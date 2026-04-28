@@ -31,16 +31,18 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Centered Logo */}
+          {/* Centered Logo - no border */}
           <Link href="/" className="flex items-center justify-center lg:flex-1">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shepherd_Verses_herologo_GOLD_STAR_1000-TFtKOOQYo18yfrpJoLNECTVKpFezRx.png"
-              alt="Shepherd Verses"
-              width={240}
-              height={65}
-              className="h-12 sm:h-14 w-auto"
-              priority
-            />
+            <div className="flex items-center justify-center">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shepherd_Verses_herologo_GOLD_STAR_1000-TFtKOOQYo18yfrpJoLNECTVKpFezRx.png"
+                alt="Shepherd Verses"
+                width={240}
+                height={65}
+                className="h-12 sm:h-14 w-auto"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Right CTA - #001C5F (navy), text-sm, font-medium */}
