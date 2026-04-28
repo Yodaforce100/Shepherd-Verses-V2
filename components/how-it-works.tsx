@@ -44,11 +44,11 @@ export function HowItWorks() {
         </div>
 
         {/* Steps Grid */}
-        <div className="flex flex-col md:flex-row items-start justify-center gap-8 lg:gap-12 max-w-3xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start justify-center gap-6 lg:gap-10 max-w-3xl mx-auto">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="w-full md:w-1/2 max-w-[340px] mx-auto"
+              className="w-full md:w-1/2 max-w-[320px] sm:max-w-[340px] mx-auto"
             >
               {/* Card */}
               <div 
@@ -64,9 +64,9 @@ export function HowItWorks() {
                     className="object-cover"
                   />
                   {/* Title Overlay */}
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+                  <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/50 to-transparent">
                     <h3 
-                      className="font-serif text-xl sm:text-2xl text-white"
+                      className="font-serif text-lg sm:text-xl text-white"
                       style={{ fontWeight: 500 }}
                     >
                       {step.title}
@@ -75,10 +75,10 @@ export function HowItWorks() {
                 </div>
 
                 {/* Description */}
-                <div className="p-5">
+                <div className="p-4 sm:p-5">
                   <p 
-                    className="font-sans text-[15px]"
-                    style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+                    className="font-sans text-sm sm:text-[15px]"
+                    style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
                   >
                     <span 
                       className="font-semibold tracking-wide"

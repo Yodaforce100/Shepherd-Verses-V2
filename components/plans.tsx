@@ -65,31 +65,31 @@ export function Plans() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-6 lg:gap-8 max-w-4xl mx-auto mb-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-7 max-w-4xl mx-auto mb-12">
           
           {/* Monthly Plan Card */}
           <div 
-            className="w-full max-w-[340px] bg-white rounded-2xl p-5 lg:p-6 flex flex-col"
+            className="w-full max-w-[320px] sm:max-w-[340px] bg-white rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col"
             style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
           >
             {/* Plan Name */}
             <h3 
-              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-4"
+              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
               style={{ color: '#D4B96A' }}
             >
               Monthly Companion
             </h3>
 
             {/* Price */}
-            <div className="flex items-baseline gap-1 mb-6">
+            <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
               <span 
-                className="font-serif text-5xl"
+                className="font-serif text-4xl sm:text-5xl"
                 style={{ color: '#001C5F' }}
               >
                 $5.95
               </span>
               <span 
-                className="font-sans text-base"
+                className="font-sans text-sm sm:text-base"
                 style={{ color: '#6B7280' }}
               >
                 / month
@@ -97,17 +97,17 @@ export function Plans() {
             </div>
 
             {/* Features */}
-            <ul className="space-y-4 mb-8 flex-grow">
+            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
               {monthlyFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <div 
-                    className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                    className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
                     style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
                   >
-                    <Check className="w-3 h-3" style={{ color: '#5E8DBF' }} />
+                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
                   </div>
                   <span 
-                    className="font-sans text-[15px]"
+                    className="font-sans text-sm sm:text-[15px]"
                     style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
                   >
                     {feature}
@@ -118,7 +118,7 @@ export function Plans() {
 
             {/* CTA Button */}
             <Button 
-              className="w-full font-sans font-medium text-[15px] py-6 rounded-full transition-all mt-auto"
+              className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
               variant="outline"
               style={{ 
                 borderColor: '#D1D5DB',
@@ -130,10 +130,10 @@ export function Plans() {
           </div>
 
           {/* Annual Plan Card (Featured) */}
-          <div className="w-full max-w-[340px] relative">
+          <div className="w-full max-w-[320px] sm:max-w-[340px] relative">
             {/* Best Value Badge */}
             <div 
-              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 rounded-full font-sans text-xs font-semibold whitespace-nowrap"
+              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
               style={{ 
                 background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                 color: '#001C5F',
@@ -144,7 +144,7 @@ export function Plans() {
             </div>
 
             <div 
-              className="rounded-2xl p-5 lg:p-6 h-full flex flex-col"
+              className="rounded-2xl p-4 sm:p-5 lg:p-6 h-full flex flex-col"
               style={{ 
                 backgroundColor: '#001C5F',
                 boxShadow: '0 8px 30px rgba(0,28,95,0.25)',
@@ -152,22 +152,22 @@ export function Plans() {
             >
               {/* Plan Name */}
               <h3 
-                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-4 mt-2"
+                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4 mt-1 sm:mt-2"
                 style={{ color: 'rgba(255,255,255,0.6)' }}
               >
                 Annual Journey
               </h3>
 
               {/* Price */}
-              <div className="flex items-baseline gap-1 mb-6">
+              <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
                 <span 
-                  className="font-serif text-5xl"
+                  className="font-serif text-4xl sm:text-5xl"
                   style={{ color: '#D4B96A' }}
                 >
                   $59.50
                 </span>
                 <span 
-                  className="font-sans text-base"
+                  className="font-sans text-sm sm:text-base"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
                   / year
@@ -175,17 +175,17 @@ export function Plans() {
               </div>
 
               {/* Features */}
-              <ul className="space-y-4 mb-8 flex-grow">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
                 {annualFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-start gap-2 sm:gap-3">
                     <div 
-                      className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                      className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
                       style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
                     >
-                      <Check className="w-3 h-3" style={{ color: '#D4B96A' }} />
+                      <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
                     </div>
                     <span 
-                      className="font-sans text-[15px]"
+                      className="font-sans text-sm sm:text-[15px]"
                       style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
                     >
                       {feature}
@@ -196,7 +196,7 @@ export function Plans() {
 
               {/* CTA Button */}
               <Button 
-                className="w-full font-sans font-medium text-[15px] py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
+                className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
                 style={{ 
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',

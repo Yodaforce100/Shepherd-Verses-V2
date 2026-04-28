@@ -85,9 +85,9 @@ export function FAQ() {
         </div>
 
         {/* FAQ Accordion Card - centered */}
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-lg mx-auto px-2 sm:px-0">
           <div 
-            className="bg-white rounded-2xl p-5 lg:p-6"
+            className="bg-white rounded-2xl p-4 sm:p-5 lg:p-6"
             style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
           >
             <Accordion type="single" collapsible className="w-full">
@@ -99,14 +99,14 @@ export function FAQ() {
                   style={{ borderColor: '#E5E2DC' }}
                 >
                   <AccordionTrigger 
-                    className="font-serif text-left text-[15px] py-4 hover:no-underline"
+                    className="font-serif text-left text-sm sm:text-[15px] py-3 sm:py-4 hover:no-underline"
                     style={{ color: '#001C5F', fontWeight: 600 }}
                   >
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent 
-                    className="font-sans text-sm pb-4"
-                    style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 500 }}
+                    className="font-sans text-xs sm:text-sm pb-3 sm:pb-4"
+                    style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 500 }}
                   >
                     {faq.answer}
                   </AccordionContent>
