@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ===== SHEPHERD VERSES COMPLETE COLOR PALETTE ===== */
+  
+  /* Primary Blues */
+  --navy: #001C5F;                /* Primary Navy - main headings, primary text */
+  --dark-blue: #2A4B7C;           /* Dark Blue - body text, secondary headings */
+  --modal-blue: #243E6B;          /* Dark Blue - modal headers */
+  --body-blue: #5E8DBF;           /* Body Text Blue - body copy, accent text */
+  --config-blue: #669eea;         /* Blue - appears in config, rarely used */
+  --light-blue-accent: #AFC3DA;   /* Light Blue - rare accents */
+  
+  /* Golds */
+  --gold: #D9B86A;                /* Brand Gold - buttons, CTA elements */
+  --gold-dark: #C9A84C;           /* Slightly darker gold - dividers, accents */
+  --gold-darker: #CF9D3E;         /* Darker gold - soundwave animation bars */
+  
+  /* Backgrounds & Surfaces */
+  --stone: #F2F1EE;               /* Stone - main background */
+  --light-stone: #F7F6F4;         /* Light Stone - card backgrounds */
+  --white: #FFFFFF;               /* White - card surfaces, overlays */
+  --warm-divider: #E7DED2;        /* Warm Divider - borders, lines */
+  
+  /* Neutral Text Colors */
+  --neutral-text: #3A4A5A;        /* Neutral Text - body text */
+  --muted-text: #4A5B6B;          /* Muted Text - secondary text */
+  --footer-text: #334455;         /* Neutral Text - footer text */
+  
+  /* Accents */
+  --teal-accent: #4A8C8C;         /* Teal Accent - mood cards */
+  
+  /* ===== DESIGN SYSTEM TOKENS ===== */
+  --background: #F2F1EE;
+  --foreground: #3A4A5A;
+  --card: #F7F6F4;
+  --card-foreground: #3A4A5A;
+  --popover: #FFFFFF;
+  --popover-foreground: #3A4A5A;
+  --primary: #001C5F;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F6F4;
+  --secondary-foreground: #001C5F;
+  --muted: #F7F6F4;
+  --muted-foreground: #4A5B6B;
+  --accent: #D9B86A;
+  --accent-foreground: #001C5F;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E7DED2;
+  --input: #E7DED2;
+  --ring: #D9B86A;
+  --chart-1: #001C5F;
+  --chart-2: #D9B86A;
+  --chart-3: #5E8DBF;
+  --chart-4: #4A8C8C;
+  --chart-5: #2A4B7C;
+  --radius: 0.5rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #3A4A5A;
+  --sidebar-primary: #001C5F;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F7F6F4;
+  --sidebar-accent-foreground: #001C5F;
+  --sidebar-border: #E7DED2;
+  --sidebar-ring: #D9B86A;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-marcellus), 'Marcellus', 'Georgia', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  /* Primary Blues */
+  --color-navy: var(--navy);
+  --color-dark-blue: var(--dark-blue);
+  --color-modal-blue: var(--modal-blue);
+  --color-body-blue: var(--body-blue);
+  --color-config-blue: var(--config-blue);
+  --color-light-blue-accent: var(--light-blue-accent);
+  
+  /* Golds */
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-darker: var(--gold-darker);
+  
+  /* Backgrounds & Surfaces */
+  --color-stone: var(--stone);
+  --color-light-stone: var(--light-stone);
+  --color-warm-divider: var(--warm-divider);
+  
+  /* Neutral Text Colors */
+  --color-neutral-text: var(--neutral-text);
+  --color-muted-text: var(--muted-text);
+  --color-footer-text: var(--footer-text);
+  
+  /* Accents */
+  --color-teal-accent: var(--teal-accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ken Burns slow breathing animation */
+@keyframes ken-burns-breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-ken-burns {
+    animation: ken-burns-breathe 12s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* Soundwave bar animation */
+@keyframes soundwave-pulse {
+  0% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.4);
+  }
+}
+
+@layer utilities {
+  .animate-soundwave {
+    animation: soundwave-pulse 1s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+}
