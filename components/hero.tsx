@@ -46,22 +46,22 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 sm:pt-16 sm:pb-8 lg:pt-20 lg:pb-10">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto px-0 sm:px-4">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-24 sm:pb-12 lg:pt-32 lg:pb-16 flex items-center justify-center min-h-[70vh]">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto px-0 sm:px-4 w-full">
           {/* Eyebrow - #CF9D3E (gold), font-sans, text-base, font-medium, tracking-widest, uppercase */}
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-8 sm:mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <SoundwaveBars />
             <span 
-              className="font-sans text-base font-medium tracking-widest uppercase"
+              className="font-sans text-sm sm:text-base font-medium tracking-widest uppercase"
               style={{ color: '#CF9D3E' }}
             >
               Spoken Scripture ✝
             </span>
           </div>
 
-          {/* Headline - #001C5F (navy), font-serif (Marcellus) */}
+          {/* Headline - #001C5F (navy), font-serif (Marcellus) - LARGER & BOLDER */}
           <h1 
-            className="font-serif text-3xl sm:text-4xl md:text-[44px] leading-tight mb-4 text-balance"
+            className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight mb-6 sm:mb-8 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
             style={{ color: '#001C5F' }}
           >
             Wake up to a voice that hears you
@@ -69,33 +69,32 @@ export function Hero() {
 
           {/* Subtitle - #5E8DBF (blue), font-serif, italic */}
           <p 
-            className="font-serif italic text-lg sm:text-xl md:text-[22px] mb-6 text-balance"
+            className="font-serif italic text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
             and guides you with scripture and affirmations.
           </p>
 
-          {/* Divider - #C5B49A (warm grey), h-px decorative */}
-          <div className="w-16 h-px mb-8" style={{ backgroundColor: '#C5B49A' }} />
+          {/* Divider - #C5B49A (warm grey), h-px decorative - LARGER */}
+          <div className="w-20 h-px mb-10 sm:mb-12 animate-in fade-in duration-700 delay-300" style={{ backgroundColor: '#C5B49A' }} />
 
           {/* Body Text - #2A4B7C (dark blue), font-sans, text-[15px], leading-[1.7] */}
           <p 
-            className="font-sans text-[15px] max-w-2xl mb-10 text-pretty"
-            style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+            className="font-sans text-base sm:text-[16px] max-w-2xl mb-12 sm:mb-16 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+            style={{ color: '#2A4B7C', lineHeight: '1.8', fontWeight: 450 }}
           >
             Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance throughout your day.
           </p>
 
-          {/* CTA Button - #001C5F (navy), font-sans, font-medium */}
+          {/* CTA Button - MUCH LARGER, STRONGER PRESENCE */}
           <Button 
             asChild
-            size="lg"
-            className="font-sans font-medium text-[15px] px-8 sm:px-10 py-6 rounded-full hover:opacity-90 transition-opacity mb-4"
+            className="font-sans font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-6 sm:mb-8 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
               color: '#001C5F',
-              border: '1px solid rgba(255,255,255,0.4)',
-              boxShadow: '0 4px 14px rgba(212,185,106,0.4)',
+              border: '2px solid rgba(255,255,255,0.6)',
+              boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
             }}
           >
             <Link href="#plans">Start Your Morning with Peace</Link>
@@ -103,15 +102,15 @@ export function Hero() {
 
           {/* Trust Line - #4A5568 (grey), font-sans, text-xs, opacity-70 */}
           <p 
-            className="font-sans text-xs mb-14"
+            className="font-sans text-xs sm:text-sm mb-16 sm:mb-20 animate-in fade-in duration-700 delay-600"
             style={{ color: '#4A5568', opacity: 0.7 }}
           >
             Free 7-day trial · Cancel anytime
           </p>
 
           {/* Scripture Quote - #001C5F (navy), font-serif, italic, text-[15px] */}
-          <blockquote className="font-serif italic text-[15px] sm:max-w-xl" style={{ color: '#001C5F', fontWeight: 650 }}>
-            <p className="mb-2">
+          <blockquote className="font-serif italic text-base sm:text-[16px] sm:max-w-xl animate-in fade-in duration-700 delay-700" style={{ color: '#001C5F', fontWeight: 650 }}>
+            <p className="mb-3 leading-relaxed">
               <span className="hidden sm:inline">&quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot;</span>
               <span className="sm:hidden">&quot;Come to me, all you who are weary and<br />burdened, and I will give you rest.&quot;</span>
             </p>
