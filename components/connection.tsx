@@ -62,25 +62,25 @@ export function Connection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Mobile: Heading above card */}
-        <div className="lg:hidden text-center mb-8">
-          <CrossDivider />
-          <h2 
-            className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
-            style={{ color: '#001C5F' }}
-          >
-            A companion for every
-          </h2>
-          <p 
-            className="font-serif text-xl sm:text-2xl"
-            style={{ color: '#5E8DBF', fontWeight: 550 }}
-          >
-            moment of your day
-          </p>
-        </div>
-
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
           
+          {/* Mobile: Heading above card */}
+          <div className="lg:hidden w-full text-center mb-6 order-first">
+            <CrossDivider />
+            <h2 
+              className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
+              style={{ color: '#001C5F' }}
+            >
+              A companion for every
+            </h2>
+            <p 
+              className="font-serif text-xl sm:text-2xl"
+              style={{ color: '#5E8DBF', fontWeight: 550 }}
+            >
+              moment of your day
+            </p>
+          </div>
+
           {/* Left: Mood Selector Card */}
           <div className="w-full max-w-[240px]">
             <div 
@@ -146,7 +146,7 @@ export function Connection() {
           </div>
 
           {/* Right: Text Content (hidden on mobile, shown on desktop) */}
-          <div className="hidden lg:block max-w-sm text-center -mt-4">
+          <div className="hidden lg:block max-w-sm text-center">
             {/* Cross Divider */}
             <CrossDivider />
 
@@ -176,7 +176,7 @@ export function Connection() {
           </div>
 
           {/* Mobile: Body Text below card */}
-          <div className="lg:hidden max-w-sm text-center">
+          <div className="lg:hidden w-full max-w-sm text-center order-last">
             <p 
               className="font-sans text-[15px] mx-auto"
               style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
