@@ -48,7 +48,7 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="w-full md:w-1/2 max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] mx-auto"
+              className="w-full md:w-1/2 max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] mx-auto"
             >
               {/* Card */}
               <div 

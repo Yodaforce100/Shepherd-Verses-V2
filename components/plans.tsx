@@ -69,7 +69,7 @@ export function Plans() {
           
           {/* Monthly Plan Card */}
           <div 
-            className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] bg-white rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col"
+            className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] bg-white rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col"
             style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
           >
             {/* Plan Name */}
@@ -130,7 +130,7 @@ export function Plans() {
           </div>
 
           {/* Annual Plan Card (Featured) */}
-          <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] relative">
+          <div className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] relative">
             {/* Best Value Badge */}
             <div 
               className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
