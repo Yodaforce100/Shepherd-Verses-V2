@@ -10,7 +10,7 @@ const steps = [
     descriptionEnd: "listens to where you are in this moment.",
   },
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iStock-2257561497-2xxDGXqjXSTeuBzIu57Q1Jkso6xyoY.jpg",
+    image: "/images/mobile-app-ui-new.jpg",
     title: "Hear a Caring Voice",
     accentWord: "LISTEN",
     description: "as your companion shares spoken scripture and affirmations tailored to your feelings, carefully chosen to guide and support you.",
