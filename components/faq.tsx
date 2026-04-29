@@ -40,7 +40,7 @@ function CrossDivider() {
   return (
     <div className="flex items-center justify-center gap-3 mb-4">
       <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
-      <span style={{ color: '#D4B96A', fontSize: '18px' }}>&#10013;</span>
+      <span style={{ color: '#D4B96A', fontSize: '24px' }}>✝</span>
       <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
     </div>
   )
