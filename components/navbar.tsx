@@ -32,8 +32,8 @@ export function Navbar() {
           </div>
 
           {/* Centered Logo - no border */}
-          <Link href="/" className="flex items-center justify-center lg:flex-1">
-            <div className="flex items-center justify-center">
+          <Link href="/" className="flex items-center justify-center lg:flex-1 focus:outline-none">
+            <div className="flex items-center justify-center" style={{ border: 'none', outline: 'none' }}>
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shepherd_Verses_herologo_GOLD_STAR_1000-TFtKOOQYo18yfrpJoLNECTVKpFezRx.png"
                 alt="Shepherd Verses"
@@ -41,6 +41,7 @@ export function Navbar() {
                 height={65}
                 className="h-12 sm:h-14 w-auto"
                 priority
+                style={{ border: 'none', outline: 'none' }}
               />
             </div>
           </Link>
