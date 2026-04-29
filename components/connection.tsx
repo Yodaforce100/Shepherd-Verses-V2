@@ -62,7 +62,7 @@ export function Connection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-20 w-full max-w-sm sm:max-w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-20 px-4">
           
           {/* Mobile: Heading above card */}
           <div className="lg:hidden w-full text-center mb-6 order-first">

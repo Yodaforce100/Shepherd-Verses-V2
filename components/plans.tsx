@@ -65,7 +65,7 @@ export function Plans() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-7 max-w-4xl mx-auto mb-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-7 max-w-4xl mx-auto mb-12 px-4">
           
           {/* Monthly Plan Card */}
           <div 

@@ -44,7 +44,7 @@ export function HowItWorks() {
         </div>
 
         {/* Steps Grid */}
-        <div className="flex flex-col md:flex-row items-start justify-center gap-4 sm:gap-6 lg:gap-10 max-w-2xl sm:max-w-3xl mx-auto px-4 sm:px-0">
+        <div className="flex flex-col md:flex-row items-start justify-center gap-4 sm:gap-6 lg:gap-10 max-w-2xl sm:max-w-3xl mx-auto px-4">
           {steps.map((step, index) => (
             <div 
               key={index}
