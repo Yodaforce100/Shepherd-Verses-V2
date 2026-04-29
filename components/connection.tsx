@@ -47,64 +47,64 @@ export function Connection() {
           fill
           className="object-cover"
           style={{
-            opacity: 0.35,
-            filter: 'saturate(0.2) hue-rotate(180deg) brightness(1.2) grayscale(0.4)',
+            opacity: 0.65,
+            filter: 'saturate(0.3) hue-rotate(180deg) brightness(1.15) grayscale(0.3)',
           }}
         />
         {/* White gradient fade from top */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0.95) 100%)',
+            background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.5) 80%, rgba(255,255,255,0.9) 100%)',
           }}
         />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-20 px-4">
-          
-          {/* Mobile: Heading above card */}
-          <div className="lg:hidden w-full text-center mb-6 order-first">
-            <CrossDivider />
-            <h2 
-              className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
-              style={{ color: '#001C5F' }}
-            >
-              A companion for every
-            </h2>
-            <p 
-              className="font-serif text-xl sm:text-2xl"
-              style={{ color: '#5E8DBF', fontWeight: 550 }}
-            >
-              moment of your day
-            </p>
-          </div>
+        {/* Mobile: Heading above card */}
+        <div className="lg:hidden text-center mb-8">
+          <CrossDivider />
+          <h2 
+            className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
+            style={{ color: '#001C5F' }}
+          >
+            A companion for every
+          </h2>
+          <p 
+            className="font-serif text-xl sm:text-2xl"
+            style={{ color: '#5E8DBF', fontWeight: 550 }}
+          >
+            moment of your day
+          </p>
+        </div>
 
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
+          
           {/* Left: Mood Selector Card */}
-          <div className="w-full max-w-[180px] sm:max-w-[220px] lg:max-w-[260px]">
+          <div className="w-full max-w-[240px]">
             <div 
-              className="bg-white rounded-2xl shadow-lg p-3 sm:p-4"
+              className="bg-white rounded-2xl shadow-lg p-4"
               style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}
             >
               {/* Card Header */}
               <h3 
-                className="font-sans text-xs font-semibold tracking-wider uppercase text-center mb-3 sm:mb-4"
+                className="font-sans text-xs font-semibold tracking-wider uppercase text-center mb-4"
                 style={{ color: '#2A4B7C' }}
               >
                 How are you feeling this morning?
               </h3>
 
               {/* Mood Grid */}
-              <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-4 sm:mb-5">
+              <div className="grid grid-cols-3 gap-2 mb-6">
                 {moods.map((mood) => (
                   <button
                     key={mood.label}
-                    className="flex flex-col items-center gap-0.5 sm:gap-1 p-1.5 sm:p-2 rounded-xl hover:bg-stone/50 transition-colors"
+                    className="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-stone/50 transition-colors"
                   >
-                    <span className="text-3xl sm:text-2xl">{mood.emoji}</span>
+                    <span className="text-2xl">{mood.emoji}</span>
                     <span 
-                      className="font-sans text-[9px] sm:text-[10px] font-medium"
+                      className="font-sans text-[10px] font-medium"
                       style={{ color: '#2A4B7C' }}
                     >
                       {mood.label}
@@ -114,13 +114,13 @@ export function Connection() {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px bg-warm-divider mb-3 sm:mb-4" />
+              <div className="w-full h-px bg-warm-divider mb-4" />
 
               {/* Response Section */}
-              <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <SoundwaveBars />
                 <span 
-                  className="font-sans text-[11px] sm:text-xs"
+                  className="font-sans text-xs"
                   style={{ color: '#5E8DBF' }}
                 >
                   Your companion responds...
@@ -129,14 +129,14 @@ export function Connection() {
 
               {/* Scripture Quote */}
               <blockquote 
-                className="font-serif italic text-xs sm:text-sm"
+                className="font-serif italic text-sm"
                 style={{ color: '#001C5F', fontWeight: 500 }}
               >
-                <p className="mb-1 leading-snug">
+                <p className="mb-1">
                   &quot;Cast all your anxiety on him because he cares for you.&quot;
                 </p>
                 <footer 
-                  className="font-serif text-[10px] sm:text-xs not-italic"
+                  className="font-serif text-xs not-italic"
                   style={{ color: '#001C5F', fontWeight: 450 }}
                 >
                   — 1 Peter 5:7
@@ -146,7 +146,7 @@ export function Connection() {
           </div>
 
           {/* Right: Text Content (hidden on mobile, shown on desktop) */}
-          <div className="hidden lg:block max-w-sm text-center">
+          <div className="hidden lg:block max-w-sm text-center -mt-4">
             {/* Cross Divider */}
             <CrossDivider />
 
@@ -176,7 +176,7 @@ export function Connection() {
           </div>
 
           {/* Mobile: Body Text below card */}
-          <div className="lg:hidden w-full max-w-sm text-center order-last">
+          <div className="lg:hidden max-w-sm text-center">
             <p 
               className="font-sans text-[15px] mx-auto"
               style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
