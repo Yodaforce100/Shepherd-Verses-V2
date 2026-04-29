@@ -82,7 +82,7 @@ export function Connection() {
           </div>
 
           {/* Left: Mood Selector Card */}
-          <div className="w-full max-w-[240px] sm:max-w-[260px]">
+          <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[260px]">
             <div 
               className="bg-white rounded-2xl shadow-lg p-3 sm:p-4"
               style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}
