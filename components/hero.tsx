@@ -98,7 +98,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
           {/* Trust Line */}
           <p 
-            className="font-sans text-xs text-center animate-in fade-in duration-700 delay-500"
+            className="font-sans text-xs animate-in fade-in duration-700 delay-500"
             style={{ color: '#4A5568', opacity: 0.7 }}
           >
             Free 3-day trial · Cancel anytime
