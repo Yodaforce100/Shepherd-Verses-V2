@@ -25,26 +25,26 @@ export function Hero() {
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Image at top with fade to bottom */}
-        <div className="relative h-64 sm:h-80">
+        <div className="relative h-72 sm:h-80">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-[center_25%]"
+            className="object-cover object-[center_35%]"
           />
           {/* Gradient fade to bottom */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 50%, rgba(247,246,244,1) 100%)',
+              background: 'linear-gradient(to bottom, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 60%, rgba(247,246,244,1) 100%)',
             }}
           />
         </div>
         
         {/* Text content below image */}
-        <div className="text-center px-4 -mt-4 pb-10">
+        <div className="text-center px-4 -mt-8 pb-8">
           {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="flex items-center justify-center gap-3 mb-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <SoundwaveBars />
             <span 
               className="font-sans text-xs font-medium tracking-widest uppercase"
@@ -72,18 +72,10 @@ export function Hero() {
 
           {/* Body Text */}
           <p 
-            className="font-sans text-sm max-w-[320px] mx-auto mb-3 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            className="font-sans text-sm max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
             Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
-          </p>
-
-          {/* Scripture Quote */}
-          <p 
-            className="font-sans italic text-[13px] max-w-[300px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-350"
-            style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
-          >
-            &quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot; — Matthew 11:28
           </p>
 
           {/* CTA Button */}
