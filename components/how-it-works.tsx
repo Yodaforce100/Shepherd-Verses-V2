@@ -69,21 +69,13 @@ export function HowItWorks() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          {/* Heading - matches Connection section */}
+          {/* Heading with inline subtitle */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-2"
+            className="font-serif text-2xl lg:text-3xl leading-tight"
             style={{ color: '#001C5F' }}
           >
-            Two simple steps
+            Two simple steps<span style={{ color: '#5E8DBF' }}>.. a day transformed</span>
           </h2>
-
-          {/* Subtitle - matches Connection section */}
-          <p 
-            className="font-sans text-lg lg:text-xl"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
-          >
-            A day transformed
-          </p>
         </div>
 
         {/* Steps Grid */}
