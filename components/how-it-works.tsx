@@ -19,7 +19,7 @@ function SpeechBubbleIcon() {
   )
 }
 
-// Soundwave Icon
+// Soundwave Icon - thin elegant lines
 function SoundwaveIcon() {
   return (
     <svg 
@@ -29,15 +29,14 @@ function SoundwaveIcon() {
       fill="none" 
       stroke="#CF9D3E" 
       strokeWidth="1.5" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
+      strokeLinecap="round"
       className="flex-shrink-0"
     >
-      <rect x="4" y="9" width="2" height="6" rx="1" fill="#CF9D3E" />
-      <rect x="8" y="6" width="2" height="12" rx="1" fill="#CF9D3E" />
-      <rect x="12" y="4" width="2" height="16" rx="1" fill="#CF9D3E" />
-      <rect x="16" y="6" width="2" height="12" rx="1" fill="#CF9D3E" />
-      <rect x="20" y="9" width="2" height="6" rx="1" fill="#CF9D3E" />
+      <line x1="4" y1="10" x2="4" y2="14" />
+      <line x1="8" y1="7" x2="8" y2="17" />
+      <line x1="12" y1="4" x2="12" y2="20" />
+      <line x1="16" y1="7" x2="16" y2="17" />
+      <line x1="20" y1="10" x2="20" y2="14" />
     </svg>
   )
 }
