@@ -35,23 +35,23 @@ export function Connection() {
         </div>
         
         {/* Text content below image */}
-        <div className="text-center px-4 -mt-2 pb-10">
+        <div className="text-center px-4 -mt-2 pb-6">
           <CrossDivider compact />
           <h2 
-            className="font-serif text-2xl sm:text-3xl leading-tight mb-1"
+            className="font-serif text-2xl sm:text-3xl leading-tight mb-0"
             style={{ color: '#001C5F' }}
           >
             A companion for every
           </h2>
           <p 
-            className="font-serif text-xl sm:text-2xl mb-5"
+            className="font-serif text-xl sm:text-2xl mb-4"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
             moment of your day
           </p>
           <p 
-            className="font-sans text-[15px] mx-auto max-w-sm"
-            style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+            className="font-sans text-[14px] mx-auto max-w-sm"
+            style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
             Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments—listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
           </p>
