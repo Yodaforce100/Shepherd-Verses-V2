@@ -23,7 +23,7 @@ export function Connection() {
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-top"
+            className="object-cover object-[center_25%]"
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -59,7 +59,7 @@ export function Connection() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative pt-4 pb-20">
+      <div className="hidden lg:block relative pt-10 pb-24">
         {/* Left Image with Fade */}
         <div className="absolute inset-y-0 left-0 w-3/5 z-0">
           <Image
@@ -87,8 +87,10 @@ export function Connection() {
         {/* Text Content - Right side */}
         <div className="relative z-10 container mx-auto px-8">
           <div className="flex justify-end py-12">
-            <div className="max-w-md text-left mr-12">
-              <CrossDivider />
+            <div className="max-w-md mr-12">
+              <div className="flex justify-start">
+                <CrossDivider />
+              </div>
               
               <h2 
                 className="font-serif text-3xl leading-tight mb-1"
