@@ -71,11 +71,18 @@ export function HowItWorks() {
         <div className="text-center mb-12">
           {/* Heading */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight"
+            className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
             style={{ color: '#001C5F' }}
           >
-            Two simple steps.. a day transformed
+            Two simple steps
           </h2>
+          {/* Subtitle */}
+          <p 
+            className="font-sans text-lg lg:text-xl"
+            style={{ color: '#5E8DBF', fontWeight: 500 }}
+          >
+            A day transformed
+          </p>
         </div>
 
         {/* Steps Grid */}
