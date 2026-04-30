@@ -114,18 +114,6 @@ export function HowItWorks() {
                       background: 'linear-gradient(to top, rgba(42,75,124,0.65) 0%, rgba(42,75,124,0.3) 50%, rgba(42,75,124,0) 100%)',
                     }}
                   />
-                  {/* Step Number Badge */}
-                  <div 
-                    className="absolute top-3 left-3 w-8 h-8 rounded-full flex items-center justify-center"
-                    style={{ 
-                      backgroundColor: '#D9B86A',
-                      boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
-                    }}
-                  >
-                    <span className="font-serif text-white text-sm" style={{ fontWeight: 600 }}>
-                      {index + 1}
-                    </span>
-                  </div>
                   {/* Title Overlay */}
                   <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
                     <h3 
