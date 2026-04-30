@@ -30,8 +30,8 @@ export function Hero() {
             fill
             className="object-cover"
             style={{
-              opacity: 0.72,
-              filter: 'contrast(1.1) saturate(0.95) sepia(0.15)',
+              opacity: 0.68,
+              filter: 'contrast(1.05) saturate(0.85) sepia(0.25)',
             }}
             priority
           />
@@ -99,23 +99,11 @@ export function Hero() {
 
           {/* Trust Line */}
           <p 
-            className="font-sans text-xs sm:text-sm mb-8 sm:mb-10 animate-in fade-in duration-700 delay-500"
+            className="font-sans text-xs sm:text-sm animate-in fade-in duration-700 delay-500"
             style={{ color: '#4A5568', opacity: 0.7 }}
           >
             Free 7-day trial · Cancel anytime
           </p>
-
-          {/* Scripture Quote */}
-          <blockquote className="font-serif italic text-base sm:text-[16px] sm:max-w-xl animate-in fade-in duration-700 delay-600" style={{ color: '#001C5F', fontWeight: 650 }}>
-            <p className="mb-3 leading-relaxed">
-              <span className="hidden sm:inline">&quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot;</span>
-              <span className="sm:hidden">&quot;Come to me, all you who are weary and<br />burdened, and I will give you rest.&quot;</span>
-            </p>
-            {/* Scripture Reference - #001C5F (navy), font-serif, text-sm */}
-            <footer className="font-serif text-sm not-italic" style={{ color: '#001C5F', fontWeight: 550 }}>
-              — Matthew 11:28
-            </footer>
-          </blockquote>
         </div>
       </div>
     </section>
