@@ -137,7 +137,7 @@ export function HowItWorks() {
                     >
                       <span 
                         className="font-semibold"
-                        style={{ color: '#CF9D3E' }}
+                        style={{ color: '#D4B96A' }}
                       >
                         {step.accentWord}
                       </span>{" "}
