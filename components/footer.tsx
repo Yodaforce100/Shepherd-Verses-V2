@@ -23,10 +23,10 @@ export function Footer() {
           <div className="flex justify-center lg:flex-1">
             <Link href="/">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shepherd_Verses_herologo_GOLD_STAR_1000-TFtKOOQYo18yfrpJoLNECTVKpFezRx.png"
+                src="/images/shepherd-verses-logo.svg"
                 alt="Shepherd Verses"
                 width={220}
-                height={60}
+                height={70}
                 className="h-14 w-auto"
               />
             </Link>

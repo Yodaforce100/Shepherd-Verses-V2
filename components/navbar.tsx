@@ -10,6 +10,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
+    { href: "#hero", label: "Home" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#plans", label: "Plans" },
   ]
@@ -35,11 +36,11 @@ export function Navbar() {
           <Link href="/" className="flex items-center justify-center lg:flex-1 focus:outline-none">
             <div className="flex items-center justify-center" style={{ border: 'none', outline: 'none' }}>
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shepherd_Verses_herologo_GOLD_STAR_1000-TFtKOOQYo18yfrpJoLNECTVKpFezRx.png"
+                src="/images/shepherd-verses-logo.svg"
                 alt="Shepherd Verses"
-                width={240}
-                height={65}
-                className="h-12 sm:h-14 w-auto"
+                width={320}
+                height={100}
+                className="h-16 sm:h-[72px] lg:h-20 w-auto"
                 priority
                 style={{ border: 'none', outline: 'none' }}
               />

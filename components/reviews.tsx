@@ -2,17 +2,17 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    quote: "Every morning I used to reach for my phone and feel anxious before the day even started. Now I start with Shepherd Verses and it genuinely changes my whole outlook. The scripture it chooses always feels like it was written just for me.",
+    quote: "I start with Shepherd Verses every morning and it changes my whole outlook. The scripture always feels like it was written just for me.",
     name: "Margaret T.",
     location: "Tennessee",
   },
   {
-    quote: "I was sceptical at first — I've been a Christian for thirty years and wondered what an app could offer me. But the way it listens and responds with such relevant scripture surprised me deeply. It's become part of my morning prayer time.",
+    quote: "The way it listens and responds with relevant scripture surprised me deeply. It's become part of my morning prayer time.",
     name: "David R.",
     location: "Texas",
   },
   {
-    quote: "I shared that I was feeling overwhelmed one morning and the verse it gave me brought me to tears — in the best way. It felt like being heard. I've recommended it to everyone in my small group.",
+    quote: "The verse it gave me brought me to tears — in the best way. It felt like being heard. I've recommended it to everyone.",
     name: "Joanne M.",
     location: "Georgia",
   },

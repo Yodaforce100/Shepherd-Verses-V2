@@ -7,14 +7,14 @@ import { Check } from "lucide-react"
 function GoldDivider({ text }: { text: string }) {
   return (
     <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-12 h-px" style={{ backgroundColor: '#D9B86A' }} />
       <span 
         className="font-sans text-xs font-semibold tracking-[0.2em] uppercase"
-        style={{ color: '#D4B96A' }}
+        style={{ color: '#D9B86A' }}
       >
         {text}
       </span>
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-12 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
@@ -57,8 +57,8 @@ export function Plans() {
 
           {/* Subtitle */}
           <p 
-            className="font-sans text-[15px]"
-            style={{ color: '#2A4B7C', fontWeight: 450 }}
+            className="font-sans text-lg lg:text-xl"
+            style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
           </p>
@@ -133,14 +133,14 @@ export function Plans() {
           <div className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] relative">
             {/* Best Value Badge */}
             <div 
-              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
+              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-6 sm:px-8 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
               style={{ 
                 background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                 color: '#001C5F',
                 boxShadow: '0 2px 8px rgba(212,185,106,0.3)',
               }}
             >
-              Just $4.95/month — Best Value
+              - Best Value -
             </div>
 
             <div 
