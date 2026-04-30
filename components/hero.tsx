@@ -69,7 +69,7 @@ export function Hero() {
 
           {/* Subtitle - #5E8DBF (blue), font-serif, italic */}
           <p 
-            className="font-serif italic text-lg sm:text-2xl md:text-3xl mb-5 sm:mb-8 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-[280px] sm:max-w-none"
+            className="font-serif italic text-lg sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-[280px] sm:max-w-none"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
             and guides you with scripture and affirmations.
@@ -77,7 +77,7 @@ export function Hero() {
 
           {/* Body Text - #2A4B7C (dark blue), font-sans */}
           <p 
-            className="font-sans text-sm sm:text-[16px] max-w-[300px] sm:max-w-2xl mb-6 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            className="font-sans text-sm sm:text-[16px] max-w-[300px] sm:max-w-2xl mb-8 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
             Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
