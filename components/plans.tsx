@@ -36,7 +36,7 @@ const annualFeatures = [
 const trustBadges = [
   { icon: "🔒", text: "Secure Payment" },
   { icon: "✝", text: "Cancel Anytime" },
-  { icon: "🎁", text: "7-Day Free Trial" },
+  { icon: "🎁", text: "3-Day Free Trial" },
 ]
 
 interface PlansProps {

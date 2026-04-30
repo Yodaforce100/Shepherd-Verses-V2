@@ -60,7 +60,7 @@ export default function SignupModal({ isOpen, onClose, tier = 'monthly' }: Signu
               className="font-sans text-sm mt-2"
               style={{ color: '#5E8DBF', fontWeight: 450 }}
             >
-              7-day free trial. Cancel anytime.
+              3-day free trial. Cancel anytime.
             </p>
           </div>
 
