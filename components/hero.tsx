@@ -18,7 +18,11 @@ function SoundwaveBars() {
   )
 }
 
-export function Hero() {
+interface HeroProps {
+  onSignupClick?: () => void
+}
+
+export function Hero({ onSignupClick }: HeroProps) {
   return (
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
@@ -79,8 +83,8 @@ export function Hero() {
           </p>
 
           {/* CTA Button */}
-          <Button 
-            asChild
+          <button
+            onClick={onSignupClick}
             className="font-sans font-bold text-base px-10 py-7 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
@@ -89,8 +93,8 @@ export function Hero() {
               boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
             }}
           >
-            <Link href="#plans">Start Your Morning with Peace</Link>
-          </Button>
+            Start Your Morning with Peace
+          </button>
 
           {/* Trust Line */}
           <p 
