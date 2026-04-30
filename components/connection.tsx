@@ -1,9 +1,9 @@
 import Image from "next/image"
 
 // Cross Divider Component
-function CrossDivider() {
+function CrossDivider({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="flex items-center justify-center gap-4 mb-4">
+    <div className={`flex items-center justify-center gap-4 ${compact ? 'mb-2' : 'mb-4'}`}>
       <div className="w-14 h-px" style={{ backgroundColor: '#C5B49A' }} />
       <span style={{ color: '#D9B86A', fontSize: '24px' }}>✝</span>
       <div className="w-14 h-px" style={{ backgroundColor: '#C5B49A' }} />
@@ -21,7 +21,7 @@ export function Connection() {
       />
 
       {/* Left Image with Fade */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-3/5 z-0">
+      <div className="absolute inset-y-0 left-0 w-full lg:w-3/5 z-0 opacity-40 lg:opacity-100">
         <Image
           src="/images/companion-moment.jpg"
           alt="A peaceful moment of reflection"
@@ -47,16 +47,16 @@ export function Connection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Layout */}
-        <div className="lg:hidden text-center pt-4 pb-12">
-          <CrossDivider />
+        <div className="lg:hidden text-center pt-0 pb-12">
+          <CrossDivider compact />
           <h2 
-            className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
+            className="font-serif text-2xl sm:text-3xl leading-tight mb-1"
             style={{ color: '#001C5F' }}
           >
             A companion for every
           </h2>
           <p 
-            className="font-serif text-xl sm:text-2xl mb-6"
+            className="font-serif text-xl sm:text-2xl mb-5"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
             moment of your day
