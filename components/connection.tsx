@@ -44,8 +44,8 @@ export function Connection() {
             A companion for every
           </h2>
           <p 
-            className="font-serif text-xl sm:text-2xl mb-4"
-            style={{ color: '#5E8DBF', fontWeight: 550 }}
+            className="font-sans text-lg sm:text-xl mb-4"
+            style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             moment of your day
           </p>
@@ -100,8 +100,8 @@ export function Connection() {
               </h2>
               
               <p 
-                className="font-serif text-2xl mb-6"
-                style={{ color: '#5E8DBF', fontWeight: 550 }}
+                className="font-sans text-lg lg:text-xl mb-6"
+                style={{ color: '#5E8DBF', fontWeight: 500 }}
               >
                 moment of your day
               </p>

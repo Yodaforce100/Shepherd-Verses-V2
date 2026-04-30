@@ -57,8 +57,8 @@ export function Plans() {
 
           {/* Subtitle */}
           <p 
-            className="font-serif text-lg lg:text-xl"
-            style={{ color: '#5E8DBF', fontWeight: 550 }}
+            className="font-sans text-lg lg:text-xl"
+            style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
           </p>

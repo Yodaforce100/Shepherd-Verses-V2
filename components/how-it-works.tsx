@@ -77,10 +77,10 @@ export function HowItWorks() {
             Two simple steps
           </h2>
 
-          {/* Subtitle - matches Connection section (not italic) */}
+          {/* Subtitle - matches Connection section */}
           <p 
-            className="font-serif text-lg lg:text-xl"
-            style={{ color: '#5E8DBF', fontWeight: 550 }}
+            className="font-sans text-lg lg:text-xl"
+            style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             A day transformed
           </p>
