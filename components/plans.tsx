@@ -39,11 +39,7 @@ const trustBadges = [
   { icon: "🎁", text: "7-Day Free Trial" },
 ]
 
-interface PlansProps {
-  onSignupClick?: () => void
-}
-
-export function Plans({ onSignupClick }: PlansProps) {
+export function Plans() {
   return (
     <section id="plans" className="relative py-10 lg:py-14" style={{ backgroundColor: '#F7F6F4' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,18 +117,16 @@ export function Plans({ onSignupClick }: PlansProps) {
             </ul>
 
             {/* CTA Button */}
-            <button
-              onClick={onSignupClick}
+            <Button 
               className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
+              variant="outline"
               style={{ 
                 borderColor: '#D1D5DB',
                 color: '#001C5F',
-                border: '1px solid #D1D5DB',
-                backgroundColor: 'transparent'
               }}
             >
               Start Monthly Plan
-            </button>
+            </Button>
           </div>
 
           {/* Annual Plan Card (Featured) */}
@@ -201,8 +195,7 @@ export function Plans({ onSignupClick }: PlansProps) {
               </ul>
 
               {/* CTA Button */}
-              <button
-                onClick={onSignupClick}
+              <Button 
                 className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
                 style={{ 
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
@@ -212,7 +205,7 @@ export function Plans({ onSignupClick }: PlansProps) {
                 }}
               >
                 Start Annual Journey
-              </button>
+              </Button>
             </div>
           </div>
         </div>
