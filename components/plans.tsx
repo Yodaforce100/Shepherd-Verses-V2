@@ -140,7 +140,7 @@ export function Plans() {
                 boxShadow: '0 2px 8px rgba(212,185,106,0.3)',
               }}
             >
-              Just $4.95/month — Best Value
+              Best Value
             </div>
 
             <div 
