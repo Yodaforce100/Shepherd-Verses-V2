@@ -80,7 +80,7 @@ export function Hero() {
             className="font-sans text-sm sm:text-[16px] max-w-[300px] sm:max-w-2xl mb-8 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
-            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
+            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance. <span className="italic">&quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot;</span> — Matthew 11:28
           </p>
 
           {/* CTA Button */}
