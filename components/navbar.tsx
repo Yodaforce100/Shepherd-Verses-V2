@@ -38,9 +38,9 @@ export function Navbar() {
               <Image
                 src="/images/shepherd-verses-logo.svg"
                 alt="Shepherd Verses"
-                width={280}
-                height={90}
-                className="h-14 sm:h-16 lg:h-[72px] w-auto"
+                width={320}
+                height={100}
+                className="h-16 sm:h-[72px] lg:h-20 w-auto"
                 priority
                 style={{ border: 'none', outline: 'none' }}
               />
