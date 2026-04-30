@@ -14,15 +14,24 @@ import SignupModal from "@/components/signup-modal"
 
 export default function Home() {
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false)
+  const [selectedTier, setSelectedTier] = useState<'monthly' | 'annual'>('monthly')
+
+  const handleSignupClick = (tier: 'monthly' | 'annual' = 'monthly') => {
+    setSelectedTier(tier)
+    setIsSignupModalOpen(true)
+  }
 
   return (
     <div className="min-h-screen">
-      <Navbar onSignupClick={() => setIsSignupModalOpen(true)} />
+      <Navbar onSignupClick={() => handleSignupClick('monthly')} />
       <main>
-        <Hero onSignupClick={() => setIsSignupModalOpen(true)} />
+        <Hero onSignupClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })} />
         <Connection />
         <HowItWorks />
-        <Plans onSignupClick={() => setIsSignupModalOpen(true)} />
+        <Plans 
+          onMonthlyClick={() => handleSignupClick('monthly')}
+          onAnnualClick={() => handleSignupClick('annual')}
+        />
         <Reviews />
         <FAQ />
         <Socials />
@@ -33,6 +42,7 @@ export default function Home() {
       <SignupModal
         isOpen={isSignupModalOpen}
         onClose={() => setIsSignupModalOpen(false)}
+        tier={selectedTier}
       />
     </div>
   )

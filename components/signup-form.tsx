@@ -170,7 +170,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       <div>
         <label 
           className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
-          style={{ color: '#D4B96A' }}
+          style={{ color: '#001C5F' }}
         >
           Email Address
         </label>
@@ -195,7 +195,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       <div>
         <label 
           className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
-          style={{ color: '#D4B96A' }}
+          style={{ color: '#001C5F' }}
         >
           Country
         </label>
@@ -226,7 +226,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
         <div>
           <label 
             className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
-            style={{ color: '#D4B96A' }}
+            style={{ color: '#001C5F' }}
           >
             Timezone
           </label>

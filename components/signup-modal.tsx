@@ -6,10 +6,10 @@ import SignupForm from './signup-form'
 interface SignupModalProps {
   isOpen: boolean
   onClose: () => void
-  tier?: string
+  tier?: 'monthly' | 'annual'
 }
 
-export default function SignupModal({ isOpen, onClose, tier = 'companion' }: SignupModalProps) {
+export default function SignupModal({ isOpen, onClose, tier = 'monthly' }: SignupModalProps) {
   if (!isOpen) return null
 
   return (
@@ -48,7 +48,7 @@ export default function SignupModal({ isOpen, onClose, tier = 'companion' }: Sig
               className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-1"
               style={{ color: '#D4B96A' }}
             >
-              Companion Tier
+              {tier === 'monthly' ? 'Monthly Companion' : 'Annual Journey'}
             </h2>
             <p
               className="font-serif text-xl leading-tight"

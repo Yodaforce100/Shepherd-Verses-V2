@@ -40,10 +40,11 @@ const trustBadges = [
 ]
 
 interface PlansProps {
-  onSignupClick?: () => void
+  onMonthlyClick?: () => void
+  onAnnualClick?: () => void
 }
 
-export function Plans({ onSignupClick }: PlansProps) {
+export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
   return (
     <section id="plans" className="relative py-10 lg:py-14" style={{ backgroundColor: '#F7F6F4' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,7 +123,7 @@ export function Plans({ onSignupClick }: PlansProps) {
 
             {/* CTA Button */}
             <button
-              onClick={onSignupClick}
+              onClick={onMonthlyClick}
               className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
               style={{ 
                 borderColor: '#D1D5DB',
@@ -202,7 +203,7 @@ export function Plans({ onSignupClick }: PlansProps) {
 
               {/* CTA Button */}
               <button
-                onClick={onSignupClick}
+                onClick={onAnnualClick}
                 className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
                 style={{ 
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
