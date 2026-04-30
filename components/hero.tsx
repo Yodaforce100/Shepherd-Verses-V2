@@ -27,7 +27,7 @@ export function Hero() {
         {/* Image at top with fade to bottom */}
         <div className="relative h-64 sm:h-80">
           <Image
-            src="/images/hero-bible.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1745032664-1024x1024-yoBdlM1cHDDE8K3csjS6lvm4I5SsTW.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[center_25%]"
@@ -115,7 +115,7 @@ export function Hero() {
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-3/5 z-0">
           <Image
-            src="/images/hero-bible.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1745032664-1024x1024-yoBdlM1cHDDE8K3csjS6lvm4I5SsTW.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-center"
