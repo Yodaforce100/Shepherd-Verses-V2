@@ -18,7 +18,7 @@ export function Connection() {
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Image at top with fade to bottom */}
-        <div className="relative h-48 sm:h-56">
+        <div className="relative h-56 sm:h-64">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
