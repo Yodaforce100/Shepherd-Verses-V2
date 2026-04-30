@@ -11,7 +11,7 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="py-12 lg:py-20" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="connection" className="pt-6 pb-12 lg:pt-10 lg:pb-20" style={{ backgroundColor: '#F7F6F4' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <CrossDivider />
