@@ -85,7 +85,7 @@ export function Hero() {
 
           {/* Scripture Quote */}
           <p 
-            className="font-serif italic text-xs sm:text-sm max-w-[280px] sm:max-w-lg mb-8 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-350"
+            className="font-sans italic text-[13px] sm:text-[15px] max-w-[280px] sm:max-w-lg mb-8 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-350"
             style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
           >
             &quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot; — Matthew 11:28
