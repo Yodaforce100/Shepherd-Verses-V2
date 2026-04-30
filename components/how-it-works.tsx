@@ -69,12 +69,12 @@ export function HowItWorks() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          {/* Heading with inline subtitle */}
+          {/* Heading */}
           <h2 
             className="font-serif text-2xl lg:text-3xl leading-tight"
             style={{ color: '#001C5F' }}
           >
-            Two simple steps<span style={{ color: '#5E8DBF' }}>.. a day transformed</span>
+            Two simple steps.. a day transformed
           </h2>
         </div>
 
