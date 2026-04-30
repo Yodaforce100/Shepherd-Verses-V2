@@ -133,14 +133,14 @@ export function Plans() {
           <div className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px] relative">
             {/* Best Value Badge */}
             <div 
-              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
+              className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-6 sm:px-8 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
               style={{ 
                 background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                 color: '#001C5F',
                 boxShadow: '0 2px 8px rgba(212,185,106,0.3)',
               }}
             >
-              Best Value
+              - Best Value -
             </div>
 
             <div 
