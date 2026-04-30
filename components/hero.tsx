@@ -25,12 +25,13 @@ export function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className={`absolute inset-0 ${styles.kenBurnsBackground}`}>
           <Image
-            src="/images/hero-morning-light.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iStock-1470973831-hrm3ARDpThRJMcpKPkyK9JYNJ1mb9V.jpg"
             alt=""
             fill
             className="object-cover"
             style={{
-              opacity: 0.85,
+              opacity: 0.75,
+              filter: 'saturate(1.05) sepia(0.1)',
             }}
             priority
           />
