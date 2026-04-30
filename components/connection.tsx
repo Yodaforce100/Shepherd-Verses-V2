@@ -40,7 +40,7 @@ export function Connection() {
           {/* Scripture Quote */}
           <p 
             className="font-serif italic text-[14px] sm:text-[15px] mx-auto max-w-md"
-            style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 500 }}
+            style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 500 }}
           >
             &quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot; — Matthew 11:28
           </p>
