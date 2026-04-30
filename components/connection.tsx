@@ -13,7 +13,7 @@ function CrossDivider({ compact = false }: { compact?: boolean }) {
 
 export function Connection() {
   return (
-    <section id="connection" className="relative overflow-hidden" style={{ backgroundColor: '#F8F6F2' }}>
+    <section id="connection" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
       {/* Mobile Layout */}
       <div className="lg:hidden">
@@ -29,7 +29,7 @@ export function Connection() {
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(248,246,242,0) 0%, rgba(248,246,242,0.4) 60%, rgba(248,246,242,1) 100%)',
+              background: 'linear-gradient(to bottom, rgba(247,246,244,0) 0%, rgba(247,246,244,0.4) 60%, rgba(247,246,244,1) 100%)',
             }}
           />
         </div>
@@ -72,14 +72,14 @@ export function Connection() {
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(248,246,242,0) 0%, rgba(248,246,242,0.3) 40%, rgba(248,246,242,0.8) 70%, rgba(248,246,242,1) 100%)',
+              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 40%, rgba(247,246,244,0.8) 70%, rgba(247,246,244,1) 100%)',
             }}
           />
           {/* Additional top/bottom fade for seamless blend */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(248,246,242,0.5) 0%, rgba(248,246,242,0) 20%, rgba(248,246,242,0) 80%, rgba(248,246,242,0.5) 100%)',
+              background: 'linear-gradient(to bottom, rgba(247,246,244,0.5) 0%, rgba(247,246,244,0) 20%, rgba(247,246,244,0) 80%, rgba(247,246,244,0.5) 100%)',
             }}
           />
         </div>
