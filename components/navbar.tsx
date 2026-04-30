@@ -6,7 +6,11 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export function Navbar() {
+interface NavbarProps {
+  onSignupClick?: () => void
+}
+
+export function Navbar({ onSignupClick }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
@@ -48,8 +52,8 @@ export function Navbar() {
 
           {/* Right CTA - #001C5F (navy), text-sm, font-medium */}
           <div className="hidden lg:flex items-center justify-end flex-1">
-            <Button 
-              asChild
+            <button
+              onClick={onSignupClick}
               className="font-sans text-sm font-medium px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
               style={{
                 background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
@@ -58,8 +62,8 @@ export function Navbar() {
                 boxShadow: '0 4px 14px rgba(212,185,106,0.4)',
               }}
             >
-              <Link href="#plans">Begin Free Trial</Link>
-            </Button>
+              Begin Free Trial
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,9 +90,12 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Button 
-                asChild
-                className="mt-2 font-sans text-sm font-medium rounded-full transition-opacity hover:opacity-90"
+              <button
+                onClick={() => {
+                  onSignupClick?.()
+                  setIsMenuOpen(false)
+                }}
+                className="w-full mt-2 font-sans text-sm font-medium py-2.5 rounded-full transition-opacity hover:opacity-90"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
@@ -96,10 +103,8 @@ export function Navbar() {
                   boxShadow: '0 4px 14px rgba(212,185,106,0.4)',
                 }}
               >
-                <Link href="#plans" onClick={() => setIsMenuOpen(false)}>
-                  Begin Free Trial
-                </Link>
-              </Button>
+                Begin Free Trial
+              </button>
             </div>
           </div>
         )}
