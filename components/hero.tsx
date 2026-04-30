@@ -31,7 +31,7 @@ export function Hero() {
             className="object-cover"
             style={{
               opacity: 0.72,
-              filter: 'contrast(1.15) saturate(1.1)',
+              filter: 'contrast(1.1) saturate(0.95) sepia(0.15)',
             }}
             priority
           />

@@ -107,11 +107,11 @@ export function HowItWorks() {
                     fill
                     className="object-cover"
                   />
-                  {/* Soft gradient overlay for better title visibility */}
+                  {/* Soft warm gradient overlay for better title visibility */}
                   <div 
                     className="absolute inset-x-0 bottom-0 h-1/2"
                     style={{
-                      background: 'linear-gradient(to top, rgba(42,75,124,0.65) 0%, rgba(42,75,124,0.3) 50%, rgba(42,75,124,0) 100%)',
+                      background: 'linear-gradient(to top, rgba(62,50,38,0.7) 0%, rgba(62,50,38,0.35) 50%, rgba(62,50,38,0) 100%)',
                     }}
                   />
                   {/* Title Overlay */}
