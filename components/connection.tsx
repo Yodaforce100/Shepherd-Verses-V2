@@ -13,7 +13,7 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="relative pt-6 pb-12 lg:pt-4 lg:pb-20 overflow-hidden">
+    <section id="connection" className="relative pt-10 pb-16 lg:pt-4 lg:pb-20 overflow-hidden">
       {/* Background - clean light wash */}
       <div 
         className="absolute inset-0 z-0"
@@ -47,7 +47,7 @@ export function Connection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Layout */}
-        <div className="lg:hidden text-center py-8">
+        <div className="lg:hidden text-center pt-4 pb-12">
           <CrossDivider />
           <h2 
             className="font-serif text-2xl sm:text-3xl leading-tight mb-2"
