@@ -46,7 +46,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-24 sm:pb-12 lg:pt-32 lg:pb-16 flex items-center justify-center min-h-[70vh]">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8 sm:pt-24 sm:pb-12 lg:pt-32 lg:pb-16 flex items-center justify-center min-h-[70vh]">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto px-0 sm:px-4 w-full">
           {/* Eyebrow - #CF9D3E (gold), font-sans, text-base, font-medium, tracking-widest, uppercase */}
           <div className="flex items-center gap-3 mb-5 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
