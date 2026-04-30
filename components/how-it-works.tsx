@@ -1,21 +1,65 @@
 import Image from "next/image"
 
+// Speech Bubble Icon
+function SpeechBubbleIcon() {
+  return (
+    <svg 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="#5E8DBF" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+      className="flex-shrink-0"
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  )
+}
+
+// Soundwave Icon
+function SoundwaveIcon() {
+  return (
+    <svg 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="#5E8DBF" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+      className="flex-shrink-0"
+    >
+      <rect x="4" y="9" width="2" height="6" rx="1" fill="#5E8DBF" />
+      <rect x="8" y="6" width="2" height="12" rx="1" fill="#5E8DBF" />
+      <rect x="12" y="4" width="2" height="16" rx="1" fill="#5E8DBF" />
+      <rect x="16" y="6" width="2" height="12" rx="1" fill="#5E8DBF" />
+      <rect x="20" y="9" width="2" height="6" rx="1" fill="#5E8DBF" />
+    </svg>
+  )
+}
+
 const steps = [
   {
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hero%20Mobile%20phone%20image%20Apr26-JLFOCxANb5QnS51z8WCdLELMtMraKZ.png",
     title: "Share How You Feel",
-    accentWord: "PAUSE",
-    description: "and name your current emotion—whether you're anxious, tired, or grateful. Your",
-    emphasis: "Shepherd Verses companion",
-    descriptionEnd: "listens to where you are in this moment.",
+    accentWord: "Pause",
+    description: "and name your current emotion — whether you're anxious, tired, or grateful. Your",
+    emphasis: "Shepherd Verses",
+    descriptionEnd: "companion listens to where you are in this moment.",
+    icon: "speech",
   },
   {
     image: "/images/mobile-app-ui-new.jpg",
     title: "Hear a Caring Voice",
-    accentWord: "LISTEN",
+    accentWord: "Listen",
     description: "as your companion shares spoken scripture and affirmations tailored to your feelings, carefully chosen to guide and support you.",
     emphasis: null,
     descriptionEnd: null,
+    icon: "soundwave",
   },
 ]
 
@@ -63,8 +107,15 @@ export function HowItWorks() {
                     fill
                     className="object-cover"
                   />
+                  {/* Enhanced gradient overlay for better title visibility */}
+                  <div 
+                    className="absolute inset-x-0 bottom-0 h-2/3"
+                    style={{
+                      background: 'linear-gradient(to top, rgba(0,28,95,0.75) 0%, rgba(0,28,95,0.4) 40%, rgba(0,28,95,0) 100%)',
+                    }}
+                  />
                   {/* Title Overlay */}
-                  <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/50 to-transparent">
+                  <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
                     <h3 
                       className="font-serif text-lg sm:text-xl text-white"
                       style={{ fontWeight: 500 }}
@@ -74,27 +125,34 @@ export function HowItWorks() {
                   </div>
                 </div>
 
-                {/* Description */}
+                {/* Description with Icon */}
                 <div className="p-4 sm:p-5">
-                  <p 
-                    className="font-sans text-sm sm:text-[15px]"
-                    style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
-                  >
-                    <span 
-                      className="font-semibold tracking-wide"
-                      style={{ color: '#CF9D3E' }}
+                  <div className="flex items-start gap-3">
+                    {/* Icon */}
+                    <div className="mt-0.5">
+                      {step.icon === "speech" ? <SpeechBubbleIcon /> : <SoundwaveIcon />}
+                    </div>
+                    {/* Text */}
+                    <p 
+                      className="font-sans text-sm sm:text-[15px]"
+                      style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
                     >
-                      {step.accentWord}
-                    </span>{" "}
-                    {step.description}
-                    {step.emphasis && (
-                      <>
-                        {" "}
-                        <span style={{ fontWeight: 600 }}>{step.emphasis}</span>{" "}
-                        {step.descriptionEnd}
-                      </>
-                    )}
-                  </p>
+                      <span 
+                        className="font-semibold"
+                        style={{ color: '#001C5F' }}
+                      >
+                        {step.accentWord}
+                      </span>{" "}
+                      {step.description}
+                      {step.emphasis && (
+                        <>
+                          {" "}
+                          <span style={{ fontWeight: 600 }}>{step.emphasis}</span>{" "}
+                          {step.descriptionEnd}
+                        </>
+                      )}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
