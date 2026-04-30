@@ -7,14 +7,14 @@ import { Check } from "lucide-react"
 function GoldDivider({ text }: { text: string }) {
   return (
     <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-12 h-px" style={{ backgroundColor: '#D9B86A' }} />
       <span 
         className="font-sans text-xs font-semibold tracking-[0.2em] uppercase"
-        style={{ color: '#D4B96A' }}
+        style={{ color: '#D9B86A' }}
       >
         {text}
       </span>
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-12 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
