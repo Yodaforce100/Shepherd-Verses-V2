@@ -272,7 +272,9 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
         disabled={loading}
         className="w-full py-3 px-4 rounded-lg font-semibold text-white transition"
         style={{
-          backgroundColor: loading ? '#999' : '#D9B86A',
+          background: loading 
+            ? '#999' 
+            : 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
           cursor: loading ? 'not-allowed' : 'pointer',
         }}
       >
