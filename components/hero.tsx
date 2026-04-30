@@ -83,7 +83,7 @@ export function Hero() {
             className="font-sans text-base sm:text-[16px] max-w-2xl mb-12 sm:mb-16 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{ color: '#2A4B7C', lineHeight: '1.8', fontWeight: 450 }}
           >
-            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance throughout your day.
+            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
           </p>
 
           {/* CTA Button - MUCH LARGER, STRONGER PRESENCE */}
