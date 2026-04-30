@@ -27,7 +27,7 @@ export function Hero() {
         {/* Image at top with fade to bottom */}
         <div className="relative h-64 sm:h-80">
           <Image
-            src="/images/hero-contemplative.jpg"
+            src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[center_25%]"
@@ -115,7 +115,7 @@ export function Hero() {
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-3/5 z-0">
           <Image
-            src="/images/hero-contemplative.jpg"
+            src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-center"
