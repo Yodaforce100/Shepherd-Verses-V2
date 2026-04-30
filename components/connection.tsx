@@ -18,12 +18,12 @@ export function Connection() {
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Image at top with fade to bottom */}
-        <div className="relative h-56 sm:h-64">
+        <div className="relative h-64 sm:h-72">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -35,7 +35,7 @@ export function Connection() {
         </div>
         
         {/* Text content below image */}
-        <div className="text-center px-4 -mt-6 pb-10">
+        <div className="text-center px-4 -mt-2 pb-10">
           <CrossDivider compact />
           <h2 
             className="font-serif text-2xl sm:text-3xl leading-tight mb-1"
