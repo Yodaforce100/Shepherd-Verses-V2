@@ -167,27 +167,29 @@ export function Hero() {
                 Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
               </p>
 
-              {/* CTA Button */}
-              <Button 
-                asChild
-                className="font-sans font-bold text-lg px-14 py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
-                style={{
-                  background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
-                  color: '#001C5F',
-                  border: '2px solid rgba(255,255,255,0.6)',
-                  boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
-                }}
-              >
-                <Link href="#plans">Start Your Morning with Peace</Link>
-              </Button>
+              {/* CTA Button and Trust Line - centered together */}
+              <div className="flex flex-col items-center">
+                <Button 
+                  asChild
+                  className="font-sans font-bold text-lg px-14 py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+                  style={{
+                    background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+                    color: '#001C5F',
+                    border: '2px solid rgba(255,255,255,0.6)',
+                    boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
+                  }}
+                >
+                  <Link href="#plans">Start Your Morning with Peace</Link>
+                </Button>
 
-              {/* Trust Line */}
-              <p 
-                className="font-sans text-sm animate-in fade-in duration-700 delay-500"
-                style={{ color: '#4A5568', opacity: 0.7 }}
-              >
-                Free 7-day trial · Cancel anytime
-              </p>
+                {/* Trust Line */}
+                <p 
+                  className="font-sans text-sm animate-in fade-in duration-700 delay-500"
+                  style={{ color: '#4A5568', opacity: 0.7 }}
+                >
+                  Free 7-day trial · Cancel anytime
+                </p>
+              </div>
             </div>
           </div>
         </div>
