@@ -69,27 +69,24 @@ export function Hero() {
 
           {/* Subtitle - #5E8DBF (blue), font-serif, italic */}
           <p 
-            className="font-serif italic text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+            className="font-serif italic text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
             and guides you with scripture and affirmations.
           </p>
 
-          {/* Divider - #C5B49A (warm grey), h-px decorative - LARGER */}
-          <div className="w-20 h-px mb-10 sm:mb-12 animate-in fade-in duration-700 delay-300" style={{ backgroundColor: '#C5B49A' }} />
-
           {/* Body Text - #2A4B7C (dark blue), font-sans, text-[15px], leading-[1.7] */}
           <p 
-            className="font-sans text-base sm:text-[16px] max-w-2xl mb-12 sm:mb-16 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
-            style={{ color: '#2A4B7C', lineHeight: '1.8', fontWeight: 450 }}
+            className="font-sans text-base sm:text-[16px] max-w-2xl mb-8 sm:mb-10 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
           >
             Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
           </p>
 
-          {/* CTA Button - MUCH LARGER, STRONGER PRESENCE */}
+          {/* CTA Button */}
           <Button 
             asChild
-            className="font-sans font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-6 sm:mb-8 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500"
+            className="font-sans font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 sm:mb-5 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
               color: '#001C5F',
@@ -100,16 +97,16 @@ export function Hero() {
             <Link href="#plans">Start Your Morning with Peace</Link>
           </Button>
 
-          {/* Trust Line - #4A5568 (grey), font-sans, text-xs, opacity-70 */}
+          {/* Trust Line */}
           <p 
-            className="font-sans text-xs sm:text-sm mb-16 sm:mb-20 animate-in fade-in duration-700 delay-600"
+            className="font-sans text-xs sm:text-sm mb-8 sm:mb-10 animate-in fade-in duration-700 delay-500"
             style={{ color: '#4A5568', opacity: 0.7 }}
           >
             Free 7-day trial · Cancel anytime
           </p>
 
-          {/* Scripture Quote - #001C5F (navy), font-serif, italic, text-[15px] */}
-          <blockquote className="font-serif italic text-base sm:text-[16px] sm:max-w-xl animate-in fade-in duration-700 delay-700" style={{ color: '#001C5F', fontWeight: 650 }}>
+          {/* Scripture Quote */}
+          <blockquote className="font-serif italic text-base sm:text-[16px] sm:max-w-xl animate-in fade-in duration-700 delay-600" style={{ color: '#001C5F', fontWeight: 650 }}>
             <p className="mb-3 leading-relaxed">
               <span className="hidden sm:inline">&quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot;</span>
               <span className="sm:hidden">&quot;Come to me, all you who are weary and<br />burdened, and I will give you rest.&quot;</span>
