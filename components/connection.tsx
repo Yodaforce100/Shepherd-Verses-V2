@@ -38,7 +38,7 @@ const moods = [
 
 export function Connection() {
   return (
-    <section id="connection" className="relative py-12 lg:pt-10 lg:pb-20 overflow-hidden">
+    <section id="connection" className="relative pt-6 pb-12 lg:pt-4 lg:pb-20 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
