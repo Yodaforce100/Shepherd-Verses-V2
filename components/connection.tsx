@@ -47,22 +47,26 @@ export function Connection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Layout */}
-        <div className="lg:hidden text-center pt-0 pb-12">
-          <CrossDivider compact />
-          <h2 
-            className="font-serif text-2xl sm:text-3xl leading-tight mb-1"
-            style={{ color: '#001C5F' }}
-          >
-            A companion for every
-          </h2>
+        <div className="lg:hidden text-center">
+          {/* Header group - positioned near top */}
+          <div className="-mt-4">
+            <CrossDivider compact />
+            <h2 
+              className="font-serif text-2xl sm:text-3xl leading-tight mb-0"
+              style={{ color: '#001C5F' }}
+            >
+              A companion for every
+            </h2>
+            <p 
+              className="font-serif text-xl sm:text-2xl"
+              style={{ color: '#5E8DBF', fontWeight: 550 }}
+            >
+              moment of your day
+            </p>
+          </div>
+          {/* Body text - with more space above */}
           <p 
-            className="font-serif text-xl sm:text-2xl mb-5"
-            style={{ color: '#5E8DBF', fontWeight: 550 }}
-          >
-            moment of your day
-          </p>
-          <p 
-            className="font-sans text-[15px] mx-auto max-w-sm"
+            className="font-sans text-[15px] mx-auto max-w-sm mt-8 pb-8"
             style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
           >
             Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments—listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
