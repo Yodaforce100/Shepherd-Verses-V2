@@ -130,7 +130,7 @@ export function Connection() {
               {/* Scripture Quote */}
               <blockquote 
                 className="font-serif italic text-sm"
-                style={{ color: '#001C5F', fontWeight: 500 }}
+                style={{ color: '#001C5F', fontWeight: 600 }}
               >
                 <p className="mb-1">
                   &quot;Cast all your anxiety on him because he cares for you.&quot;
