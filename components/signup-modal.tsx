@@ -24,17 +24,18 @@ export default function SignupModal({ isOpen, onClose, tier = 'companion' }: Sig
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         <div
-          className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative"
+          className="rounded-2xl shadow-lg max-w-md w-full p-6 sm:p-8 relative flex flex-col"
           style={{
-            backgroundColor: '#FAFAF8',
-            border: '1px solid #E8E6E0'
+            backgroundColor: '#FFFFFF',
+            border: '0.5px solid #D5CDB8',
+            boxShadow: '0 8px 30px rgba(0,28,95,0.15)',
           }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 text-2xl font-light transition hover:opacity-50"
+            className="absolute top-4 right-4 text-lg font-light transition hover:opacity-50"
             style={{ color: '#001C5F' }}
             aria-label="Close"
           >
@@ -44,14 +45,20 @@ export default function SignupModal({ isOpen, onClose, tier = 'companion' }: Sig
           {/* Header */}
           <div className="mb-6">
             <h2
-              className="font-serif text-2xl mb-1"
-              style={{ color: '#001C5F' }}
+              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-1"
+              style={{ color: '#D4B96A' }}
             >
               Companion Tier
             </h2>
             <p
-              className="text-sm"
-              style={{ color: '#5E8DBF' }}
+              className="font-serif text-xl leading-tight"
+              style={{ color: '#001C5F', fontWeight: 550 }}
+            >
+              Begin Your Journey
+            </p>
+            <p
+              className="font-sans text-sm mt-2"
+              style={{ color: '#5E8DBF', fontWeight: 450 }}
             >
               7-day free trial. Cancel anytime.
             </p>

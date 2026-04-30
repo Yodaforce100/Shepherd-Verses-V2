@@ -169,8 +169,8 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       {/* Email */}
       <div>
         <label 
-          className="block text-sm font-medium mb-2"
-          style={{ color: '#001C5F' }}
+          className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
+          style={{ color: '#D4B96A' }}
         >
           Email Address
         </label>
@@ -181,12 +181,12 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
           placeholder="your@email.com"
           required
           disabled={loading}
-          className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 disabled:bg-gray-100 transition"
+          className="w-full px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:bg-gray-100 transition"
           style={{
             borderColor: '#D5CDB8',
             border: '1px solid #D5CDB8',
             color: '#001C5F',
-            focusColor: '#5E8DBF'
+            fontSize: '15px'
           }}
         />
       </div>
@@ -194,21 +194,22 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       {/* Country */}
       <div>
         <label 
-          className="block text-sm font-medium mb-2"
-          style={{ color: '#001C5F' }}
+          className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
+          style={{ color: '#D4B96A' }}
         >
-          Country <span className="text-xs" style={{ color: '#999' }}>(for accurate timing)</span>
+          Country
         </label>
         <select
           value={country}
           onChange={(e) => setCountry(e.target.value)}
           required
           disabled={loading}
-          className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 disabled:bg-gray-100 transition"
+          className="w-full px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:bg-gray-100 transition"
           style={{
             borderColor: '#D5CDB8',
             border: '1px solid #D5CDB8',
-            color: country ? '#001C5F' : '#999'
+            color: country ? '#001C5F' : '#999',
+            fontSize: '15px'
           }}
         >
           <option value="">Select your country...</option>
@@ -224,8 +225,8 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       {country && availableTimezones.length > 0 && (
         <div>
           <label 
-            className="block text-sm font-medium mb-2"
-            style={{ color: '#001C5F' }}
+            className="block font-sans text-sm font-semibold tracking-[0.15em] uppercase mb-2"
+            style={{ color: '#D4B96A' }}
           >
             Timezone
           </label>
@@ -234,11 +235,12 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
             onChange={(e) => setTimezone(e.target.value)}
             required
             disabled={loading}
-            className="w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 disabled:bg-gray-100 transition"
+            className="w-full px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:bg-gray-100 transition"
             style={{
               borderColor: '#D5CDB8',
               border: '1px solid #D5CDB8',
-              color: timezone ? '#001C5F' : '#999'
+              color: timezone ? '#001C5F' : '#999',
+              fontSize: '15px'
             }}
           >
             <option value="">Select your timezone...</option>
@@ -260,7 +262,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
             border: '1px solid #FCA5A5'
           }}
         >
-          <p style={{ color: '#DC2626' }} className="text-sm">
+          <p style={{ color: '#DC2626' }} className="text-sm font-sans">
             {error}
           </p>
         </div>
@@ -270,11 +272,14 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-3 px-4 rounded-lg font-semibold text-white transition"
+        className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-6"
         style={{
           background: loading 
             ? '#999' 
             : 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+          color: '#001C5F',
+          border: '1px solid rgba(255,255,255,0.2)',
+          boxShadow: '0 4px 14px rgba(212,185,106,0.4)',
           cursor: loading ? 'not-allowed' : 'pointer',
         }}
       >
@@ -282,7 +287,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
       </button>
 
       {/* Helper text */}
-      <p className="text-xs text-center" style={{ color: '#666' }}>
+      <p className="text-xs text-center font-sans" style={{ color: '#6B7280' }}>
         Takes 30 seconds. Stripe handles payment securely.
       </p>
     </form>
