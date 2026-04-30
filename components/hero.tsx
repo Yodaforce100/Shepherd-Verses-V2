@@ -161,18 +161,10 @@ export function Hero() {
 
               {/* Body Text */}
               <p 
-                className="font-sans text-[15px] mb-4 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                className="font-sans text-[15px] mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
                 Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
-              </p>
-
-              {/* Scripture Quote */}
-              <p 
-                className="font-sans italic text-[14px] mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-350"
-                style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
-              >
-                &quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot; — Matthew 11:28
               </p>
 
               {/* CTA Button */}
