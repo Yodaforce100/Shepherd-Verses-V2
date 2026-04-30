@@ -8,7 +8,7 @@ function SpeechBubbleIcon() {
       height="24" 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke="#5E8DBF" 
+      stroke="#CF9D3E" 
       strokeWidth="1.5" 
       strokeLinecap="round" 
       strokeLinejoin="round"
@@ -27,17 +27,17 @@ function SoundwaveIcon() {
       height="24" 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke="#5E8DBF" 
+      stroke="#CF9D3E" 
       strokeWidth="1.5" 
       strokeLinecap="round" 
       strokeLinejoin="round"
       className="flex-shrink-0"
     >
-      <rect x="4" y="9" width="2" height="6" rx="1" fill="#5E8DBF" />
-      <rect x="8" y="6" width="2" height="12" rx="1" fill="#5E8DBF" />
-      <rect x="12" y="4" width="2" height="16" rx="1" fill="#5E8DBF" />
-      <rect x="16" y="6" width="2" height="12" rx="1" fill="#5E8DBF" />
-      <rect x="20" y="9" width="2" height="6" rx="1" fill="#5E8DBF" />
+      <rect x="4" y="9" width="2" height="6" rx="1" fill="#CF9D3E" />
+      <rect x="8" y="6" width="2" height="12" rx="1" fill="#CF9D3E" />
+      <rect x="12" y="4" width="2" height="16" rx="1" fill="#CF9D3E" />
+      <rect x="16" y="6" width="2" height="12" rx="1" fill="#CF9D3E" />
+      <rect x="20" y="9" width="2" height="6" rx="1" fill="#CF9D3E" />
     </svg>
   )
 }
@@ -88,7 +88,7 @@ export function HowItWorks() {
         </div>
 
         {/* Steps Grid */}
-        <div className="flex flex-col md:flex-row items-start justify-center gap-4 sm:gap-6 lg:gap-10 max-w-2xl sm:max-w-3xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 sm:gap-6 lg:gap-10 max-w-2xl sm:max-w-3xl mx-auto px-4">
           {steps.map((step, index) => (
             <div 
               key={index}
@@ -96,7 +96,7 @@ export function HowItWorks() {
             >
               {/* Card */}
               <div 
-                className="bg-white rounded-2xl overflow-hidden"
+                className="bg-white rounded-2xl overflow-hidden h-full flex flex-col"
                 style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
               >
                 {/* Image with Title Overlay */}
@@ -138,7 +138,7 @@ export function HowItWorks() {
                 </div>
 
                 {/* Description with Icon */}
-                <div className="p-4 sm:p-5 min-h-[120px] sm:min-h-[130px]">
+                <div className="p-4 sm:p-5 flex-grow">
                   <div className="flex items-start gap-3">
                     {/* Icon */}
                     <div className="mt-0.5">
@@ -151,7 +151,7 @@ export function HowItWorks() {
                     >
                       <span 
                         className="font-semibold"
-                        style={{ color: '#001C5F' }}
+                        style={{ color: '#CF9D3E' }}
                       >
                         {step.accentWord}
                       </span>{" "}
