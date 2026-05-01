@@ -39,8 +39,12 @@ export async function POST(request: NextRequest) {
       'metadata[timezone]': timezone || 'unknown',
       'success_url': successUrl,
       'cancel_url': cancelUrl,
-      'subscription_data[trial_period_days]': '3',
     })
+
+    // Only add trial if explicitly set (some prices may not support it)
+    if (tier) {
+      params.append('subscription_data[trial_period_days]', '3')
+    }
 
     const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
