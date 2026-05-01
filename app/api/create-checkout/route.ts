@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
     const cancelUrl = `${baseUrl}/#signup`
 
     console.log('Creating checkout session for:', { priceId, tier, country, timezone, successUrl, cancelUrl })
+    console.log('Price ID being used:', priceId)
 
     // Call Stripe API directly using fetch instead of SDK
     const params = new URLSearchParams({
