@@ -139,7 +139,7 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          priceId: 'price_1TSAH8CBvG3oASGPEKD8pkXz',
+          priceId: 'price_1TOaUUCBvG3oASGPpTATQKy0',
           tier,
           customerEmail: email,
           country,
