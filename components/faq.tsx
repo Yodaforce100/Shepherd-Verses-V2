@@ -64,7 +64,7 @@ export function FAQ() {
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, rgba(242,241,238,0.85) 0%, rgba(247,246,244,0.80) 50%, rgba(242,241,238,0.88) 100%)',
+            background: 'linear-gradient(to bottom, rgba(242,241,238,0.92) 0%, rgba(245,244,242,0.90) 50%, rgba(242,241,238,0.93) 100%)',
           }}
         />
       </div>
