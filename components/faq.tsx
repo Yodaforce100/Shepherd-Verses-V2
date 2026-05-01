@@ -58,7 +58,7 @@ export function FAQ() {
           className="object-cover"
           style={{
             objectPosition: 'center 70%',
-            filter: 'saturate(0.3) brightness(1.15) sepia(0.08)',
+            filter: 'saturate(0.15) brightness(1.35) contrast(0.9)',
           }}
         />
         {/* Light stone overlay to match page color scheme */}
