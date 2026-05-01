@@ -55,9 +55,8 @@ export function FAQ() {
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iStock-2235714260-Qht3ixddkTkvnZnanMXK6AZCQ97zKZ.jpg"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover sm:object-[center_70%] object-[center_60%]"
           style={{
-            objectPosition: 'center 70%',
             filter: 'saturate(0.15) brightness(1.35) contrast(0.9)',
           }}
         />
