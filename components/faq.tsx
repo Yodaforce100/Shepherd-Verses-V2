@@ -58,13 +58,14 @@ export function FAQ() {
           className="object-cover"
           style={{
             objectPosition: 'center 70%',
+            filter: 'saturate(0.3) brightness(1.15) sepia(0.08)',
           }}
         />
         {/* Light stone overlay to match page color scheme */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, rgba(242,241,238,0.92) 0%, rgba(245,244,242,0.90) 50%, rgba(242,241,238,0.93) 100%)',
+            background: 'linear-gradient(to bottom, rgba(242,241,238,0.65) 0%, rgba(245,244,242,0.55) 50%, rgba(242,241,238,0.65) 100%)',
           }}
         />
       </div>
