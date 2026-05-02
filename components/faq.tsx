@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import {
   Accordion,
   AccordionContent,
@@ -49,27 +48,13 @@ function CrossDivider() {
 export function FAQ() {
   return (
     <section id="faq" className="relative pt-10 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
-      {/* Background Image - cross on left side */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iStock-1164883816-2-gSL0XSXOLnHcHGGunyw5N3XNuZ8n6c.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          style={{
-            opacity: 0.9,
-            filter: 'brightness(1.1)',
-            objectPosition: 'left center',
-          }}
-        />
-        {/* White gradient overlay */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.6) 100%)',
-          }}
-        />
-      </div>
+      {/* Subtle gradient background */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(to bottom, #F7F6F4 0%, #F2F1EE 50%, #EDECEA 100%)',
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">

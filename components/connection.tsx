@@ -11,7 +11,14 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="pt-6 pb-12 lg:pt-10 lg:pb-20" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="connection" className="relative pt-6 pb-12 lg:pt-10 lg:pb-20" style={{ backgroundColor: '#F7F6F4' }}>
+      {/* Bottom gradient blend into HowItWorks section */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.7) 100%)',
+        }}
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <CrossDivider />
