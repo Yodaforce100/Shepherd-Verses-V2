@@ -71,18 +71,13 @@ export function HowItWorks() {
         <div className="text-center mb-6 sm:mb-12">
           {/* Heading */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-1 inline-block"
-            style={{ color: '#001C5F' }}
+            className="font-serif text-3xl lg:text-4xl leading-tight mb-2 inline-block px-6 py-2 rounded-lg"
+            style={{ 
+              color: '#001C5F',
+              background: 'linear-gradient(135deg, rgba(212,185,106,0.12) 0%, rgba(242,241,238,0.8) 50%, rgba(212,185,106,0.12) 100%)',
+            }}
           >
             Two simple steps
-            <span 
-              className="block mx-auto mt-2"
-              style={{
-                width: '60px',
-                height: '2px',
-                background: 'linear-gradient(90deg, transparent 0%, #D4B96A 20%, #D4B96A 80%, transparent 100%)',
-              }}
-            />
           </h2>
           {/* Subtitle */}
           <p 
