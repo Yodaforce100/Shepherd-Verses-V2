@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 // Speech Bubble Icon
 function SpeechBubbleIcon() {
@@ -63,6 +66,27 @@ const steps = [
 ]
 
 export function HowItWorks() {
+  const [isVisible, setIsVisible] = useState(false)
+  const headingRef = useRef<HTMLHeadingElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    if (headingRef.current) {
+      observer.observe(headingRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="how-it-works" className="relative py-10 lg:py-14 bg-white">
       {/* Content */}
@@ -71,8 +95,13 @@ export function HowItWorks() {
         <div className="text-center mb-6 sm:mb-12">
           {/* Heading */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
-            style={{ color: '#001C5F' }}
+            ref={headingRef}
+            className="font-serif text-2xl lg:text-3xl leading-tight mb-1 transition-all duration-700 ease-out"
+            style={{ 
+              color: '#001C5F',
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+            }}
           >
             Two simple steps
           </h2>
