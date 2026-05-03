@@ -1,10 +1,10 @@
 'use client'
 
+import { Suspense, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { useState } from 'react'
 import { Check } from 'lucide-react'
 
-export default function WelcomePage() {
+function WelcomeContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const email = searchParams.get('email')
@@ -244,5 +244,13 @@ export default function WelcomePage() {
         </p>
       </div>
     </div>
+  )
+}
+
+export default function WelcomePage() {
+  return (
+    <Suspense fallback={<div style={{ backgroundColor: '#F7F6F4', minHeight: '100vh' }} />}>
+      <WelcomeContent />
+    </Suspense>
   )
 }
