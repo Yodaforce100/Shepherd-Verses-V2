@@ -52,10 +52,10 @@ function WelcomeContent() {
           {/* Success Icon & Heading */}
           <div className="text-center mb-6">
             <div 
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
               style={{ backgroundColor: 'rgba(94, 200, 150, 0.15)' }}
             >
-              <Check className="w-8 h-8" style={{ color: '#5EC896' }} strokeWidth={3} />
+              <Check className="w-7 h-7" style={{ color: '#5EC896' }} strokeWidth={3} />
             </div>
 
             <p 
