@@ -45,203 +45,187 @@ function WelcomeContent() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ backgroundColor: '#F7F6F4' }}>
-      <div className="max-w-2xl w-full">
-        {/* Success Icon */}
-        <div className="text-center mb-8">
-          <div 
-            className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
-          >
-            <Check className="w-10 h-10" style={{ color: '#5E8DBF' }} strokeWidth={3} />
-          </div>
-
-          {/* Heading */}
-          <h1 
-            className="font-serif text-3xl sm:text-4xl mb-3"
-            style={{ color: '#001C5F' }}
-          >
-            Welcome to Shepherd Verses!
-          </h1>
-
-          {/* Subheading */}
-          <p 
-            className="font-sans text-lg mb-2"
-            style={{ color: '#5E8DBF' }}
-          >
-            Your subscription is active.
-          </p>
-        </div>
-
-        {/* Subscription Details Card */}
-        <div 
-          className="rounded-2xl p-6 sm:p-8 mb-8"
-          style={{
-            backgroundColor: '#FFFFFF',
-            border: '1px solid #D5CDB8',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
-          }}
+    <div className="min-h-screen flex flex-col px-4 py-6" style={{ backgroundColor: '#F7F6F4' }}>
+      {/* Header with Logo Link */}
+      <div className="mb-4">
+        <a 
+          href="/"
+          className="text-center font-serif text-xl"
+          style={{ color: '#001C5F', textDecoration: 'none' }}
         >
-          <div className="mb-6">
-            <p style={{ color: '#999', fontSize: '14px', marginBottom: '4px' }}>Plan</p>
+          🙏 Shepherd Verses
+        </a>
+      </div>
+
+      {/* Main Content - Centered */}
+      <div className="flex-1 flex items-center justify-center">
+        <div className="max-w-xl w-full">
+          {/* Success Icon */}
+          <div className="text-center mb-4">
+            <div 
+              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
+              style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
+            >
+              <Check className="w-8 h-8" style={{ color: '#5E8DBF' }} strokeWidth={3} />
+            </div>
+
+            {/* Success Text */}
             <p 
-              className="font-serif text-xl"
+              className="font-sans text-sm font-semibold mb-2"
+              style={{ color: '#5E8DBF' }}
+            >
+              ✓ PAYMENT SUCCESSFUL
+            </p>
+
+            {/* Heading */}
+            <h1 
+              className="font-serif text-2xl sm:text-3xl mb-2"
               style={{ color: '#001C5F' }}
             >
-              {plan === 'annual' ? 'Annual Journey' : 'Monthly Companion'}
-            </p>
-          </div>
+              Welcome to Shepherd Verses!
+            </h1>
 
-          <div className="mb-6">
-            <p style={{ color: '#999', fontSize: '14px', marginBottom: '4px' }}>Free Trial Ends</p>
-            <p 
-              className="font-serif text-xl"
-              style={{ color: '#001C5F' }}
-            >
-              {formattedEndDate}
-            </p>
-          </div>
-
-          <div>
-            <p style={{ color: '#999', fontSize: '14px', marginBottom: '4px' }}>Email</p>
+            {/* Subheading */}
             <p 
               className="font-sans text-base"
               style={{ color: '#666' }}
             >
-              {email || 'your email'}
+              Your subscription is active.
             </p>
           </div>
-        </div>
 
-        {/* Next Steps */}
-        <div className="mb-8">
+          {/* Subscription Details - Compact */}
+          <div 
+            className="rounded-xl p-3 sm:p-4 mb-4 text-sm"
+            style={{
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #D5CDB8',
+            }}
+          >
+            <div className="grid grid-cols-3 gap-2">
+              <div>
+                <p style={{ color: '#999', fontSize: '12px' }}>Plan</p>
+                <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '14px' }}>
+                  {plan === 'annual' ? 'Annual' : 'Monthly'}
+                </p>
+              </div>
+              <div>
+                <p style={{ color: '#999', fontSize: '12px' }}>Trial Ends</p>
+                <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '14px' }}>
+                  {formattedEndDate}
+                </p>
+              </div>
+              <div>
+                <p style={{ color: '#999', fontSize: '12px' }}>Email</p>
+                <p style={{ color: '#666', fontSize: '13px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {email}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Next Steps - Compact */}
           <h2 
-            className="font-serif text-xl mb-6"
+            className="font-serif text-lg mb-3"
             style={{ color: '#001C5F' }}
           >
-            Next: Connect to Telegram
+            Connect to Telegram
           </h2>
 
-          {/* Step 1 */}
-          <div className="flex gap-4 mb-6">
-            <div 
-              className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
-            >
-              1
-            </div>
-            <div>
-              <p 
-                className="font-sans font-semibold mb-1"
-                style={{ color: '#001C5F' }}
+          {/* Steps - Condensed */}
+          <div className="space-y-2 mb-4">
+            {/* Step 1 */}
+            <div className="flex gap-2 text-sm">
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs"
+                style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
               >
-                Click the button below
-              </p>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Open Telegram and join our bot
-              </p>
+                1
+              </div>
+              <div>
+                <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '13px' }}>Click button below</p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex gap-2 text-sm">
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs"
+                style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
+              >
+                2
+              </div>
+              <div>
+                <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '13px' }}>Click /start in bot</p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex gap-2 text-sm">
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs"
+                style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
+              >
+                3
+              </div>
+              <div>
+                <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '13px' }}>Set your message time</p>
+              </div>
             </div>
           </div>
 
-          {/* Step 2 */}
-          <div className="flex gap-4 mb-6">
-            <div 
-              className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
-            >
-              2
-            </div>
-            <div>
-              <p 
-                className="font-sans font-semibold mb-1"
-                style={{ color: '#001C5F' }}
+          {!emailSent ? (
+            <>
+              {/* Primary CTA: Open Telegram */}
+              <a 
+                href="https://t.me/ShepherdVersesBot?start=connect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-center font-sans font-medium text-sm py-3 rounded-full transition-all mb-2"
+                style={{
+                  background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+                  color: '#001C5F',
+                  textDecoration: 'none',
+                }}
               >
-                Click /start
-              </p>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Confirm your email to link your account
-              </p>
-            </div>
-          </div>
+                Open Telegram Bot →
+              </a>
 
-          {/* Step 3 */}
-          <div className="flex gap-4 mb-8">
-            <div 
-              className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
-            >
-              3
-            </div>
-            <div>
-              <p 
-                className="font-sans font-semibold mb-1"
-                style={{ color: '#001C5F' }}
+              {/* Secondary Option: Email */}
+              <button
+                onClick={handleSendEmail}
+                disabled={loading}
+                className="w-full font-sans font-medium text-xs py-2 rounded-full transition-all text-center"
+                style={{
+                  color: '#5E8DBF',
+                  backgroundColor: 'transparent',
+                  border: '1px solid #D5CDB8',
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                  opacity: loading ? 0.6 : 1,
+                }}
               >
-                Set your time
-              </p>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Choose when you want to receive your daily message
+                {loading ? 'Sending...' : 'Email link instead'}
+              </button>
+            </>
+          ) : (
+            <div 
+              className="p-2 rounded text-center text-xs"
+              style={{ backgroundColor: 'rgba(94, 141, 191, 0.1)' }}
+            >
+              <p style={{ color: '#5E8DBF' }}>
+                ✓ Check your email! We'll remind you in 24 hours.
               </p>
             </div>
-          </div>
-        </div>
+          )}
 
-        {!emailSent ? (
-          <>
-            {/* Primary CTA: Open Telegram */}
-            <a 
-              href="https://t.me/ShepherdVersesBot?start=connect"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center font-sans font-medium text-base py-4 rounded-full transition-all mb-4"
-              style={{
-                background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
-                color: '#001C5F',
-                textDecoration: 'none',
-              }}
-            >
-              Open Telegram Bot →
-            </a>
-
-            {/* Secondary Option: Email */}
-            <button
-              onClick={handleSendEmail}
-              disabled={loading}
-              className="w-full font-sans font-medium text-sm py-3 rounded-full transition-all text-center"
-              style={{
-                color: '#5E8DBF',
-                backgroundColor: 'transparent',
-                border: '1px solid #D5CDB8',
-                cursor: loading ? 'not-allowed' : 'pointer',
-                opacity: loading ? 0.6 : 1,
-              }}
-            >
-              {loading ? 'Sending...' : 'Send me the link via email instead'}
-            </button>
-          </>
-        ) : (
-          <div 
-            className="p-4 rounded-lg text-center"
-            style={{ backgroundColor: 'rgba(94, 141, 191, 0.1)' }}
+          {/* Helper Text */}
+          <p 
+            className="text-center font-sans text-xs mt-2"
+            style={{ color: '#999' }}
           >
-            <p 
-              className="font-sans"
-              style={{ color: '#5E8DBF' }}
-            >
-              ✓ Check your email! We've sent you the Telegram link. 
-              <br />
-              <span style={{ fontSize: '14px' }}>We'll also remind you in 24 hours.</span>
-            </p>
-          </div>
-        )}
-
-        {/* Helper Text */}
-        <p 
-          className="text-center font-sans text-sm mt-6"
-          style={{ color: '#999' }}
-        >
-          Need help? Email us at support@shepherdverses.com
-        </p>
+            Questions? Email support@shepherdverses.com
+          </p>
+        </div>
       </div>
     </div>
   )
