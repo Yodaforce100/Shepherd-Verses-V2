@@ -76,10 +76,10 @@ function WelcomeContent() {
 
             {/* Subheading */}
             <p 
-              className="font-sans text-base"
-              style={{ color: '#5E8DBF' }}
+              className="font-sans text-sm"
+              style={{ color: '#5E8DBF', lineHeight: '1.5' }}
             >
-              Your subscription is active.
+              Your subscription is confirmed. Now let's connect you to Telegram so you can start receiving your daily messages.
             </p>
           </div>
 
