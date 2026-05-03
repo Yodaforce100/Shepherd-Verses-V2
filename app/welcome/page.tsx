@@ -82,7 +82,7 @@ function WelcomeContent() {
 
           {/* Subscription Details - Minimal */}
           <div 
-            className="rounded-lg p-4 mb-6 text-xs"
+            className="rounded-2xl p-4 mb-6 text-xs"
             style={{
               backgroundColor: '#FFFFFF',
               border: '1px solid #D5CDB8',
@@ -125,7 +125,7 @@ function WelcomeContent() {
 
           {/* Telegram Connection Box */}
           <div 
-            className="rounded-lg p-5 mb-6"
+            className="rounded-2xl p-5 mb-6"
             style={{
               backgroundColor: '#FFFFFF',
               border: '1px solid #D5CDB8',
