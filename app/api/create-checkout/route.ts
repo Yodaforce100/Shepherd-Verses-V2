@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
 
     // Use hard-coded base URL since NEXT_PUBLIC_BASE_URL might not be available server-side
     const baseUrl = 'https://shepherdverses.com'
-    const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`
+    const successUrl = `${baseUrl}/welcome?session_id={CHECKOUT_SESSION_ID}`
     const cancelUrl = `${baseUrl}/#signup`
 
     console.log('Creating checkout session for:', { priceId, tier, country, timezone, successUrl, cancelUrl })
