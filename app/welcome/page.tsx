@@ -66,7 +66,7 @@ function WelcomeContent() {
             </p>
 
             <h1 
-              className="font-serif text-2xl mb-3"
+              className="font-serif text-3xl sm:text-4xl mb-3"
               style={{ color: '#001C5F' }}
             >
               Welcome to Shepherd Verses!
