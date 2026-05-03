@@ -46,33 +46,22 @@ function WelcomeContent() {
 
   return (
     <div className="min-h-screen flex flex-col px-4 py-6" style={{ backgroundColor: '#F7F6F4' }}>
-      {/* Header with Logo Link */}
-      <div className="mb-4">
-        <a 
-          href="/"
-          className="text-center font-serif text-xl"
-          style={{ color: '#001C5F', textDecoration: 'none' }}
-        >
-          🙏 Shepherd Verses
-        </a>
-      </div>
-
       {/* Main Content - Centered */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="max-w-xl w-full">
+        <div className="max-w-sm w-full">
           {/* Success Icon */}
           <div className="text-center mb-4">
             <div 
               className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
-              style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
+              style={{ backgroundColor: 'rgba(94, 200, 150, 0.15)' }}
             >
-              <Check className="w-8 h-8" style={{ color: '#5E8DBF' }} strokeWidth={3} />
+              <Check className="w-8 h-8" style={{ color: '#5EC896' }} strokeWidth={3} />
             </div>
 
             {/* Success Text */}
             <p 
               className="font-sans text-sm font-semibold mb-2"
-              style={{ color: '#5E8DBF' }}
+              style={{ color: '#5EC896' }}
             >
               ✓ PAYMENT SUCCESSFUL
             </p>
@@ -88,7 +77,7 @@ function WelcomeContent() {
             {/* Subheading */}
             <p 
               className="font-sans text-base"
-              style={{ color: '#666' }}
+              style={{ color: '#5E8DBF' }}
             >
               Your subscription is active.
             </p>
@@ -102,24 +91,36 @@ function WelcomeContent() {
               border: '1px solid #D5CDB8',
             }}
           >
-            <div className="grid grid-cols-3 gap-2">
+            <div className="space-y-2">
               <div>
-                <p style={{ color: '#999', fontSize: '12px' }}>Plan</p>
+                <p style={{ color: '#5E8DBF', fontSize: '11px', fontWeight: 'bold', textTransform: 'uppercase' }}>Plan</p>
                 <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '14px' }}>
-                  {plan === 'annual' ? 'Annual' : 'Monthly'}
+                  {plan === 'annual' ? 'Annual Journey' : 'Monthly Companion'}
                 </p>
               </div>
               <div>
-                <p style={{ color: '#999', fontSize: '12px' }}>Trial Ends</p>
+                <p style={{ color: '#5E8DBF', fontSize: '11px', fontWeight: 'bold', textTransform: 'uppercase' }}>Trial Ends</p>
                 <p style={{ color: '#001C5F', fontWeight: 'bold', fontSize: '14px' }}>
                   {formattedEndDate}
                 </p>
               </div>
               <div>
-                <p style={{ color: '#999', fontSize: '12px' }}>Email</p>
-                <p style={{ color: '#666', fontSize: '13px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {email}
-                </p>
+                <p style={{ color: '#5E8DBF', fontSize: '11px', fontWeight: 'bold', textTransform: 'uppercase' }}>Email</p>
+                <input 
+                  type="email"
+                  value={email || ''}
+                  disabled
+                  style={{
+                    width: '100%',
+                    padding: '8px 12px',
+                    borderRadius: '6px',
+                    border: '1px solid #D5CDB8',
+                    fontSize: '13px',
+                    color: '#001C5F',
+                    backgroundColor: '#F9F8F6',
+                    fontFamily: 'monospace',
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -181,7 +182,7 @@ function WelcomeContent() {
                 href="https://t.me/ShepherdVersesBot?start=connect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full block text-center font-sans font-medium text-sm py-3 rounded-full transition-all mb-2"
+                className="inline-block text-center font-sans font-medium text-sm py-3 px-8 rounded-full transition-all mb-2 mx-auto block"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
@@ -195,7 +196,7 @@ function WelcomeContent() {
               <button
                 onClick={handleSendEmail}
                 disabled={loading}
-                className="w-full font-sans font-medium text-xs py-2 rounded-full transition-all text-center"
+                className="block mx-auto font-sans font-medium text-xs py-2 px-6 rounded-full transition-all text-center"
                 style={{
                   color: '#5E8DBF',
                   backgroundColor: 'transparent',
@@ -210,9 +211,9 @@ function WelcomeContent() {
           ) : (
             <div 
               className="p-2 rounded text-center text-xs"
-              style={{ backgroundColor: 'rgba(94, 141, 191, 0.1)' }}
+              style={{ backgroundColor: 'rgba(94, 200, 150, 0.1)' }}
             >
-              <p style={{ color: '#5E8DBF' }}>
+              <p style={{ color: '#5EC896' }}>
                 ✓ Check your email! We'll remind you in 24 hours.
               </p>
             </div>
@@ -220,12 +221,23 @@ function WelcomeContent() {
 
           {/* Helper Text */}
           <p 
-            className="text-center font-sans text-xs mt-2"
-            style={{ color: '#999' }}
+            className="text-center font-sans text-xs mt-3"
+            style={{ color: '#5E8DBF' }}
           >
             Questions? Email support@shepherdverses.com
           </p>
         </div>
+      </div>
+
+      {/* Footer Logo */}
+      <div className="text-center mt-4">
+        <a 
+          href="/"
+          className="font-serif text-lg inline-block"
+          style={{ color: '#001C5F', textDecoration: 'none' }}
+        >
+          🙏 Shepherd Verses
+        </a>
       </div>
     </div>
   )
