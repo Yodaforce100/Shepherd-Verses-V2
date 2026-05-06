@@ -154,6 +154,10 @@ export default function SignupForm({ tier = 'companion', onSuccess }: SignupForm
 
       const data = await response.json()
       if (data.url) {
+        // Store email in localStorage for welcome page fallback
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('signup_email', email)
+        }
         window.location.href = data.url
       } else {
         throw new Error('No checkout URL returned')

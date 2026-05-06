@@ -7,9 +7,14 @@ import { Check } from 'lucide-react'
 function WelcomeContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
-  const email = searchParams.get('email')
+  let email = searchParams.get('email')
   const plan = searchParams.get('plan') || 'companion'
   const trialDays = 3
+  
+  // Fallback: try to get email from localStorage if not in URL params
+  if (!email && typeof window !== 'undefined') {
+    email = localStorage.getItem('signup_email') || ''
+  }
   
   const [emailSent, setEmailSent] = useState(false)
   const [loading, setLoading] = useState(false)
