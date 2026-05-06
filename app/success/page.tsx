@@ -9,8 +9,27 @@ function SuccessContent() {
 
   useEffect(() => {
     if (sessionId) {
-      // Simple redirect using window.location
-      window.location.href = `/welcome?session_id=${sessionId}`
+      // Fetch session data to get email and plan
+      const fetchAndRedirect = async () => {
+        try {
+          const response = await fetch(`/api/get-session-data?session_id=${sessionId}`)
+          const data = await response.json()
+          
+          if (data.email && data.plan) {
+            // Redirect with email and plan included
+            window.location.href = `/welcome?session_id=${sessionId}&email=${encodeURIComponent(data.email)}&plan=${encodeURIComponent(data.plan)}`
+          } else {
+            // Fallback redirect with just session_id
+            window.location.href = `/welcome?session_id=${sessionId}`
+          }
+        } catch (error) {
+          console.error('Error fetching session data:', error)
+          // Fallback redirect
+          window.location.href = `/welcome?session_id=${sessionId}`
+        }
+      }
+      
+      fetchAndRedirect()
     }
   }, [sessionId])
 
