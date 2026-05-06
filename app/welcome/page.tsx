@@ -178,19 +178,27 @@ function WelcomeContent() {
             {!emailSent ? (
               <>
                 {/* Primary Button */}
-                <a 
-                  href="https://t.me/ShepherdVersesBot?start=connect"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center font-sans font-medium text-sm py-3 rounded-full transition-all mb-3"
-                  style={{
-                    background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
-                    color: '#001C5F',
-                    textDecoration: 'none',
-                  }}
-                >
-                  Open Telegram Bot →
-                </a>
+                {(() => {
+                  // Encode email in base64 for URL parameter (using btoa for browser)
+                  const encodedEmail = email ? btoa(email) : '';
+                  const telegramUrl = `https://t.me/ShepherdVersesBot?start=${encodedEmail}`;
+                  
+                  return (
+                    <a 
+                      href={telegramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center font-sans font-medium text-sm py-3 rounded-full transition-all mb-3"
+                      style={{
+                        background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+                        color: '#001C5F',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      Open Telegram Bot →
+                    </a>
+                  );
+                })()}
 
                 {/* Secondary Button */}
                 <button
