@@ -184,9 +184,7 @@ function WelcomeContent() {
               <>
                 {/* Primary Button */}
                 {(() => {
-                  // Encode email in base64 for URL parameter (using btoa for browser)
-                  const encodedEmail = email ? btoa(email) : '';
-                  const telegramUrl = `https://t.me/ShepherdVersesBot?start=${encodedEmail}`;
+                  const telegramUrl = `https://t.me/Shepherdverses_bot`;
                   
                   return (
                     <a 

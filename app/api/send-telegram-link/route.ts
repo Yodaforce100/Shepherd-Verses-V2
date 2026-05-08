@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     console.log(`📧 Sending Telegram link to: ${email}`)
 
     // In production, send email here with:
-    // - Telegram bot link: https://t.me/ShepherdVersesBot?start=connect
+    // - Telegram bot link: https://t.me/Shepherdverses_bot?start=connect
     // - Instructions to join bot
     // - Reactivation link (valid for 7 days)
 
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
       
       To start receiving your daily messages, please join our Telegram bot:
       
-      👉 https://t.me/ShepherdVersesBot?start=connect
+      👉 https://t.me/Shepherdverses_bot?start=connect
       
       Once you're in, click /start and confirm your email to link your account.
       
