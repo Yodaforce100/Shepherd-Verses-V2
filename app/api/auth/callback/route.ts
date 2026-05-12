@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
-
 export async function GET(req: NextRequest) {
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  )
+
   const { searchParams } = new URL(req.url)
   const token = searchParams.get('token')
   const email = searchParams.get('email')
@@ -15,7 +15,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL('/login?error=invalid', req.url))
   }
 
-  // Look up subscriber with this token
   const { data: subscriber } = await supabase
     .from('subscribers')
     .select('id, email, metadata')
@@ -27,19 +26,14 @@ export async function GET(req: NextRequest) {
   }
 
   const meta = subscriber.metadata as any
-  const storedToken = meta?.magic_link_token
-  const expiresAt = meta?.magic_link_expires
-
-  // Validate token and expiry
-  if (!storedToken || storedToken !== token) {
+  if (!meta?.magic_link_token || meta.magic_link_token !== token) {
     return NextResponse.redirect(new URL('/login?error=invalid', req.url))
   }
 
-  if (!expiresAt || new Date() > new Date(expiresAt)) {
+  if (!meta.magic_link_expires || new Date() > new Date(meta.magic_link_expires)) {
     return NextResponse.redirect(new URL('/login?error=expired', req.url))
   }
 
-  // Clear the token so it can't be reused
   await supabase
     .from('subscribers')
     .update({
@@ -48,15 +42,13 @@ export async function GET(req: NextRequest) {
     })
     .eq('id', subscriber.id)
 
-  // Set a simple session cookie with the subscriber ID
   const response = NextResponse.redirect(new URL('/account', req.url))
   response.cookies.set('sv_session', subscriber.id, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 30, // 30 days
+    maxAge: 60 * 60 * 24 * 30,
     path: '/'
   })
-
   return response
 }
