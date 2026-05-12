@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-// Country-to-Timezones mapping
+// Country-to-Timezones mapping — city names, no DST duplicates
 const COUNTRY_TIMEZONES: Record<string, { name: string; zones: string[] }> = {
   AU: {
     name: 'Australia',
@@ -10,55 +10,55 @@ const COUNTRY_TIMEZONES: Record<string, { name: string; zones: string[] }> = {
   },
   US: {
     name: 'United States',
-    zones: ['EST (East)', 'CST (Central)', 'MST (Mountain)', 'PST (Pacific)', 'AKT (Alaska)', 'HST (Hawaii)']
+    zones: ['New York (Eastern)', 'Chicago (Central)', 'Denver (Mountain)', 'Los Angeles (Pacific)', 'Anchorage (Alaska)', 'Honolulu (Hawaii)']
   },
   CA: {
     name: 'Canada',
-    zones: ['EST (East)', 'CST (Central)', 'MST (Mountain)', 'PST (Pacific)']
+    zones: ['Toronto (Eastern)', 'Winnipeg (Central)', 'Calgary (Mountain)', 'Vancouver (Pacific)', 'Halifax (Atlantic)']
   },
   GB: {
     name: 'United Kingdom',
-    zones: ['GMT (UTC+0)', 'BST (UTC+1)']
+    zones: ['London']
   },
   NZ: {
     name: 'New Zealand',
-    zones: ['NZDT (Summer)', 'NZST (Winter)']
+    zones: ['Auckland']
   },
   IE: {
     name: 'Ireland',
-    zones: ['GMT (UTC+0)', 'IST (UTC+1)']
+    zones: ['Dublin']
   },
   DE: {
     name: 'Germany',
-    zones: ['CET (UTC+1)', 'CEST (UTC+2)']
+    zones: ['Berlin']
   },
   FR: {
     name: 'France',
-    zones: ['CET (UTC+1)', 'CEST (UTC+2)']
+    zones: ['Paris']
   },
   JP: {
     name: 'Japan',
-    zones: ['JST (Japan Standard)']
+    zones: ['Tokyo']
   },
   SG: {
     name: 'Singapore',
-    zones: ['SGT (Singapore)']
+    zones: ['Singapore']
   },
   IN: {
     name: 'India',
-    zones: ['IST (India Standard)']
+    zones: ['Mumbai / New Delhi']
   },
   BR: {
     name: 'Brazil',
-    zones: ['BRT (Brasília)', 'BRST (Summer)']
+    zones: ['São Paulo', 'Manaus (Amazon)', 'Fortaleza (Brasília)']
   },
   MX: {
     name: 'Mexico',
-    zones: ['CST (Central)', 'MST (Mountain)', 'PST (Pacific)']
+    zones: ['Mexico City (Central)', 'Hermosillo (Mountain)', 'Tijuana (Pacific)']
   },
   ZA: {
     name: 'South Africa',
-    zones: ['SAST (South African)']
+    zones: ['Johannesburg / Cape Town']
   },
   OTHER: {
     name: 'Other',
