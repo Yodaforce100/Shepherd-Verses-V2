@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 const COUNTRY_TIMEZONES: Record<string, { name: string; zones: string[] }> = {
   AU: {
     name: 'Australia',
-    zones: ['AEDT (Sydney)', 'AEST (Sydney)', 'ACDT (Adelaide)', 'ACST (Adelaide)', 'AWST (Perth)']
+    zones: ['Sydney / Melbourne', 'Adelaide', 'Brisbane', 'Perth', 'Darwin']
   },
   US: {
     name: 'United States',
