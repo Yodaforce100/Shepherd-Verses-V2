@@ -27,7 +27,7 @@ export function Hero({ onSignupClick }: HeroProps) {
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
       {/* Mobile Layout */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-80">
           <Image
@@ -107,7 +107,7 @@ export function Hero({ onSignupClick }: HeroProps) {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block relative py-16">
+      <div className="hidden lg:block relative py-16">
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-3/5 z-0">
           <Image
