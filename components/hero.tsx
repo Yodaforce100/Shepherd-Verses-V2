@@ -29,7 +29,7 @@ export function Hero({ onSignupClick }: HeroProps) {
       {/* Mobile Layout - Stacked for phones and small tablets */}
       <div className="md:hidden">
         {/* Image at top with fade to bottom */}
-        <div className="relative h-72 sm:h-96">
+        <div className="relative h-72 sm:h-[28rem]">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
