@@ -17,6 +17,7 @@ export function Navbar({ onSignupClick }: NavbarProps) {
     { href: "#hero", label: "Home" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#plans", label: "Plans" },
+    { href: "/login", label: "My Account" },
   ]
 
   return (
