@@ -127,7 +127,7 @@ export default function AccountPage() {
       {/* Navbar */}
       <div style={{ padding: '20px 32px' }}>
         <Link href="/">
-          <Image src="/images/shepherd-verses-logo.svg" alt="Shepherd Verses" width={180} height={56} style={{ height: '40px', width: 'auto' }} />
+          <Image src="/images/shepherd-verses-logo-new.png" alt="Shepherd Verses" width={180} height={56} style={{ height: '40px', width: 'auto' }} />
         </Link>
       </div>
 

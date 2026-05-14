@@ -41,7 +41,7 @@ export function Navbar({ onSignupClick }: NavbarProps) {
           <Link href="/" className="flex items-center justify-center lg:flex-1 focus:outline-none">
             <div className="flex items-center justify-center" style={{ border: 'none', outline: 'none' }}>
               <Image
-                src="/images/shepherd-verses-logo.svg"
+                src="/images/shepherd-verses-logo-new.png"
                 alt="Shepherd Verses"
                 width={320}
                 height={100}

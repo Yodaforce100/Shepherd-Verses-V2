@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
       html: `
         <div style="font-family: Inter, Georgia, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 24px; background: #F2F1EE;">
           <div style="background: white; border-radius: 20px; padding: 44px 36px; text-align: center; box-shadow: 0 2px 20px rgba(0,0,0,0.06);">
-            <div style="font-size: 40px; margin-bottom: 16px;">🙏</div>
+            <img src="https://shepherdverses.com/images/shepherd-verses-icon.png" alt="Shepherd Verses" width="80" height="80" style="margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
             <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #CF9D3E; margin: 0 0 8px;">My Account</p>
             <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 400; color: #001C5F; margin: 0 0 12px;">Welcome back, ${firstName}</h1>
             <p style="color: #2A4B7C; font-size: 14px; line-height: 1.6; margin: 0 0 32px;">Click the button below to access your account. This link expires in 15 minutes.</p>
