@@ -109,7 +109,7 @@ export function Hero({ onSignupClick }: HeroProps) {
       {/* Desktop Layout */}
       <div className="hidden lg:block relative py-16">
         {/* Left Image with Fade to Right */}
-        <div className="absolute inset-y-0 left-0 w-3/5 z-0">
+        <div className="absolute inset-y-0 left-0 w-1/2 xl:w-3/5 z-0">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
@@ -135,7 +135,7 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Text Content - Right side */}
         <div className="relative z-10 container mx-auto px-8">
           <div className="flex justify-end py-8">
-            <div className="max-w-md text-left mr-8">
+            <div className="max-w-md text-left mr-4 xl:mr-8">
               {/* Eyebrow */}
               <div className="flex items-center gap-3 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <SoundwaveBars />
