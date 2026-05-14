@@ -26,8 +26,8 @@ export function Hero({ onSignupClick }: HeroProps) {
   return (
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
-      {/* Mobile Layout */}
-      <div className="sm:hidden">
+      {/* Mobile Layout - Only on very small screens (below 480px) */}
+      <div className="hidden">
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-80">
           <Image
@@ -106,10 +106,10 @@ export function Hero({ onSignupClick }: HeroProps) {
         </div>
       </div>
 
-      {/* Desktop Layout */}
-      <div className="hidden sm:block relative py-16">
+      {/* Desktop Layout - Always visible, scales down gracefully */}
+      <div className="block relative py-8 sm:py-12 md:py-16">
         {/* Left Image with Fade to Right */}
-        <div className="absolute inset-y-0 left-0 w-2/5 md:w-1/2 lg:w-3/5 z-0">
+        <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
@@ -135,12 +135,12 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Text Content - Right side */}
         <div className="relative z-10 container mx-auto px-8">
           <div className="flex justify-end py-8">
-            <div className="max-w-md text-left mr-2 md:mr-4 lg:mr-8">
+            <div className="max-w-xs sm:max-w-sm md:max-w-md text-left mr-1 sm:mr-2 md:mr-4 lg:mr-8">
               {/* Eyebrow */}
-              <div className="flex items-center gap-3 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <SoundwaveBars />
                 <span 
-                  className="font-sans text-base font-medium tracking-widest uppercase"
+                  className="font-sans text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase"
                   style={{ color: '#CF9D3E' }}
                 >
                   Spoken Scripture ✝
@@ -149,7 +149,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Headline */}
               <h1 
-                className="font-serif text-4xl lg:text-5xl leading-tight mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-2 sm:mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
                 style={{ color: '#001C5F' }}
               >
                 Wake up to a voice that hears you
@@ -157,7 +157,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Subtitle */}
               <p 
-                className="font-serif italic text-xl lg:text-2xl mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+                className="font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
                 style={{ color: '#5E8DBF', fontWeight: 550 }}
               >
                 and guides you with scripture and affirmations.
@@ -165,7 +165,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Body Text */}
               <p 
-                className="font-sans text-[15px] mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                className="font-sans text-xs sm:text-sm md:text-[15px] mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
                 Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
@@ -174,7 +174,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* CTA Button */}
               <Button 
                 asChild
-                className="font-sans font-bold text-lg px-14 py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+                className="font-sans font-bold text-sm sm:text-base md:text-lg px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
