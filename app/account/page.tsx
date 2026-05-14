@@ -112,7 +112,7 @@ export default function AccountPage() {
   if (loading) {
     return (
       <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter, system-ui, sans-serif' }}>
-        <p style={{ color: '#4A5568' }}>Loading your account...</p>
+        <p style={{ color: '#2A4B7C' }}>Loading your account...</p>
       </div>
     )
   }
@@ -145,7 +145,7 @@ export default function AccountPage() {
           }}>
             {subscriber.first_name ? `Welcome back, ${subscriber.first_name}` : 'Your Account'}
           </h1>
-          <p style={{ color: '#6B7280', fontSize: '13px', marginTop: '4px' }}>{subscriber.email}</p>
+          <p style={{ color: '#2A4B7C', fontSize: '13px', marginTop: '4px' }}>{subscriber.email}</p>
         </div>
 
         {/* Subscription card */}
@@ -156,7 +156,7 @@ export default function AccountPage() {
               <p style={{ color: '#001C5F', fontWeight: 600, margin: '0 0 2px', fontSize: '16px' }}>
                 {subscriber.tier === 'annual' ? 'Annual Companion' : 'Monthly Companion'}
               </p>
-              <p style={{ color: '#6B7280', fontSize: '13px', margin: 0 }}>
+              <p style={{ color: '#2A4B7C', fontSize: '13px', margin: 0 }}>
                 {isCanceled ? 'Cancelled' : 'Active'}
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function AccountPage() {
         {/* Daily message time card */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '12px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
           <p style={LABEL_STYLE}>Daily Message Time</p>
-          <p style={{ color: '#4A5568', fontSize: '14px', marginBottom: '16px', marginTop: 0 }}>
+          <p style={{ color: '#2A4B7C', fontSize: '14px', marginBottom: '16px', marginTop: 0 }}>
             {subscriber.preferred_time
               ? <>Your message arrives at <strong style={{ color: '#001C5F' }}>{formatTime(subscriber.preferred_time)}</strong> ({subscriber.timezone})</>
               : 'No preferred time set yet.'

@@ -81,7 +81,7 @@ export default function LoginPage() {
                 Welcome Back
               </h1>
 
-              <p style={{ color: '#4A6FA5', fontSize: '14px', marginBottom: '28px', marginTop: 0, lineHeight: 1.5 }}>
+              <p style={{ color: '#2A4B7C', fontSize: '14px', marginBottom: '28px', marginTop: 0, lineHeight: 1.5 }}>
                 Enter your email and we'll send you a link to access your account.
               </p>
 
@@ -190,7 +190,7 @@ export default function LoginPage() {
                   Link sent!
                 </h2>
 
-                <p style={{ color: '#4A5568', fontSize: '14px', lineHeight: 1.6, marginBottom: '20px' }}>
+                <p style={{ color: '#2A4B7C', fontSize: '14px', lineHeight: 1.6, marginBottom: '20px' }}>
                   We sent a login link to <strong>{email}</strong>. Click the link in the email to access your account.
                 </p>
 

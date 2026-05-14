@@ -48,11 +48,11 @@ export async function POST(req: NextRequest) {
             <div style="font-size: 40px; margin-bottom: 16px;">🙏</div>
             <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #CF9D3E; margin: 0 0 8px;">My Account</p>
             <h1 style="font-family: Georgia, serif; font-size: 26px; font-weight: 400; color: #001C5F; margin: 0 0 12px;">Welcome back, ${firstName}</h1>
-            <p style="color: #4A6FA5; font-size: 14px; line-height: 1.6; margin: 0 0 32px;">Click the button below to access your account. This link expires in 15 minutes.</p>
+            <p style="color: #2A4B7C; font-size: 14px; line-height: 1.6; margin: 0 0 32px;">Click the button below to access your account. This link expires in 15 minutes.</p>
             <a href="${loginUrl}" style="display: inline-block; background: linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%); color: #001C5F; text-decoration: none; padding: 16px 40px; border-radius: 50px; font-size: 15px; font-weight: 600; box-shadow: 0 4px 14px rgba(212,185,106,0.4);">Access my account</a>
             <p style="color: #9CA3AF; font-size: 13px; margin-top: 24px; margin-bottom: 0;">If you didn't request this, you can safely ignore this email.</p>
           </div>
-          <p style="text-align: center; color: #9CA3AF; font-size: 12px; margin-top: 20px;">Shepherd Verses · <a href="https://shepherdverses.com" style="color: #4A6FA5; text-decoration: none;">shepherdverses.com</a></p>
+          <p style="text-align: center; color: #9CA3AF; font-size: 12px; margin-top: 20px;">Shepherd Verses · <a href="https://shepherdverses.com" style="color: #2A4B7C; text-decoration: none;">shepherdverses.com</a></p>
         </div>
       `
     })
