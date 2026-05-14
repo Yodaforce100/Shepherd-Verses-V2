@@ -23,7 +23,7 @@ export function Footer() {
           <div className="flex justify-center lg:flex-1">
             <Link href="/">
               <Image
-                src="/images/shepherd-verses-logo-new.png"
+                src="/images/shepherd-verses-logo-2x.png"
                 alt="Shepherd Verses"
                 width={220}
                 height={70}
