@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -32,113 +34,179 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      backgroundColor: '#F2F1EE',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '24px',
-      fontFamily: 'Inter, sans-serif'
-    }}>
-      <div style={{
-        backgroundColor: 'white',
-        borderRadius: '16px',
-        padding: '48px 40px',
-        maxWidth: '420px',
-        width: '100%',
-        boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
-        textAlign: 'center'
-      }}>
-        <div style={{ fontSize: '32px', marginBottom: '16px' }}>🙏</div>
-        <h1 style={{
-          fontFamily: 'Lora, serif',
-          fontSize: '26px',
-          color: '#3A4A5A',
-          marginBottom: '8px',
-          fontWeight: 600
+    <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', fontFamily: 'Inter, system-ui, sans-serif' }}>
+
+      {/* Navbar */}
+      <div style={{ padding: '20px 32px' }}>
+        <Link href="/">
+          <Image src="/images/shepherd-verses-logo.svg" alt="Shepherd Verses" width={180} height={56} style={{ height: '40px', width: 'auto' }} />
+        </Link>
+      </div>
+
+      {/* Card */}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '40px 16px' }}>
+        <div style={{
+          backgroundColor: 'white',
+          borderRadius: '20px',
+          padding: '40px 36px',
+          maxWidth: '460px',
+          width: '100%',
+          boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
         }}>
-          Welcome back
-        </h1>
 
-        {!sent ? (
-          <>
-            <p style={{ color: '#4A5B6B', fontSize: '15px', marginBottom: '32px', lineHeight: 1.6 }}>
-              Enter the email you signed up with and we'll send you a link to access your account.
-            </p>
+          {!sent ? (
+            <>
+              {/* Eyebrow */}
+              <p style={{
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: '#CF9D3E',
+                marginBottom: '8px',
+                marginTop: 0,
+              }}>
+                My Account
+              </p>
 
-            <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                required
-                style={{
-                  width: '100%',
-                  padding: '14px 16px',
-                  borderRadius: '10px',
-                  border: '1.5px solid #E7DED2',
-                  fontSize: '15px',
-                  color: '#3A4A5A',
-                  backgroundColor: '#FAFAF9',
-                  outline: 'none',
-                  marginBottom: '16px',
-                  boxSizing: 'border-box'
-                }}
-              />
+              {/* Heading */}
+              <h1 style={{
+                fontFamily: 'Marcellus, Georgia, serif',
+                fontSize: '28px',
+                fontWeight: 400,
+                color: '#001C5F',
+                marginBottom: '8px',
+                marginTop: 0,
+              }}>
+                Welcome Back
+              </h1>
 
-              {error && (
-                <p style={{ color: '#D88C7A', fontSize: '14px', marginBottom: '12px' }}>
-                  {error}
+              <p style={{ color: '#4A6FA5', fontSize: '14px', marginBottom: '28px', marginTop: 0, lineHeight: 1.5 }}>
+                Enter your email and we'll send you a link to access your account.
+              </p>
+
+              <form onSubmit={handleSubmit}>
+                {/* Label */}
+                <label style={{
+                  display: 'block',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#001C5F',
+                  marginBottom: '8px',
+                }}>
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  style={{
+                    width: '100%',
+                    padding: '14px 16px',
+                    borderRadius: '10px',
+                    border: '1.5px solid #E5E0D8',
+                    fontSize: '15px',
+                    color: '#001C5F',
+                    backgroundColor: 'white',
+                    outline: 'none',
+                    marginBottom: '8px',
+                    boxSizing: 'border-box',
+                  }}
+                />
+
+                {error && (
+                  <p style={{ color: '#DC2626', fontSize: '13px', marginBottom: '12px' }}>{error}</p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={loading || !email}
+                  style={{
+                    width: '100%',
+                    padding: '16px',
+                    borderRadius: '50px',
+                    background: loading || !email
+                      ? '#E5E0D8'
+                      : 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+                    color: '#001C5F',
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    border: '1px solid rgba(255,255,255,0.4)',
+                    boxShadow: loading || !email ? 'none' : '0 4px 14px rgba(212,185,106,0.4)',
+                    cursor: loading || !email ? 'not-allowed' : 'pointer',
+                    marginTop: '8px',
+                  }}
+                >
+                  {loading ? 'Sending...' : 'Send me a link'}
+                </button>
+              </form>
+
+              <p style={{ textAlign: 'center', color: '#9CA3AF', fontSize: '12px', marginTop: '20px' }}>
+                Takes 30 seconds · Secure login, no password needed
+              </p>
+            </>
+          ) : (
+            <>
+              {/* Success state */}
+              <div style={{ textAlign: 'center' }}>
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  borderRadius: '50%',
+                  backgroundColor: '#EDF2F7',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px',
+                }}>
+                  ✉️
+                </div>
+
+                <p style={{
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  color: '#CF9D3E',
+                  marginBottom: '8px',
+                }}>
+                  Check Your Inbox
                 </p>
-              )}
 
-              <button
-                type="submit"
-                disabled={loading || !email}
-                style={{
-                  width: '100%',
-                  padding: '14px',
-                  borderRadius: '10px',
-                  backgroundColor: '#3A4A5A',
-                  color: 'white',
-                  fontSize: '15px',
-                  fontWeight: 500,
-                  border: 'none',
-                  cursor: loading ? 'not-allowed' : 'pointer',
-                  opacity: loading || !email ? 0.7 : 1
-                }}
-              >
-                {loading ? 'Sending...' : 'Send me a link'}
-              </button>
-            </form>
-          </>
-        ) : (
-          <>
-            <div style={{ fontSize: '48px', marginBottom: '16px' }}>✉️</div>
-            <h2 style={{
-              fontFamily: 'Lora, serif',
-              fontSize: '22px',
-              color: '#3A4A5A',
-              marginBottom: '12px'
-            }}>
-              Check your inbox
-            </h2>
-            <p style={{ color: '#4A5B6B', fontSize: '15px', lineHeight: 1.6 }}>
-              We sent a login link to <strong>{email}</strong>. Click the link in the email to access your account.
-            </p>
-            <p style={{ color: '#A9C3D6', fontSize: '13px', marginTop: '16px' }}>
-              Didn't get it? Check your spam folder or{' '}
-              <button
-                onClick={() => setSent(false)}
-                style={{ color: '#3A4A5A', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline', fontSize: '13px' }}
-              >
-                try again
-              </button>
-            </p>
-          </>
-        )}
+                <h2 style={{
+                  fontFamily: 'Marcellus, Georgia, serif',
+                  fontSize: '24px',
+                  fontWeight: 400,
+                  color: '#001C5F',
+                  marginBottom: '12px',
+                  marginTop: 0,
+                }}>
+                  Link sent!
+                </h2>
+
+                <p style={{ color: '#4A5568', fontSize: '14px', lineHeight: 1.6, marginBottom: '20px' }}>
+                  We sent a login link to <strong>{email}</strong>. Click the link in the email to access your account.
+                </p>
+
+                <p style={{ color: '#9CA3AF', fontSize: '13px' }}>
+                  Didn't get it? Check your spam folder or{' '}
+                  <button
+                    onClick={() => setSent(false)}
+                    style={{ color: '#001C5F', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline', fontSize: '13px', padding: 0 }}
+                  >
+                    try again
+                  </button>
+                </p>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   )

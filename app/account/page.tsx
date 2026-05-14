@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
 
 interface Subscriber {
   id: string
@@ -11,7 +13,6 @@ interface Subscriber {
   tier: string
   preferred_time: string
   timezone: string
-  trial_ends_at?: string
   stripe_customer_id: string
 }
 
@@ -27,6 +28,23 @@ function formatTime(time: string) {
   const period = h >= 12 ? 'PM' : 'AM'
   const hour = h % 12 || 12
   return `${hour}:${m.toString().padStart(2, '0')} ${period}`
+}
+
+const GOLD_BUTTON = {
+  background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
+  color: '#001C5F',
+  border: '1px solid rgba(255,255,255,0.4)',
+  boxShadow: '0 4px 14px rgba(212,185,106,0.4)',
+}
+
+const LABEL_STYLE = {
+  fontSize: '11px',
+  fontWeight: 600,
+  letterSpacing: '0.15em',
+  textTransform: 'uppercase' as const,
+  color: '#CF9D3E',
+  marginBottom: '12px',
+  marginTop: 0,
 }
 
 export default function AccountPage() {
@@ -93,8 +111,8 @@ export default function AccountPage() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#4A5B6B', fontFamily: 'Inter, sans-serif' }}>Loading your account...</p>
+      <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter, system-ui, sans-serif' }}>
+        <p style={{ color: '#4A5568' }}>Loading your account...</p>
       </div>
     )
   }
@@ -104,52 +122,65 @@ export default function AccountPage() {
   const isCanceled = subscriber.subscription_status === 'canceled'
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', padding: '32px 16px', fontFamily: 'Inter, sans-serif' }}>
-      <div style={{ maxWidth: '520px', margin: '0 auto' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#F2F1EE', fontFamily: 'Inter, system-ui, sans-serif' }}>
 
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <div style={{ fontSize: '28px', marginBottom: '8px' }}>🙏</div>
-          <h1 style={{ fontFamily: 'Lora, serif', fontSize: '26px', color: '#3A4A5A', margin: 0 }}>
-            Your Account
+      {/* Navbar */}
+      <div style={{ padding: '20px 32px' }}>
+        <Link href="/">
+          <Image src="/images/shepherd-verses-logo.svg" alt="Shepherd Verses" width={180} height={56} style={{ height: '40px', width: 'auto' }} />
+        </Link>
+      </div>
+
+      <div style={{ maxWidth: '520px', margin: '0 auto', padding: '20px 16px 60px' }}>
+
+        {/* Page heading */}
+        <div style={{ marginBottom: '28px' }}>
+          <p style={{ ...LABEL_STYLE, marginBottom: '4px' }}>My Account</p>
+          <h1 style={{
+            fontFamily: 'Marcellus, Georgia, serif',
+            fontSize: '28px',
+            fontWeight: 400,
+            color: '#001C5F',
+            margin: 0,
+          }}>
+            {subscriber.first_name ? `Welcome back, ${subscriber.first_name}` : 'Your Account'}
           </h1>
-          <p style={{ color: '#4A5B6B', fontSize: '14px', marginTop: '4px' }}>{subscriber.email}</p>
+          <p style={{ color: '#6B7280', fontSize: '13px', marginTop: '4px' }}>{subscriber.email}</p>
         </div>
 
-        {/* Subscription Status */}
-        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '16px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
-          <h2 style={{ fontSize: '13px', fontWeight: 600, color: '#A9C3D6', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '16px', marginTop: 0 }}>
-            Subscription
-          </h2>
+        {/* Subscription card */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '12px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
+          <p style={LABEL_STYLE}>Subscription</p>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
-              <p style={{ color: '#3A4A5A', fontWeight: 500, margin: '0 0 4px' }}>
+              <p style={{ color: '#001C5F', fontWeight: 600, margin: '0 0 2px', fontSize: '16px' }}>
                 {subscriber.tier === 'annual' ? 'Annual Companion' : 'Monthly Companion'}
               </p>
-              <p style={{ color: '#4A5B6B', fontSize: '14px', margin: 0 }}>
+              <p style={{ color: '#6B7280', fontSize: '13px', margin: 0 }}>
                 {isCanceled ? 'Cancelled' : 'Active'}
               </p>
             </div>
             <span style={{
-              backgroundColor: isCanceled ? '#F9E8E4' : '#E8F4ED',
-              color: isCanceled ? '#D88C7A' : '#4A8C6A',
-              padding: '4px 12px',
+              backgroundColor: isCanceled ? '#FEE2E2' : '#D1FAE5',
+              color: isCanceled ? '#DC2626' : '#065F46',
+              padding: '4px 14px',
               borderRadius: '20px',
-              fontSize: '13px',
-              fontWeight: 500
+              fontSize: '12px',
+              fontWeight: 600,
             }}>
               {isCanceled ? 'Cancelled' : 'Active'}
             </span>
           </div>
         </div>
 
-        {/* Preferred Time */}
-        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '16px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
-          <h2 style={{ fontSize: '13px', fontWeight: 600, color: '#A9C3D6', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '16px', marginTop: 0 }}>
-            Daily Message Time
-          </h2>
-          <p style={{ color: '#4A5B6B', fontSize: '14px', marginBottom: '16px', marginTop: 0 }}>
-            Your message arrives at <strong>{formatTime(subscriber.preferred_time)}</strong> ({subscriber.timezone})
+        {/* Daily message time card */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '12px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
+          <p style={LABEL_STYLE}>Daily Message Time</p>
+          <p style={{ color: '#4A5568', fontSize: '14px', marginBottom: '16px', marginTop: 0 }}>
+            {subscriber.preferred_time
+              ? <>Your message arrives at <strong style={{ color: '#001C5F' }}>{formatTime(subscriber.preferred_time)}</strong> ({subscriber.timezone})</>
+              : 'No preferred time set yet.'
+            }
           </p>
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
             <select
@@ -157,13 +188,13 @@ export default function AccountPage() {
               onChange={e => setNewTime(e.target.value)}
               style={{
                 flex: 1,
-                padding: '10px 12px',
-                borderRadius: '8px',
-                border: '1.5px solid #E7DED2',
+                padding: '12px 14px',
+                borderRadius: '10px',
+                border: '1.5px solid #E5E0D8',
                 fontSize: '14px',
-                color: '#3A4A5A',
-                backgroundColor: '#FAFAF9',
-                outline: 'none'
+                color: '#001C5F',
+                backgroundColor: 'white',
+                outline: 'none',
               }}
             >
               {TIME_OPTIONS.map(t => (
@@ -174,15 +205,13 @@ export default function AccountPage() {
               onClick={saveTime}
               disabled={saving || newTime === subscriber.preferred_time}
               style={{
-                padding: '10px 20px',
-                backgroundColor: '#3A4A5A',
-                color: 'white',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '14px',
-                cursor: 'pointer',
-                opacity: saving || newTime === subscriber.preferred_time ? 0.6 : 1,
-                whiteSpace: 'nowrap'
+                padding: '12px 22px',
+                borderRadius: '50px',
+                fontSize: '13px',
+                fontWeight: 600,
+                cursor: saving || newTime === subscriber.preferred_time ? 'not-allowed' : 'pointer',
+                opacity: saving || newTime === subscriber.preferred_time ? 0.5 : 1,
+                ...(saving || newTime === subscriber.preferred_time ? { background: '#E5E0D8', color: '#9CA3AF', border: 'none' } : GOLD_BUTTON),
               }}
             >
               {saving ? 'Saving...' : timeSaved ? '✓ Saved' : 'Save'}
@@ -190,25 +219,22 @@ export default function AccountPage() {
           </div>
         </div>
 
-        {/* Billing Actions */}
+        {/* Billing card */}
         {!isCanceled && (
-          <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '16px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
-            <h2 style={{ fontSize: '13px', fontWeight: 600, color: '#A9C3D6', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '16px', marginTop: 0 }}>
-              Billing
-            </h2>
+          <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', marginBottom: '12px', boxShadow: '0 1px 8px rgba(0,0,0,0.05)' }}>
+            <p style={LABEL_STYLE}>Billing</p>
+
             <button
               onClick={handleUpdatePayment}
               style={{
                 width: '100%',
-                padding: '12px',
-                backgroundColor: 'white',
-                color: '#3A4A5A',
-                border: '1.5px solid #E7DED2',
-                borderRadius: '10px',
+                padding: '14px',
+                borderRadius: '50px',
                 fontSize: '14px',
-                fontWeight: 500,
+                fontWeight: 600,
                 cursor: 'pointer',
-                marginBottom: '10px'
+                marginBottom: '10px',
+                ...GOLD_BUTTON,
               }}
             >
               Update payment method
@@ -219,43 +245,34 @@ export default function AccountPage() {
                 onClick={() => setCancelConfirm(true)}
                 style={{
                   width: '100%',
-                  padding: '12px',
+                  padding: '14px',
                   backgroundColor: 'white',
-                  color: '#D88C7A',
-                  border: '1.5px solid #F0D8D2',
-                  borderRadius: '10px',
+                  color: '#DC2626',
+                  border: '1.5px solid #FCA5A5',
+                  borderRadius: '50px',
                   fontSize: '14px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
                 }}
               >
                 Cancel subscription
               </button>
             ) : (
-              <div style={{ backgroundColor: '#FDF4F2', borderRadius: '10px', padding: '16px' }}>
-                <p style={{ color: '#3A4A5A', fontSize: '14px', marginBottom: '12px', marginTop: 0 }}>
+              <div style={{ backgroundColor: '#FFF5F5', borderRadius: '12px', padding: '16px' }}>
+                <p style={{ color: '#001C5F', fontSize: '14px', marginBottom: '12px', marginTop: 0 }}>
                   Are you sure? You'll keep access until the end of your billing period.
                 </p>
-                {cancelError && (
-                  <p style={{ color: '#D88C7A', fontSize: '13px', marginBottom: '10px' }}>{cancelError}</p>
-                )}
+                {cancelError && <p style={{ color: '#DC2626', fontSize: '13px', marginBottom: '10px' }}>{cancelError}</p>}
                 <div style={{ display: 'flex', gap: '8px' }}>
                   <button
                     onClick={handleCancel}
                     disabled={cancelling}
-                    style={{
-                      flex: 1, padding: '10px', backgroundColor: '#D88C7A', color: 'white',
-                      border: 'none', borderRadius: '8px', fontSize: '14px', cursor: 'pointer',
-                      opacity: cancelling ? 0.7 : 1
-                    }}
+                    style={{ flex: 1, padding: '11px', backgroundColor: '#DC2626', color: 'white', border: 'none', borderRadius: '50px', fontSize: '13px', fontWeight: 600, cursor: 'pointer', opacity: cancelling ? 0.7 : 1 }}
                   >
                     {cancelling ? 'Cancelling...' : 'Yes, cancel'}
                   </button>
                   <button
                     onClick={() => { setCancelConfirm(false); setCancelError('') }}
-                    style={{
-                      flex: 1, padding: '10px', backgroundColor: 'white', color: '#3A4A5A',
-                      border: '1.5px solid #E7DED2', borderRadius: '8px', fontSize: '14px', cursor: 'pointer'
-                    }}
+                    style={{ flex: 1, padding: '11px', backgroundColor: 'white', color: '#001C5F', border: '1.5px solid #E5E0D8', borderRadius: '50px', fontSize: '13px', fontWeight: 600, cursor: 'pointer' }}
                   >
                     Keep my account
                   </button>
@@ -266,8 +283,8 @@ export default function AccountPage() {
         )}
 
         {/* Footer */}
-        <p style={{ textAlign: 'center', color: '#A9C3D6', fontSize: '13px' }}>
-          Need help? Email <a href="mailto:hello@shepherdverses.com" style={{ color: '#4A5B6B' }}>hello@shepherdverses.com</a>
+        <p style={{ textAlign: 'center', color: '#9CA3AF', fontSize: '13px', marginTop: '8px' }}>
+          Questions? Email <a href="mailto:hello@shepherdverses.com" style={{ color: '#4A6FA5', textDecoration: 'none' }}>hello@shepherdverses.com</a>
         </p>
 
       </div>
