@@ -27,7 +27,7 @@ export function Footer() {
                 alt="Shepherd Verses"
                 width={220}
                 height={70}
-                className="h-14 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
