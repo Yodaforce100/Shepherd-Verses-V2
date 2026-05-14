@@ -85,7 +85,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* CTA Button */}
           <button
             onClick={onSignupClick}
-            className="font-sans font-bold text-base px-10 py-7 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+            className="font-sans font-semibold text-sm px-8 py-4 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
               color: '#001C5F',
@@ -174,7 +174,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* CTA Button */}
               <Button 
                 asChild
-                className="font-sans font-bold text-sm sm:text-base md:text-lg px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+                className="font-sans font-semibold text-sm md:text-base lg:text-lg px-6 md:px-10 lg:px-12 py-3 md:py-4 lg:py-5 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
