@@ -28,7 +28,7 @@ const monthlyFeatures = [
 const annualFeatures = [
   "Your daily Scripture delivered at your chosen time",
   "Received in Telegram as a voice and written message",
-  { text: "2 months free", bold: true, suffix: " compared to monthly!" },
+  { text: "2 months free", bold: true, suffix: " compared to monthly" },
 ]
 
 const trustBadges = [
