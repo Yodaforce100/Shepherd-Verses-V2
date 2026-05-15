@@ -50,10 +50,10 @@ function WelcomeContent() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col px-4 py-8" style={{ backgroundColor: '#F7F6F4' }}>
+    <div className="min-h-screen flex flex-col px-6 py-8" style={{ backgroundColor: '#F7F6F4' }}>
       {/* Main Content - Centered */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="max-w-sm w-full">
+        <div className="w-full" style={{ maxWidth: '360px' }}>
           {/* Success Icon & Heading */}
           <div className="text-center mb-6">
             <div 
