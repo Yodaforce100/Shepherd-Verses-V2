@@ -151,7 +151,7 @@ function WelcomeContent() {
                 >
                   2
                 </div>
-                <p style={{ color: '#001C5F', margin: 'auto 0' }}>Click /start and confirm your email</p>
+                <p style={{ color: '#001C5F', margin: 'auto 0' }}>Type /start then enter your email</p>
               </div>
 
               {/* Step 3 */}
@@ -234,7 +234,7 @@ function WelcomeContent() {
           <img
             src="/images/shepherd-verses-logo-2x.png"
             alt="Shepherd Verses"
-            style={{ height: '36px', width: 'auto', display: 'inline-block' }}
+            style={{ height: '56px', width: 'auto', display: 'inline-block' }}
           />
         </a>
       </div>
