@@ -151,7 +151,7 @@ function WelcomeContent() {
                 >
                   2
                 </div>
-                <p style={{ color: '#001C5F', margin: 'auto 0' }}>Type /start then enter your email</p>
+                <p style={{ color: '#001C5F', margin: 'auto 0' }}>In Telegram click the START button and then confirm your email</p>
               </div>
 
               {/* Step 3 */}
@@ -229,12 +229,12 @@ function WelcomeContent() {
       </div>
 
       {/* Footer Logo */}
-      <div className="text-center mt-6">
+      <div className="text-center mt-2">
         <a href="/">
           <img
             src="/images/shepherd-verses-logo-2x.png"
             alt="Shepherd Verses"
-            style={{ height: '56px', width: 'auto', display: 'inline-block' }}
+            style={{ height: '80px', width: 'auto', display: 'inline-block' }}
           />
         </a>
       </div>
