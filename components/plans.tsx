@@ -20,17 +20,16 @@ function GoldDivider({ text }: { text: string }) {
 }
 
 const monthlyFeatures = [
-  "A spoken & written message every morning",
-  "Receive your prompt at a time that suits your routine",
-  "Delivered via Telegram, WhatsApp, or Email",
-  "Manage or cancel your subscription at any time",
+  "Your daily Scripture delivered at your chosen time",
+  "Received in Telegram as a voice and written message",
+  "Cancel anytime",
 ]
 
 const annualFeatures = [
-  "Our best value for daily encouragement",
-  "All features included for a full year",
-  "One annual payment for year-round peace",
-  "Everything in Monthly, plus priority support",
+  "Your daily Scripture delivered at your chosen time",
+  "Received in Telegram as a voice and written message",
+  "2 months free compared to monthly",
+  "Priority support included",
 ]
 
 const trustBadges = [
@@ -107,9 +106,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <div 
                     className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
-                    style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
+                    style={{ backgroundColor: 'rgba(212, 185, 106, 0.15)' }}
                   >
-                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
+                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
                   </div>
                   <span 
                     className="font-sans text-sm sm:text-[15px]"
