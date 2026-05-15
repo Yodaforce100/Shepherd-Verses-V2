@@ -157,12 +157,12 @@ function WelcomeContent() {
                   In Telegram:
                 </p>
 
-                <div className="flex gap-3 text-sm mb-3" style={{ paddingLeft: '8px' }}>
+                <div className="flex gap-3 mb-3" style={{ paddingLeft: '8px', fontSize: '12px' }}>
                   <span style={{ color: '#D9B86A', fontWeight: 700, flexShrink: 0 }}>→</span>
                   <p style={{ color: '#001C5F', margin: 0 }}>Click the START button and confirm your email</p>
                 </div>
 
-                <div className="flex gap-3 text-sm" style={{ paddingLeft: '8px' }}>
+                <div className="flex gap-3" style={{ paddingLeft: '8px', fontSize: '12px' }}>
                   <span style={{ color: '#D9B86A', fontWeight: 700, flexShrink: 0 }}>→</span>
                   <p style={{ color: '#001C5F', margin: 0 }}>Set your preferred message time</p>
                 </div>
