@@ -109,22 +109,9 @@ function WelcomeContent() {
             </div>
             <div className="border-t" style={{ borderColor: '#D5CDB8', paddingTop: '8px', marginTop: '8px' }}>
               <p style={{ color: '#5E8DBF', fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '4px' }}>Email</p>
-              <input 
-                type="email"
-                value={email || ''}
-                disabled
-                style={{
-                  width: '100%',
-                  padding: '8px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #D5CDB8',
-                  fontSize: '13px',
-                  color: '#001C5F',
-                  backgroundColor: '#F9F8F6',
-                  fontFamily: 'monospace',
-                  boxSizing: 'border-box',
-                }}
-              />
+              <p style={{ color: '#001C5F', fontSize: '13px', fontWeight: 500, padding: '4px 0' }}>
+                {email || ''}
+              </p>
             </div>
           </div>
 
@@ -198,7 +185,7 @@ function WelcomeContent() {
                         textDecoration: 'none',
                       }}
                     >
-                      Open Telegram Bot →
+                      Open Telegram →
                     </a>
                   );
                 })()}
@@ -243,12 +230,12 @@ function WelcomeContent() {
 
       {/* Footer Logo */}
       <div className="text-center mt-6">
-        <a 
-          href="/"
-          className="font-serif text-lg inline-block"
-          style={{ color: '#001C5F', textDecoration: 'none' }}
-        >
-          🙏 Shepherd Verses
+        <a href="/">
+          <img
+            src="/images/shepherd-verses-logo-2x.png"
+            alt="Shepherd Verses"
+            style={{ height: '36px', width: 'auto', display: 'inline-block' }}
+          />
         </a>
       </div>
     </div>
