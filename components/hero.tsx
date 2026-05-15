@@ -26,10 +26,10 @@ export function Hero({ onSignupClick }: HeroProps) {
   return (
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
-      {/* Mobile Layout */}
-      <div className="lg:hidden">
+      {/* Mobile Layout - Stacked for phones and small tablets */}
+      <div className="md:hidden">
         {/* Image at top with fade to bottom */}
-        <div className="relative h-72 sm:h-80">
+        <div className="relative h-72 sm:h-[28rem]">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
@@ -106,10 +106,10 @@ export function Hero({ onSignupClick }: HeroProps) {
         </div>
       </div>
 
-      {/* Desktop Layout */}
-      <div className="hidden lg:block relative py-16">
+      {/* Desktop Layout - Side by side for tablets and up */}
+      <div className="hidden md:block relative py-8 sm:py-12 md:py-16">
         {/* Left Image with Fade to Right */}
-        <div className="absolute inset-y-0 left-0 w-3/5 z-0">
+        <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
             src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
@@ -135,12 +135,12 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Text Content - Right side */}
         <div className="relative z-10 container mx-auto px-8">
           <div className="flex justify-end py-8">
-            <div className="max-w-md text-left mr-8">
+            <div className="max-w-xs sm:max-w-sm md:max-w-md text-left mr-1 sm:mr-2 md:mr-4 lg:mr-8">
               {/* Eyebrow */}
-              <div className="flex items-center gap-3 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <SoundwaveBars />
                 <span 
-                  className="font-sans text-base font-medium tracking-widest uppercase"
+                  className="font-sans text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase"
                   style={{ color: '#CF9D3E' }}
                 >
                   Spoken Scripture ✝
@@ -149,7 +149,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Headline */}
               <h1 
-                className="font-serif text-4xl lg:text-5xl leading-tight mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-2 sm:mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
                 style={{ color: '#001C5F' }}
               >
                 Wake up to a voice that hears you
@@ -157,7 +157,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Subtitle */}
               <p 
-                className="font-serif italic text-xl lg:text-2xl mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+                className="font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
                 style={{ color: '#5E8DBF', fontWeight: 550 }}
               >
                 and guides you with scripture and affirmations.
@@ -165,7 +165,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Body Text */}
               <p 
-                className="font-sans text-[15px] mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                className="font-sans text-xs sm:text-sm md:text-[15px] mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
                 Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
@@ -190,7 +190,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                 className="font-sans text-sm text-center animate-in fade-in duration-700 delay-500"
                 style={{ color: '#4A5568', opacity: 0.7, maxWidth: '280px', margin: '0 auto' }}
               >
-                Free 7-day trial · Cancel anytime
+                Free 3-day trial · Cancel anytime
               </p>
             </div>
           </div>

@@ -20,17 +20,15 @@ function GoldDivider({ text }: { text: string }) {
 }
 
 const monthlyFeatures = [
-  "A spoken & written message every morning",
-  "Receive your prompt at a time that suits your routine",
-  "Delivered via Telegram, WhatsApp, or Email",
-  "Manage or cancel your subscription at any time",
+  "Your daily Scripture delivered at your chosen time",
+  "Received in Telegram as a voice and written message",
+  "Cancel anytime",
 ]
 
 const annualFeatures = [
-  "Our best value for daily encouragement",
-  "All features included for a full year",
-  "One annual payment for year-round peace",
-  "Everything in Monthly, plus priority support",
+  "Your daily Scripture delivered at your chosen time",
+  "Received in Telegram as a voice and written message",
+  { text: "2 months free", bold: true, suffix: " compared to monthly" },
 ]
 
 const trustBadges = [
@@ -126,9 +124,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               onClick={onMonthlyClick}
               className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
               style={{ 
-                borderColor: '#D1D5DB',
+                borderColor: '#D4B96A',
                 color: '#001C5F',
-                border: '1px solid #D1D5DB',
+                border: '1px solid #D4B96A',
                 backgroundColor: 'transparent'
               }}
             >
@@ -195,7 +193,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                       className="font-sans text-sm sm:text-[15px]"
                       style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
                     >
-                      {feature}
+                      {typeof feature === 'string' ? feature : (
+                        <><span style={{ fontWeight: 700 }}>{feature.text}</span>{feature.suffix}</>
+                      )}
                     </span>
                   </li>
                 ))}
