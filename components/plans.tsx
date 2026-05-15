@@ -28,8 +28,7 @@ const monthlyFeatures = [
 const annualFeatures = [
   "Your daily Scripture delivered at your chosen time",
   "Received in Telegram as a voice and written message",
-  "2 months free compared to monthly",
-  "Priority support included",
+  { text: "2 months free", bold: true, suffix: " compared to monthly" },
 ]
 
 const trustBadges = [
@@ -106,9 +105,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <div 
                     className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
-                    style={{ backgroundColor: 'rgba(212, 185, 106, 0.15)' }}
+                    style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
                   >
-                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
+                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
                   </div>
                   <span 
                     className="font-sans text-sm sm:text-[15px]"
@@ -125,9 +124,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               onClick={onMonthlyClick}
               className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
               style={{ 
-                borderColor: '#D1D5DB',
+                borderColor: '#D4B96A',
                 color: '#001C5F',
-                border: '1px solid #D1D5DB',
+                border: '1px solid #D4B96A',
                 backgroundColor: 'transparent'
               }}
             >
@@ -194,7 +193,9 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                       className="font-sans text-sm sm:text-[15px]"
                       style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
                     >
-                      {feature}
+                      {typeof feature === 'string' ? feature : (
+                        <><span style={{ fontWeight: 700 }}>{feature.text}</span>{feature.suffix}</>
+                      )}
                     </span>
                   </li>
                 ))}

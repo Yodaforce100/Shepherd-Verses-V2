@@ -101,7 +101,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             className="font-sans text-xs animate-in fade-in duration-700 delay-500"
             style={{ color: '#4A5568', opacity: 0.7 }}
           >
-            Free 7-day trial · Cancel anytime
+            Free 3-day trial · Cancel anytime
           </p>
         </div>
       </div>
@@ -190,7 +190,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                 className="font-sans text-sm text-center animate-in fade-in duration-700 delay-500"
                 style={{ color: '#4A5568', opacity: 0.7, maxWidth: '280px', margin: '0 auto' }}
               >
-                Free 7-day trial · Cancel anytime
+                Free 3-day trial · Cancel anytime
               </p>
             </div>
           </div>
