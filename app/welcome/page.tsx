@@ -143,26 +143,29 @@ function WelcomeContent() {
                 <p style={{ color: '#001C5F', margin: 'auto 0' }}>Click button below to open Telegram</p>
               </div>
 
-              {/* Step 2 */}
-              <div className="flex gap-3 text-sm">
-                <div 
-                  className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
-                  style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
-                >
-                  2
-                </div>
-                <p style={{ color: '#001C5F', margin: 'auto 0' }}>In Telegram click the START button and then confirm your email</p>
-              </div>
+              {/* In Telegram label + steps 2 & 3 */}
+              <div style={{ marginLeft: '4px', marginTop: '4px' }}>
+                <p style={{
+                  color: '#CF9D3E',
+                  fontSize: '10px',
+                  fontWeight: 600,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  marginBottom: '8px',
+                  marginTop: '4px',
+                }}>
+                  In Telegram:
+                </p>
 
-              {/* Step 3 */}
-              <div className="flex gap-3 text-sm">
-                <div 
-                  className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
-                  style={{ backgroundColor: '#D9B86A', color: '#FFFFFF' }}
-                >
-                  3
+                <div className="flex gap-3 text-sm mb-3" style={{ paddingLeft: '8px' }}>
+                  <span style={{ color: '#D9B86A', fontWeight: 700, flexShrink: 0 }}>→</span>
+                  <p style={{ color: '#001C5F', margin: 0 }}>Click the START button and confirm your email</p>
                 </div>
-                <p style={{ color: '#001C5F', margin: 'auto 0' }}>Set your preferred message time</p>
+
+                <div className="flex gap-3 text-sm" style={{ paddingLeft: '8px' }}>
+                  <span style={{ color: '#D9B86A', fontWeight: 700, flexShrink: 0 }}>→</span>
+                  <p style={{ color: '#001C5F', margin: 0 }}>Set your preferred message time</p>
+                </div>
               </div>
             </div>
 
