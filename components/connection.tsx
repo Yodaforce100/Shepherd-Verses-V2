@@ -68,7 +68,9 @@ export function Connection() {
             className="font-serif italic text-base mx-auto max-w-md"
             style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 700 }}
           >
-            &quot;Come to me, all you who are weary and burdened, and I will give you rest.&quot; — Matthew 11:28
+            &quot;Come to me, all you who are weary and burdened,
+            <br />
+            and I will give you rest.&quot; — Matthew 11:28
           </p>
         </div>
       </div>

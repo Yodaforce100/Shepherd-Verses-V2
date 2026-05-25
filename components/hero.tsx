@@ -67,11 +67,13 @@ export function Hero({ onSignupClick }: HeroProps) {
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             className="font-serif italic text-lg mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
-            and guides you with scripture and affirmations.
+            and guides you with scripture
+            <br />
+            and affirmations.
           </p>
 
           {/* Body Text */}
