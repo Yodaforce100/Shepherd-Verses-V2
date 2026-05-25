@@ -21,6 +21,7 @@ export function Connection() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           opacity: 0.3,
+          filter: 'grayscale(60%) saturate(75%)',
         }}
       />
       {/* Bottom gradient blend into HowItWorks section */}
