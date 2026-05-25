@@ -92,7 +92,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 $5.95
               </span>
               <span 
-                className="font-sans text-sm sm:text-base"
+                className="font-sans text-base"
                 style={{ color: '#6B7280' }}
               >
                 / month
@@ -110,7 +110,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
                   </div>
                   <span 
-                    className="font-sans text-sm sm:text-[15px]"
+                    className="font-sans text-base"
                     style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
                   >
                     {feature}
@@ -172,7 +172,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   $59.50
                 </span>
                 <span 
-                  className="font-sans text-sm sm:text-base"
+                  className="font-sans text-base"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
                   / year
@@ -190,7 +190,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                       <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
                     </div>
                     <span 
-                      className="font-sans text-sm sm:text-[15px]"
+                      className="font-sans text-base"
                       style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
                     >
                       {typeof feature === 'string' ? feature : (
@@ -223,8 +223,8 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           {trustBadges.map((badge, index) => (
             <div key={index} className="flex items-center gap-2">
               <span className="text-base">{badge.icon}</span>
-              <span 
-                className="font-sans text-sm"
+              <span
+                className="font-sans text-base"
                 style={{ color: '#2A4B7C', fontWeight: 450 }}
               >
                 {badge.text}

@@ -58,8 +58,8 @@ export function Reviews() {
               <StarRating />
 
               {/* Quote */}
-              <blockquote 
-                className="font-serif italic text-xs flex-grow mb-3"
+              <blockquote
+                className="font-serif italic text-sm flex-grow mb-3"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 550 }}
               >
                 &quot;{review.quote}&quot;
@@ -70,14 +70,14 @@ export function Reviews() {
 
               {/* Reviewer Info */}
               <div>
-                <p 
-                  className="font-sans text-xs font-bold mb-0.5"
+                <p
+                  className="font-sans text-sm font-bold mb-0.5"
                   style={{ color: '#001C5F' }}
                 >
                   {review.name}
                 </p>
-                <p 
-                  className="font-sans text-xs"
+                <p
+                  className="font-sans text-sm"
                   style={{ color: '#5E8DBF', fontWeight: 500 }}
                 >
                   {review.location}

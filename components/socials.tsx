@@ -54,7 +54,7 @@ export function Socials() {
             Follow Our Journey
           </h2>
           <p 
-            className="font-sans text-sm max-w-md mx-auto"
+            className="font-sans text-base max-w-md mx-auto"
             style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
           >
             Be part of something bigger. Follow along for daily scripture, gentle encouragement, and a community that cares.

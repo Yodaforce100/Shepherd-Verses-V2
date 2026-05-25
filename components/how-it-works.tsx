@@ -132,7 +132,7 @@ export function HowItWorks() {
                     </div>
                     {/* Text */}
                     <p 
-                      className="font-sans text-sm sm:text-[15px]"
+                      className="font-sans text-base"
                       style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
                     >
                       <span 
