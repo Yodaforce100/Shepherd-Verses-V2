@@ -37,10 +37,10 @@ const faqs = [
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-3 mb-4">
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
-      <span style={{ color: '#D4B96A', fontSize: '24px' }}>✝</span>
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+    <div className="flex items-center justify-center gap-4 mb-4">
+      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <span style={{ color: '#D9B86A', fontSize: '32px', fontWeight: 700 }}>✝</span>
+      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }

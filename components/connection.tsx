@@ -20,7 +20,7 @@ export function Connection() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.3,
+          opacity: 0.38,
           filter: 'grayscale(80%) saturate(70%)',
         }}
       />
