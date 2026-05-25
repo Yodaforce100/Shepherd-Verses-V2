@@ -21,10 +21,17 @@ export function Connection() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           opacity: 0.3,
-          filter: 'grayscale(60%) saturate(75%)',
+          filter: 'grayscale(80%) saturate(70%)',
         }}
       />
-      {/* Bottom gradient blend into HowItWorks section */}
+      {/* Top gradient blend from previous section */}
+      <div
+        className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, transparent 0%, rgba(247,246,244,0.9) 100%)',
+        }}
+      />
+      {/* Bottom gradient blend into next section */}
       <div
         className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
         style={{
