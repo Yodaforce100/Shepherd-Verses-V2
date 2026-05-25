@@ -20,7 +20,7 @@ function TikTokIcon({ className }: { className?: string }) {
 function SoundwaveDivider() {
   return (
     <div className="flex items-center justify-center gap-3 mb-5">
-      <div className="w-10 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-10 h-px" style={{ backgroundColor: '#D9B86A' }} />
       <div className="flex items-center justify-center gap-[3px] h-5">
         <div className={`${styles.soundwaveBar} ${styles.bar1}`} />
         <div className={`${styles.soundwaveBar} ${styles.bar2}`} />
@@ -28,7 +28,7 @@ function SoundwaveDivider() {
         <div className={`${styles.soundwaveBar} ${styles.bar4}`} />
         <div className={`${styles.soundwaveBar} ${styles.bar5}`} />
       </div>
-      <div className="w-10 h-px" style={{ backgroundColor: '#D4B96A' }} />
+      <div className="w-10 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
@@ -54,7 +54,7 @@ export function Socials() {
             Follow Our Journey
           </h2>
           <p 
-            className="font-sans text-sm max-w-md mx-auto"
+            className="font-sans text-base max-w-md mx-auto"
             style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
           >
             Be part of something bigger. Follow along for daily scripture, gentle encouragement, and a community that cares.

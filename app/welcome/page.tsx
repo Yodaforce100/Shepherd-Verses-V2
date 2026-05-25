@@ -226,7 +226,7 @@ function WelcomeContent() {
             className="text-center font-sans text-xs"
             style={{ color: '#5E8DBF' }}
           >
-            Questions? Email support@shepherdverses.com
+            Questions? Email <a href="mailto:hello@shepherdverses.com" style={{ color: '#5E8DBF', textDecoration: 'underline' }}>hello@shepherdverses.com</a>
           </p>
         </div>
       </div>

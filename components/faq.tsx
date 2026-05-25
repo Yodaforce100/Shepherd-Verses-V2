@@ -37,10 +37,10 @@ const faqs = [
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-3 mb-4">
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
-      <span style={{ color: '#D4B96A', fontSize: '24px' }}>✝</span>
-      <div className="w-12 h-px" style={{ backgroundColor: '#D4B96A' }} />
+    <div className="flex items-center justify-center gap-4 mb-4">
+      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <span style={{ color: '#D9B86A', fontSize: '32px', fontWeight: 700 }}>✝</span>
+      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
@@ -84,13 +84,13 @@ export function FAQ() {
                   style={{ borderColor: '#E5E2DC' }}
                 >
                   <AccordionTrigger 
-                    className="font-serif text-left text-sm sm:text-[15px] py-3 sm:py-4 hover:no-underline"
+                    className="font-serif text-left text-base py-3 sm:py-4 hover:no-underline"
                     style={{ color: '#001C5F', fontWeight: 600 }}
                   >
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent 
-                    className="font-sans text-xs sm:text-sm pb-3 sm:pb-4"
+                    className="font-sans text-base pb-3 sm:pb-4"
                     style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 500 }}
                   >
                     {faq.answer}

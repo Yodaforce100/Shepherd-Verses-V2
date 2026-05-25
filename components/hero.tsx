@@ -67,16 +67,18 @@ export function Hero({ onSignupClick }: HeroProps) {
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             className="font-serif italic text-lg mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
-            and guides you with scripture and affirmations.
+            and guides you with scripture
+            <br />
+            and affirmations.
           </p>
 
           {/* Body Text */}
           <p 
-            className="font-sans text-sm max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            className="font-sans text-base max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
             Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
@@ -165,7 +167,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Body Text */}
               <p 
-                className="font-sans text-xs sm:text-sm md:text-[15px] mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                className="font-sans text-base mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
                 Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
