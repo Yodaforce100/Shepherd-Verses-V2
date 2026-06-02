@@ -144,3 +144,19 @@ export async function GET() {
     secretRequired: !!SENTRY_WEBHOOK_SECRET,
   })
 }
+
+export async function HEAD() {
+  return new Response(null, { status: 200 })
+}
+
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 200,
+    headers: {
+      'Allow': 'GET, POST, HEAD, OPTIONS',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, HEAD, OPTIONS',
+      'Access-Control-Allow-Headers': '*',
+    },
+  })
+}
