@@ -57,9 +57,9 @@ const faqs = [
 function CrossDivider() {
   return (
     <div className="flex items-center justify-center gap-4 mb-4" aria-hidden="true">
-      <div className="w-14 h-px bg-gold" />
-      <LatinCross className="size-6 text-gold" />
-      <div className="w-14 h-px bg-gold" />
+      <div className="w-20 h-px bg-gold" />
+      <LatinCross className="size-9 text-gold" />
+      <div className="w-20 h-px bg-gold" />
     </div>
   )
 }
