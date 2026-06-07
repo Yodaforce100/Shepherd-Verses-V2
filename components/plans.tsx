@@ -1,23 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Lock, Gift } from "lucide-react"
-
-// Latin cross icon (tall vertical bar, shorter crossbar near the top)
-function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      style={style}
-      aria-hidden="true"
-    >
-      <rect x="10.5" y="2" width="3" height="20" rx="1" />
-      <rect x="6" y="7" width="12" height="3" rx="1" />
-    </svg>
-  )
-}
+import { Check, Lock, Gift, Pencil } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -49,7 +33,7 @@ const annualFeatures = [
 
 const trustBadges = [
   { Icon: Lock, text: "Secure Payment" },
-  { Icon: LatinCross, text: "Cancel Anytime" },
+  { Icon: Pencil, text: "Cancel Anytime" },
   { Icon: Gift, text: "3-Day Free Trial" },
 ]
 
