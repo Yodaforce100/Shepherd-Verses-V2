@@ -42,10 +42,10 @@ const socials = [
 
 export function Socials() {
   return (
-    <section id="socials" className="relative py-8 lg:py-10" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="socials" className="relative py-8 lg:py-6" style={{ backgroundColor: '#F7F6F4' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 lg:mb-6">
           <SoundwaveDivider />
           <h2 
             className="font-serif text-xl lg:text-2xl leading-tight mb-3"
@@ -54,8 +54,8 @@ export function Socials() {
             Follow Our Journey
           </h2>
           <p 
-            className="font-sans text-base max-w-md mx-auto"
-            style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+            className="font-sans text-base max-w-md lg:max-w-xl mx-auto"
+            style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
           >
             Be part of something bigger. Follow along for daily scripture, gentle encouragement, and a community that cares.
           </p>
