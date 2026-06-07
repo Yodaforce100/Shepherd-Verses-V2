@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Cross } from "lucide-react"
 
 const faqs = [
   {
@@ -37,10 +38,10 @@ const faqs = [
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
-      <span style={{ color: '#D9B86A', fontSize: '32px', fontWeight: 700 }}>✝</span>
-      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
+    <div className="flex items-center justify-center gap-4 mb-4" aria-hidden="true">
+      <div className="w-14 h-px bg-gold" />
+      <Cross className="size-7 text-gold" strokeWidth={2.5} />
+      <div className="w-14 h-px bg-gold" />
     </div>
   )
 }
@@ -49,50 +50,32 @@ export function FAQ() {
   return (
     <section id="faq" className="relative pt-10 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
       {/* Subtle gradient background */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'linear-gradient(to bottom, #F7F6F4 0%, #F2F1EE 50%, #EDECEA 100%)',
-        }}
-      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-light-stone via-stone to-stone" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <CrossDivider />
-          <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight"
-            style={{ color: '#001C5F' }}
-          >
+          <h2 className="font-serif text-2xl lg:text-3xl leading-tight text-navy">
             Frequently Asked Questions
           </h2>
         </div>
 
         {/* FAQ Accordion Card - centered */}
         <div className="max-w-lg mx-auto px-2 sm:px-0">
-          <div 
-            className="bg-white rounded-2xl p-4 sm:p-5 lg:p-6"
-            style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
-          >
+          <div className="bg-popover rounded-2xl p-4 sm:p-5 lg:p-6 border border-warm-divider shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
+                <AccordionItem
+                  key={faq.question}
                   value={`item-${index}`}
-                  className="border-b last:border-b-0"
-                  style={{ borderColor: '#E5E2DC' }}
+                  className="border-b border-border last:border-b-0"
                 >
-                  <AccordionTrigger 
-                    className="font-serif text-left text-base py-3 sm:py-4 hover:no-underline"
-                    style={{ color: '#001C5F', fontWeight: 600 }}
-                  >
+                  <AccordionTrigger className="font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent 
-                    className="font-sans text-base pb-3 sm:pb-4"
-                    style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 500 }}
-                  >
+                  <AccordionContent className="font-sans text-base font-medium leading-relaxed pb-3 sm:pb-4 text-dark-blue">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
