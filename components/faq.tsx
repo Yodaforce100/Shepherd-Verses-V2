@@ -81,8 +81,8 @@ export function FAQ() {
         </div>
 
         {/* FAQ Accordion Card - centered */}
-        <div className="max-w-lg mx-auto px-2 sm:px-0">
-          <div className="bg-popover rounded-2xl p-4 sm:p-5 lg:p-6 border border-warm-divider shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+        <div className="max-w-lg lg:max-w-3xl mx-auto px-2 sm:px-0">
+          <div className="bg-popover rounded-2xl p-4 sm:p-6 lg:p-8 border border-warm-divider shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem
