@@ -83,7 +83,7 @@ export function Socials() {
               </div>
               <span 
                 className="font-sans text-xs font-medium"
-                style={{ color: '#5E8DBF' }}
+                style={{ color: '#001C5F' }}
               >
                 {social.name}
               </span>
