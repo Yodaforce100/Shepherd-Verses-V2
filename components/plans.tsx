@@ -44,7 +44,7 @@ interface PlansProps {
 
 export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
   return (
-    <section id="plans" className="relative py-10 lg:py-14" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="plans" className="relative py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24" style={{ backgroundColor: '#F7F6F4' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
