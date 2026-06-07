@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <Navbar onSignupClick={() => handleSignupClick('monthly')} />
+      <Navbar onSignupClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })} />
       <main>
         <Hero onSignupClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })} />
         <HowItWorks />

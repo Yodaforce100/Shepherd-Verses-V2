@@ -7,40 +7,59 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+// Latin cross icon (tall vertical bar, shorter crossbar near the top)
+function LatinCross({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="10.5" y="2" width="3" height="20" rx="1" />
+      <rect x="6" y="7" width="12" height="3" rx="1" />
+    </svg>
+  )
+}
+
 const faqs = [
   {
     question: "What is Shepherd Verses?",
-    answer: "Shepherd Verses is a faith-based companion app that delivers personalized spoken scripture and affirmations based on how you're feeling. It's designed to help you start your day with peace, clarity, and spiritual encouragement."
+    answer: "Shepherd Verses is a personal spiritual companion that helps you begin each day with encouragement, guidance, and peace through God's word. By responding to how you're feeling, it delivers carefully chosen scripture, affirmations, and gentle daily guidance tailored to your emotional and spiritual needs."
   },
   {
     question: "How does Shepherd Verses work?",
-    answer: "Each morning, you share how you're feeling by selecting an emotion. Your Shepherd Verses companion then responds with carefully chosen scripture and affirmations delivered via voice, helping you find comfort and guidance tailored to your emotional state."
+    answer: "After signing up, you'll connect with Shepherd Verses through Telegram and choose a time to receive your daily message. Each morning, you'll be invited to share how you're feeling by selecting an emotion. Your Shepherd Verses companion then responds with a personalised spoken and written message designed to support and encourage you throughout your day."
   },
   {
     question: "Do I need to know the Bible to use Shepherd Verses?",
-    answer: "Not at all. Shepherd Verses is designed for everyone, whether you're deeply familiar with scripture or just beginning your faith journey. The verses are chosen to speak to your feelings in a way that's accessible and meaningful."
+    answer: "Not at all. Shepherd Verses is designed for anyone seeking encouragement and support through God's word, whether you're new to the Bible or have been reading it for years."
   },
   {
-    question: "What kinds of feelings can I share?",
-    answer: "You can share a wide range of emotions including feeling anxious, tired, grateful, hopeful, heavy, peaceful, uncertain, and more. Shepherd Verses meets you wherever you are emotionally."
+    question: "How does Shepherd Verses choose scripture?",
+    answer: "Each emotion is thoughtfully matched with scripture that reflects the challenges, hopes, and encouragement associated with that feeling. Our goal is to provide verses that speak meaningfully to where you are emotionally and spiritually."
   },
   {
-    question: "Will the scripture be relevant to how I feel?",
-    answer: "Yes. Our companion thoughtfully selects scripture and affirmations that directly relate to the emotion you've shared, ensuring the message feels personal and relevant to your current state of mind."
+    question: "What feelings can I share?",
+    answer: "Shepherd Verses currently supports a wide range of emotions, including anxiety, stress, sadness, loneliness, uncertainty, gratitude, hope, joy, and more. Simply select the emotion that best reflects how you're feeling, and your message will be tailored accordingly."
   },
   {
-    question: "Can I use Shepherd Verses more than once a day?",
-    answer: "Absolutely. While many members use it as part of their morning routine, you can return to Shepherd Verses anytime you need encouragement, comfort, or a moment of peace throughout your day."
+    question: "Do I need Telegram?",
+    answer: "Yes. Shepherd Verses currently delivers messages through Telegram. Telegram is free to use and only takes a few moments to set up. Once connected, you'll receive your daily messages directly through the app."
+  },
+  {
+    question: "How do I update my account details?",
+    answer: "If you'd like to update your email address, change the time of your daily message, or make changes to your billing details, our support team can help. Simply get in touch at hello@shepherdverses.com and we'll assist you in keeping your account up to date."
   },
 ]
 
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
-      <span style={{ color: '#D9B86A', fontSize: '32px', fontWeight: 700 }}>✝</span>
-      <div className="w-14 h-px" style={{ backgroundColor: '#D9B86A' }} />
+    <div className="flex items-center justify-center gap-4 mb-4" aria-hidden="true">
+      <div className="w-20 h-px bg-gold" />
+      <LatinCross className="size-9 text-gold" />
+      <div className="w-20 h-px bg-gold" />
     </div>
   )
 }
@@ -49,49 +68,34 @@ export function FAQ() {
   return (
     <section id="faq" className="relative pt-10 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
       {/* Subtle gradient background */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'linear-gradient(to bottom, #F7F6F4 0%, #F2F1EE 50%, #EDECEA 100%)',
-        }}
-      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-light-stone via-stone to-stone" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <CrossDivider />
-          <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight"
-            style={{ color: '#001C5F' }}
-          >
+          <h2 className="font-serif text-2xl lg:text-3xl leading-tight text-navy">
             Frequently Asked Questions
           </h2>
         </div>
 
         {/* FAQ Accordion Card - centered */}
-        <div className="max-w-lg mx-auto px-2 sm:px-0">
-          <div 
-            className="bg-white rounded-2xl p-4 sm:p-5 lg:p-6"
-            style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
-          >
+        <div className="max-w-lg lg:max-w-3xl mx-auto px-2 sm:px-0">
+          <div className="bg-popover rounded-2xl p-4 sm:p-6 lg:p-8 border border-warm-divider shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
+                <AccordionItem
+                  key={faq.question}
                   value={`item-${index}`}
-                  className="border-b last:border-b-0"
-                  style={{ borderColor: '#E5E2DC' }}
+                  className="border-b border-border last:border-b-0"
                 >
-                  <AccordionTrigger 
-                    className="font-serif text-left text-base py-3 sm:py-4 hover:no-underline"
-                    style={{ color: '#001C5F', fontWeight: 600 }}
-                  >
+                  <AccordionTrigger className="font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent 
-                    className="font-sans text-base pb-3 sm:pb-4"
-                    style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 500 }}
+                  <AccordionContent
+                    className="font-sans text-base pb-3 sm:pb-4 text-dark-blue"
+                    style={{ lineHeight: '1.6', fontWeight: 450 }}
                   >
                     {faq.answer}
                   </AccordionContent>

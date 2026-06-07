@@ -18,6 +18,22 @@ function SoundwaveBars() {
   )
 }
 
+// Latin cross icon (tall vertical bar, shorter crossbar near the top)
+function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      style={style}
+      aria-hidden="true"
+    >
+      <rect x="10.5" y="2" width="3" height="20" rx="1" />
+      <rect x="6" y="7" width="12" height="3" rx="1" />
+    </svg>
+  )
+}
+
 interface HeroProps {
   onSignupClick?: () => void
 }
@@ -51,10 +67,11 @@ export function Hero({ onSignupClick }: HeroProps) {
           <div className="flex items-center justify-center gap-3 mb-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <SoundwaveBars />
             <span 
-              className="font-sans text-xs font-medium tracking-widest uppercase"
+              className="font-sans text-xs font-medium tracking-widest uppercase inline-flex items-center gap-1.5"
               style={{ color: '#CF9D3E' }}
             >
-              Spoken Scripture ✝
+              Spoken Scripture
+              <LatinCross className="size-4" style={{ color: '#CF9D3E' }} />
             </span>
           </div>
 
@@ -142,10 +159,11 @@ export function Hero({ onSignupClick }: HeroProps) {
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <SoundwaveBars />
                 <span 
-                  className="font-sans text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase"
+                  className="font-sans text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase inline-flex items-center gap-1.5"
                   style={{ color: '#CF9D3E' }}
                 >
-                  Spoken Scripture ✝
+                  Spoken Scripture
+                  <LatinCross className="size-4 sm:size-5" style={{ color: '#CF9D3E' }} />
                 </span>
               </div>
 

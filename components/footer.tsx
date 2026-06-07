@@ -7,13 +7,13 @@ export function Footer() {
   return (
     <footer className="bg-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 lg:gap-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 lg:py-6">
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5 lg:gap-4">
           {/* Left - Tagline */}
           <div className="text-center lg:text-left lg:max-w-xs lg:flex-1">
             <p
-              className="font-sans text-base text-left"
-              style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+              className="font-sans text-sm text-center lg:text-left"
+              style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
             >
               Daily scripture and affirmations, spoken just for you. Every morning, without fail.
             </p>
@@ -27,7 +27,7 @@ export function Footer() {
                 alt="Shepherd Verses"
                 width={220}
                 height={70}
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
@@ -40,17 +40,17 @@ export function Footer() {
             >
               Legal
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center lg:justify-end gap-4">
               <Link 
                 href="/privacy" 
-                className="font-sans text-base transition-colors hover:opacity-80"
+                className="font-sans text-sm transition-colors hover:opacity-80"
                 style={{ color: '#2A4B7C', fontWeight: 450 }}
               >
                 Privacy Policy
               </Link>
               <Link 
                 href="/terms" 
-                className="font-sans text-base transition-colors hover:opacity-80"
+                className="font-sans text-sm transition-colors hover:opacity-80"
                 style={{ color: '#2A4B7C', fontWeight: 450 }}
               >
                 Terms of Service
@@ -66,9 +66,9 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <p
-          className="font-sans text-base text-center"
+          className="font-sans text-xs text-center"
           style={{ color: '#001C5F', fontWeight: 450 }}
         >
           © 2026 Shepherd Verses. Made with care for your peace of mind.

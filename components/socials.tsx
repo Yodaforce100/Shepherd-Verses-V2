@@ -42,20 +42,20 @@ const socials = [
 
 export function Socials() {
   return (
-    <section id="socials" className="relative py-8 lg:py-10" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="socials" className="relative py-10 lg:py-9" style={{ backgroundColor: '#001C5F' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 lg:mb-7">
           <SoundwaveDivider />
           <h2 
             className="font-serif text-xl lg:text-2xl leading-tight mb-3"
-            style={{ color: '#001C5F' }}
+            style={{ color: '#FFFFFF' }}
           >
             Follow Our Journey
           </h2>
           <p 
-            className="font-sans text-base max-w-md mx-auto"
-            style={{ color: '#2A4B7C', lineHeight: '1.7', fontWeight: 450 }}
+            className="font-sans text-base max-w-md lg:max-w-xl mx-auto"
+            style={{ color: 'rgba(255,255,255,0.75)', lineHeight: '1.6', fontWeight: 450 }}
           >
             Be part of something bigger. Follow along for daily scripture, gentle encouragement, and a community that cares.
           </p>
@@ -83,7 +83,7 @@ export function Socials() {
               </div>
               <span 
                 className="font-sans text-xs font-medium"
-                style={{ color: '#5E8DBF' }}
+                style={{ color: 'rgba(255,255,255,0.85)' }}
               >
                 {social.name}
               </span>
