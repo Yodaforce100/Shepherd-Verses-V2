@@ -1,7 +1,23 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { Check, Lock, Gift } from "lucide-react"
+
+// Latin cross icon (tall vertical bar, shorter crossbar near the top)
+function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      style={style}
+      aria-hidden="true"
+    >
+      <rect x="10.5" y="2" width="3" height="20" rx="1" />
+      <rect x="6" y="7" width="12" height="3" rx="1" />
+    </svg>
+  )
+}
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -32,9 +48,9 @@ const annualFeatures = [
 ]
 
 const trustBadges = [
-  { icon: "🔒", text: "Secure Payment" },
-  { icon: "✝", text: "Cancel Anytime" },
-  { icon: "🎁", text: "3-Day Free Trial" },
+  { Icon: Lock, text: "Secure Payment" },
+  { Icon: LatinCross, text: "Cancel Anytime" },
+  { Icon: Gift, text: "3-Day Free Trial" },
 ]
 
 interface PlansProps {
@@ -220,17 +236,20 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
 
         {/* Trust Badges */}
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
-          {trustBadges.map((badge, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <span className="text-base">{badge.icon}</span>
-              <span
-                className="font-sans text-base"
-                style={{ color: '#2A4B7C', fontWeight: 450 }}
-              >
-                {badge.text}
-              </span>
-            </div>
-          ))}
+          {trustBadges.map((badge, index) => {
+            const { Icon } = badge
+            return (
+              <div key={index} className="flex items-center gap-2">
+                <Icon className="w-4 h-4" style={{ color: '#D4B96A' }} />
+                <span
+                  className="font-sans text-base"
+                  style={{ color: '#2A4B7C', fontWeight: 450 }}
+                >
+                  {badge.text}
+                </span>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
