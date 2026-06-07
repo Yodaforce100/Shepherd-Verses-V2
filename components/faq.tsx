@@ -6,7 +6,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Cross } from "lucide-react"
+
+// Latin cross icon (tall vertical bar, shorter crossbar near the top)
+function LatinCross({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="10.5" y="2" width="3" height="20" rx="1" />
+      <rect x="6" y="7" width="12" height="3" rx="1" />
+    </svg>
+  )
+}
 
 const faqs = [
   {
@@ -40,7 +54,7 @@ function CrossDivider() {
   return (
     <div className="flex items-center justify-center gap-4 mb-4" aria-hidden="true">
       <div className="w-14 h-px bg-gold" />
-      <Cross className="size-7 text-gold" strokeWidth={2.5} />
+      <LatinCross className="size-6 text-gold" />
       <div className="w-14 h-px bg-gold" />
     </div>
   )
