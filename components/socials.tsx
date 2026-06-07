@@ -42,10 +42,10 @@ const socials = [
 
 export function Socials() {
   return (
-    <section id="socials" className="relative py-12 lg:py-14" style={{ backgroundColor: '#001C5F' }}>
+    <section id="socials" className="relative py-10 lg:py-9" style={{ backgroundColor: '#001C5F' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 lg:mb-10">
+        <div className="text-center mb-6 lg:mb-7">
           <SoundwaveDivider />
           <h2 
             className="font-serif text-xl lg:text-2xl leading-tight mb-3"
