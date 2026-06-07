@@ -25,7 +25,7 @@ function LatinCross({ className }: { className?: string }) {
 const faqs = [
   {
     question: "What is Shepherd Verses?",
-    answer: "Shepherd Verses is your personal spiritual companion. Choose a time to receive your message each morning, share how you're feeling, then receive a carefully selected scripture that speaks directly to your emotions. Each message includes a spoken and written Bible verse, a personalised affirmation, and a simple mantra to carry with you throughout the day—offering encouragement, guidance, and peace through God's word."
+    answer: "Shepherd Verses is a personal spiritual companion that helps you begin each day with encouragement, guidance, and peace through God's word. By responding to how you're feeling, it delivers carefully chosen scripture, affirmations, and gentle daily guidance tailored to your emotional and spiritual needs."
   },
   {
     question: "How does Shepherd Verses work?",
