@@ -93,7 +93,10 @@ export function FAQ() {
                   <AccordionTrigger className="font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="font-sans text-base font-medium leading-relaxed pb-3 sm:pb-4 text-dark-blue">
+                  <AccordionContent
+                    className="font-sans text-base pb-3 sm:pb-4 text-dark-blue"
+                    style={{ lineHeight: '1.6', fontWeight: 450 }}
+                  >
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
