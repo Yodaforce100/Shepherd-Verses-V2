@@ -28,7 +28,7 @@ const monthlyFeatures = [
 const annualFeatures = [
   "Daily Scripture, affirmation and mantra, sent at your chosen time",
   "Received in Telegram as a voice and written message",
-  "3 months free compared to monthly",
+  "3 months free vs monthly",
 ]
 
 interface PlansProps {
