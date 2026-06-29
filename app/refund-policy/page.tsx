@@ -113,8 +113,6 @@ export default function RefundPolicyPage() {
           <LegalLink href="mailto:hello@shepherdverses.com">
             hello@shepherdverses.com
           </LegalLink>
-          <br />
-          Phone: +61 412 664 024
         </LegalParagraph>
       </LegalSection>
     </LegalPage>

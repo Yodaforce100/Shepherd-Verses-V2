@@ -342,8 +342,6 @@ export default function PrivacyPolicyPage() {
           <LegalLink href="mailto:hello@shepherdverses.com">
             hello@shepherdverses.com
           </LegalLink>
-          <br />
-          Phone: +61 412 664 024
         </LegalParagraph>
         <LegalParagraph>
           If you are not satisfied with our response to a privacy complaint, you
