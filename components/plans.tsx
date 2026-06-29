@@ -57,6 +57,17 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             Wake up supported. Start your day guided.
           </p>
+
+          {/* Trial Pill */}
+          <div
+            className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 mt-6"
+            style={{ backgroundColor: '#001C5F' }}
+          >
+            <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
+            <span className="font-sans text-base lg:text-lg font-semibold text-white">
+              Start free — 3-day free trial on any plan
+            </span>
+          </div>
         </div>
 
         {/* Pricing Cards */}
