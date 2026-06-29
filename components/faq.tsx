@@ -49,7 +49,25 @@ const faqs = [
   },
   {
     question: "How do I update my account details?",
-    answer: "If you'd like to update your email address, change the time of your daily message, or make changes to your billing details, our support team can help. Simply get in touch at hello@shepherdverses.com and we'll assist you in keeping your account up to date."
+    answer: (
+      <>
+        <p>
+          To update your email address or change the time of your daily message, contact us at{" "}
+          <a href="mailto:hello@shepherdverses.com" className="underline hover:opacity-80">
+            hello@shepherdverses.com
+          </a>{" "}
+          and our support team will help.
+        </p>
+        <p className="mt-3">
+          Billing, payment method or cancelling: handled by Paddle, our payment provider — use the link in your confirmation email or visit{" "}
+          <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
+            paddle.net
+          </a>
+          .
+        </p>
+        <p className="mt-3">Not sure where to go? Email us and we&apos;ll help.</p>
+      </>
+    )
   },
 ]
 
