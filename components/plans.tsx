@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { Check, Gift, Pencil } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -22,7 +22,6 @@ function GoldDivider({ text }: { text: string }) {
 const monthlyFeatures = [
   "Your daily Scripture delivered at your chosen time",
   "Received in Telegram as a voice and written message",
-  "Cancel anytime",
 ]
 
 const annualFeatures = [
@@ -57,14 +56,6 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
-          </p>
-
-          {/* Trial note */}
-          <p
-            className="font-sans text-base mt-3"
-            style={{ color: '#2A4B7C', fontWeight: 450 }}
-          >
-            Start with a 3-day free trial. Cancel anytime.
           </p>
         </div>
 
@@ -232,6 +223,28 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 Start Annual Journey
               </button>
             </div>
+          </div>
+        </div>
+
+        {/* Trust Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-6">
+          <div className="flex items-center gap-2">
+            <Gift className="w-4 h-4" style={{ color: '#D4B96A' }} />
+            <span
+              className="font-sans text-base"
+              style={{ color: '#2A4B7C', fontWeight: 450 }}
+            >
+              3-Day Free Trial
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Pencil className="w-4 h-4" style={{ color: '#D4B96A' }} />
+            <span
+              className="font-sans text-base"
+              style={{ color: '#2A4B7C', fontWeight: 450 }}
+            >
+              Cancel Anytime
+            </span>
           </div>
         </div>
 
