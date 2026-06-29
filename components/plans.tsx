@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Lock, Gift, Pencil } from "lucide-react"
+import { Check } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -28,12 +28,6 @@ const monthlyFeatures = [
 const annualFeatures = [
   "Your daily Scripture delivered at your chosen time",
   "Received in Telegram as a voice and written message",
-]
-
-const trustBadges = [
-  { Icon: Lock, text: "Secure Payment" },
-  { Icon: Pencil, text: "Cancel Anytime" },
-  { Icon: Gift, text: "3-Day Free Trial" },
 ]
 
 interface PlansProps {
@@ -63,6 +57,14 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
+          </p>
+
+          {/* Trial note */}
+          <p
+            className="font-sans text-base mt-3"
+            style={{ color: '#2A4B7C', fontWeight: 450 }}
+          >
+            Start with a 3-day free trial. Cancel anytime.
           </p>
         </div>
 
@@ -233,23 +235,13 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           </div>
         </div>
 
-        {/* Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
-          {trustBadges.map((badge, index) => {
-            const { Icon } = badge
-            return (
-              <div key={index} className="flex items-center gap-2">
-                <Icon className="w-4 h-4" style={{ color: '#D4B96A' }} />
-                <span
-                  className="font-sans text-base"
-                  style={{ color: '#2A4B7C', fontWeight: 450 }}
-                >
-                  {badge.text}
-                </span>
-              </div>
-            )
-          })}
-        </div>
+        {/* Pricing note */}
+        <p
+          className="font-sans text-base text-center max-w-2xl mx-auto"
+          style={{ color: '#2A4B7C', fontWeight: 450 }}
+        >
+          Prices shown in US dollars. Your local currency and final price are shown at checkout. The annual plan saves you the equivalent of 3 months compared with paying monthly.
+        </p>
       </div>
     </section>
   )
