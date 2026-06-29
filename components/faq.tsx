@@ -96,7 +96,7 @@ export function FAQ() {
                   value={`item-${index}`}
                   className="border-b border-border last:border-b-0"
                 >
-                  <AccordionTrigger className="font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline">
+                  <AccordionTrigger className={`font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline ${index === 0 ? "pt-0" : ""}`}>
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent
