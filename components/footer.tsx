@@ -55,6 +55,13 @@ export function Footer() {
               >
                 Terms of Service
               </Link>
+              <Link 
+                href="/refund-policy" 
+                className="font-sans text-sm transition-colors hover:opacity-80"
+                style={{ color: '#2A4B7C', fontWeight: 450 }}
+              >
+                Refund Policy
+              </Link>
             </div>
           </div>
         </div>

@@ -55,7 +55,7 @@ const steps = [
     image: "/images/mobile-app-ui-new.jpg",
     title: "Hear a Caring Voice",
     accentWord: "Listen.",
-    description: "Your companion shares a spoken Scripture and a personal affirmation tailored to your feelings, carefully chosen to guide and support you — delivered straight to your Telegram.",
+    description: "Your companion shares a spoken Scripture, and a personalised affirmation and mantra, tailored to how you're feeling. Carefully chosen to offer comfort and support — delivered straight to your Telegram.",
     emphasis: null,
     descriptionEnd: null,
     icon: "soundwave",

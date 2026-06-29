@@ -32,24 +32,30 @@ const faqs = [
     answer: "After signing up, you'll connect with Shepherd Verses through Telegram and choose a time to receive your daily message. Each morning, you'll be invited to share how you're feeling by selecting an emotion. Your Shepherd Verses companion then responds with a personalised spoken and written message designed to support and encourage you throughout your day."
   },
   {
-    question: "Do I need to know the Bible to use Shepherd Verses?",
-    answer: "Not at all. Shepherd Verses is designed for anyone seeking encouragement and support through God's word, whether you're new to the Bible or have been reading it for years."
-  },
-  {
-    question: "How does Shepherd Verses choose scripture?",
-    answer: "Each emotion is thoughtfully matched with scripture that reflects the challenges, hopes, and encouragement associated with that feeling. Our goal is to provide verses that speak meaningfully to where you are emotionally and spiritually."
-  },
-  {
-    question: "What feelings can I share?",
-    answer: "Shepherd Verses currently supports a wide range of emotions, including anxiety, stress, sadness, loneliness, uncertainty, gratitude, hope, joy, and more. Simply select the emotion that best reflects how you're feeling, and your message will be tailored accordingly."
-  },
-  {
     question: "Do I need Telegram?",
     answer: "Yes. Shepherd Verses currently delivers messages through Telegram. Telegram is free to use and only takes a few moments to set up. Once connected, you'll receive your daily messages directly through the app."
   },
   {
     question: "How do I update my account details?",
-    answer: "If you'd like to update your email address, change the time of your daily message, or make changes to your billing details, our support team can help. Simply get in touch at hello@shepherdverses.com and we'll assist you in keeping your account up to date."
+    answer: (
+      <>
+        <p>
+          To update your email address or change the time of your daily message, contact us at{" "}
+          <a href="mailto:hello@shepherdverses.com" className="underline hover:opacity-80">
+            hello@shepherdverses.com
+          </a>{" "}
+          and our support team will help.
+        </p>
+        <p className="mt-3">
+          Billing, payment method or cancelling: handled by Paddle, our payment provider — use the link in your confirmation email or visit{" "}
+          <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
+            paddle.net
+          </a>
+          .
+        </p>
+        <p className="mt-3">Not sure where to go? Email us and we&apos;ll help.</p>
+      </>
+    )
   },
 ]
 
@@ -90,7 +96,7 @@ export function FAQ() {
                   value={`item-${index}`}
                   className="border-b border-border last:border-b-0"
                 >
-                  <AccordionTrigger className="font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline">
+                  <AccordionTrigger className={`font-serif text-left text-base font-semibold py-3 sm:py-4 text-navy hover:no-underline ${index === 0 ? "pt-0" : ""}`}>
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent

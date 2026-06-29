@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Lock, Gift, Pencil } from "lucide-react"
+import { Check, Gift, Pencil, Lock } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -20,21 +20,15 @@ function GoldDivider({ text }: { text: string }) {
 }
 
 const monthlyFeatures = [
-  "Your daily Scripture delivered at your chosen time",
+  "Daily Scripture, affirmation and mantra, sent at your chosen time",
   "Received in Telegram as a voice and written message",
-  "Cancel anytime",
+  "Flexible month to month",
 ]
 
 const annualFeatures = [
-  "Your daily Scripture delivered at your chosen time",
+  "Daily Scripture, affirmation and mantra, sent at your chosen time",
   "Received in Telegram as a voice and written message",
-  { text: "2 months free", bold: true, suffix: " compared to monthly" },
-]
-
-const trustBadges = [
-  { Icon: Lock, text: "Secure Payment" },
-  { Icon: Pencil, text: "Cancel Anytime" },
-  { Icon: Gift, text: "3-Day Free Trial" },
+  "3 months free vs monthly",
 ]
 
 interface PlansProps {
@@ -65,6 +59,17 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             Wake up supported. Start your day guided.
           </p>
+
+          {/* Trial Pill */}
+          <div
+            className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 mt-6"
+            style={{ backgroundColor: '#001C5F' }}
+          >
+            <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
+            <span className="font-sans text-base lg:text-lg font-semibold text-white">
+              Start free — 3-day free trial on any plan
+            </span>
+          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -84,19 +89,27 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </h3>
 
             {/* Price */}
-            <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
-              <span 
-                className="font-serif text-4xl sm:text-5xl"
-                style={{ color: '#001C5F' }}
-              >
-                $5.95
-              </span>
-              <span 
-                className="font-sans text-base"
+            <div className="mb-5 sm:mb-6">
+              <div className="flex items-baseline gap-1">
+                <span 
+                  className="font-serif text-4xl sm:text-5xl"
+                  style={{ color: '#001C5F' }}
+                >
+                  $8.95
+                </span>
+                <span 
+                  className="font-sans text-base"
+                  style={{ color: '#6B7280' }}
+                >
+                  USD / month
+                </span>
+              </div>
+              <p 
+                className="font-sans text-base mt-1"
                 style={{ color: '#6B7280' }}
               >
-                / month
-              </span>
+                Billed monthly
+              </p>
             </div>
 
             {/* Features */}
@@ -164,19 +177,27 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               </h3>
 
               {/* Price */}
-              <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
-                <span 
-                  className="font-serif text-4xl sm:text-5xl"
-                  style={{ color: '#D4B96A' }}
-                >
-                  $59.50
-                </span>
-                <span 
-                  className="font-sans text-base"
+              <div className="mb-5 sm:mb-6">
+                <div className="flex items-baseline gap-1">
+                  <span 
+                    className="font-serif text-4xl sm:text-5xl"
+                    style={{ color: '#D4B96A' }}
+                  >
+                    $6.70
+                  </span>
+                  <span 
+                    className="font-sans text-base"
+                    style={{ color: 'rgba(255,255,255,0.6)' }}
+                  >
+                    USD / month
+                  </span>
+                </div>
+                <p 
+                  className="font-sans text-base mt-1"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
-                  / year
-                </span>
+                  Billed annually at $80.40 USD
+                </p>
               </div>
 
               {/* Features */}
@@ -219,22 +240,34 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
         </div>
 
         {/* Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
-          {trustBadges.map((badge, index) => {
-            const { Icon } = badge
-            return (
-              <div key={index} className="flex items-center gap-2">
-                <Icon className="w-4 h-4" style={{ color: '#D4B96A' }} />
-                <span
-                  className="font-sans text-base"
-                  style={{ color: '#2A4B7C', fontWeight: 450 }}
-                >
-                  {badge.text}
-                </span>
-              </div>
-            )
-          })}
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-6">
+          <div className="flex items-center gap-2">
+            <Pencil className="w-4 h-4" style={{ color: '#D4B96A' }} />
+            <span
+              className="font-sans text-base"
+              style={{ color: '#2A4B7C', fontWeight: 450 }}
+            >
+              Cancel Anytime
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Lock className="w-4 h-4" style={{ color: '#D4B96A' }} />
+            <span
+              className="font-sans text-base"
+              style={{ color: '#2A4B7C', fontWeight: 450 }}
+            >
+              Secure Payment
+            </span>
+          </div>
         </div>
+
+        {/* Pricing note */}
+        <p
+          className="font-sans text-sm text-center max-w-xl mx-auto"
+          style={{ color: '#6B7280', fontWeight: 450 }}
+        >
+          Prices shown in US dollars. Your local currency and final price are shown at checkout. The annual plan saves you the equivalent of 3 months compared with paying monthly.
+        </p>
       </div>
     </section>
   )

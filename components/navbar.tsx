@@ -14,9 +14,9 @@ export function Navbar({ onSignupClick }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: "#hero", label: "Home" },
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#plans", label: "Plans" },
+    { href: "/#hero", label: "Home" },
+    { href: "/#how-it-works", label: "How It Works" },
+    { href: "/#plans", label: "Plans" },
     { href: "/login", label: "My Account" },
   ]
 
