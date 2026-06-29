@@ -156,7 +156,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 boxShadow: '0 2px 8px rgba(212,185,106,0.3)',
               }}
             >
-              - 3 Months Free -
+              - Best Value -
             </div>
 
             <div 
