@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Gift, Pencil } from "lucide-react"
+import { Check, Gift, Pencil, Lock } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -246,12 +246,21 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               Cancel Anytime
             </span>
           </div>
+          <div className="flex items-center gap-2">
+            <Lock className="w-4 h-4" style={{ color: '#D4B96A' }} />
+            <span
+              className="font-sans text-base"
+              style={{ color: '#2A4B7C', fontWeight: 450 }}
+            >
+              Secure Payment
+            </span>
+          </div>
         </div>
 
         {/* Pricing note */}
         <p
-          className="font-sans text-base text-center max-w-2xl mx-auto"
-          style={{ color: '#2A4B7C', fontWeight: 450 }}
+          className="font-sans text-sm text-center max-w-xl mx-auto"
+          style={{ color: '#6B7280', fontWeight: 450 }}
         >
           Prices shown in US dollars. Your local currency and final price are shown at checkout. The annual plan saves you the equivalent of 3 months compared with paying monthly.
         </p>
