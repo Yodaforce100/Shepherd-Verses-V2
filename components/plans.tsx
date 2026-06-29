@@ -20,13 +20,15 @@ function GoldDivider({ text }: { text: string }) {
 }
 
 const monthlyFeatures = [
-  "Your daily Scripture delivered at your chosen time",
+  "Daily Scripture, affirmation and mantra, sent at your chosen time",
   "Received in Telegram as a voice and written message",
+  "Flexible month to month",
 ]
 
 const annualFeatures = [
-  "Your daily Scripture delivered at your chosen time",
+  "Daily Scripture, affirmation and mantra, sent at your chosen time",
   "Received in Telegram as a voice and written message",
+  "3 months free compared to monthly",
 ]
 
 interface PlansProps {
