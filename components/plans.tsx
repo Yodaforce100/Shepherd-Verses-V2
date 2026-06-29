@@ -104,7 +104,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 className="font-sans text-base mt-1"
                 style={{ color: '#6B7280' }}
               >
-                billed monthly
+                Billed monthly
               </p>
             </div>
 
@@ -154,7 +154,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 boxShadow: '0 2px 8px rgba(212,185,106,0.3)',
               }}
             >
-              - Best Value -
+              - 3 Months Free -
             </div>
 
             <div 
