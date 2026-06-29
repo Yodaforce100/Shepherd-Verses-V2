@@ -89,13 +89,13 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 className="font-serif text-4xl sm:text-5xl"
                 style={{ color: '#001C5F' }}
               >
-                $5.95
+                $8.95
               </span>
               <span 
                 className="font-sans text-base"
                 style={{ color: '#6B7280' }}
               >
-                / month
+                USD / month
               </span>
             </div>
 
@@ -169,13 +169,13 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   className="font-serif text-4xl sm:text-5xl"
                   style={{ color: '#D4B96A' }}
                 >
-                  $59.50
+                  $89.90
                 </span>
                 <span 
                   className="font-sans text-base"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
-                  / year
+                  USD / year
                 </span>
               </div>
 
