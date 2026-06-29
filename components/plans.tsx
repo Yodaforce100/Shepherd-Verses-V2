@@ -28,7 +28,6 @@ const monthlyFeatures = [
 const annualFeatures = [
   "Your daily Scripture delivered at your chosen time",
   "Received in Telegram as a voice and written message",
-  { text: "2 months free", bold: true, suffix: " compared to monthly" },
 ]
 
 const trustBadges = [
@@ -90,13 +89,13 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   className="font-serif text-4xl sm:text-5xl"
                   style={{ color: '#001C5F' }}
                 >
-                  US$8.95
+                  $8.95
                 </span>
                 <span 
                   className="font-sans text-base"
                   style={{ color: '#6B7280' }}
                 >
-                  / month
+                  USD / month
                 </span>
               </div>
               <p 
@@ -178,20 +177,20 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     className="font-serif text-4xl sm:text-5xl"
                     style={{ color: '#D4B96A' }}
                   >
-                    US$6.70
+                    $6.70
                   </span>
                   <span 
                     className="font-sans text-base"
                     style={{ color: 'rgba(255,255,255,0.6)' }}
                   >
-                    / month
+                    USD / month
                   </span>
                 </div>
                 <p 
                   className="font-sans text-base mt-1"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
-                  Billed annually at US$80.40 - equivalent to 3 months free
+                  Billed annually at $80.40 USD
                 </p>
               </div>
 
