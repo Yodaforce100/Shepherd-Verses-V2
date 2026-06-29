@@ -242,15 +242,6 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
         {/* Trust Badges */}
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-6">
           <div className="flex items-center gap-2">
-            <Gift className="w-4 h-4" style={{ color: '#D4B96A' }} />
-            <span
-              className="font-sans text-base"
-              style={{ color: '#2A4B7C', fontWeight: 450 }}
-            >
-              3-Day Free Trial
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
             <Pencil className="w-4 h-4" style={{ color: '#D4B96A' }} />
             <span
               className="font-sans text-base"
