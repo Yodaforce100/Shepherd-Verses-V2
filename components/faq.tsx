@@ -32,18 +32,6 @@ const faqs = [
     answer: "After signing up, you'll connect with Shepherd Verses through Telegram and choose a time to receive your daily message. Each morning, you'll be invited to share how you're feeling by selecting an emotion. Your Shepherd Verses companion then responds with a personalised spoken and written message designed to support and encourage you throughout your day."
   },
   {
-    question: "Do I need to know the Bible to use Shepherd Verses?",
-    answer: "Not at all. Shepherd Verses is designed for anyone seeking encouragement and support through God's word, whether you're new to the Bible or have been reading it for years."
-  },
-  {
-    question: "How does Shepherd Verses choose scripture?",
-    answer: "Each emotion is thoughtfully matched with scripture that reflects the challenges, hopes, and encouragement associated with that feeling. Our goal is to provide verses that speak meaningfully to where you are emotionally and spiritually."
-  },
-  {
-    question: "What feelings can I share?",
-    answer: "Shepherd Verses currently supports a wide range of emotions, including anxiety, stress, sadness, loneliness, uncertainty, gratitude, hope, joy, and more. Simply select the emotion that best reflects how you're feeling, and your message will be tailored accordingly."
-  },
-  {
     question: "Do I need Telegram?",
     answer: "Yes. Shepherd Verses currently delivers messages through Telegram. Telegram is free to use and only takes a few moments to set up. Once connected, you'll receive your daily messages directly through the app."
   },
