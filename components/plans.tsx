@@ -84,19 +84,27 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </h3>
 
             {/* Price */}
-            <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
-              <span 
-                className="font-serif text-4xl sm:text-5xl"
-                style={{ color: '#001C5F' }}
-              >
-                $8.95
-              </span>
-              <span 
-                className="font-sans text-base"
+            <div className="mb-5 sm:mb-6">
+              <div className="flex items-baseline gap-1">
+                <span 
+                  className="font-serif text-4xl sm:text-5xl"
+                  style={{ color: '#001C5F' }}
+                >
+                  US$8.95
+                </span>
+                <span 
+                  className="font-sans text-base"
+                  style={{ color: '#6B7280' }}
+                >
+                  / month
+                </span>
+              </div>
+              <p 
+                className="font-sans text-base mt-1"
                 style={{ color: '#6B7280' }}
               >
-                USD / month
-              </span>
+                billed monthly
+              </p>
             </div>
 
             {/* Features */}
@@ -164,19 +172,27 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               </h3>
 
               {/* Price */}
-              <div className="flex items-baseline gap-1 mb-5 sm:mb-6">
-                <span 
-                  className="font-serif text-4xl sm:text-5xl"
-                  style={{ color: '#D4B96A' }}
-                >
-                  $89.90
-                </span>
-                <span 
-                  className="font-sans text-base"
+              <div className="mb-5 sm:mb-6">
+                <div className="flex items-baseline gap-1">
+                  <span 
+                    className="font-serif text-4xl sm:text-5xl"
+                    style={{ color: '#D4B96A' }}
+                  >
+                    US$6.70
+                  </span>
+                  <span 
+                    className="font-sans text-base"
+                    style={{ color: 'rgba(255,255,255,0.6)' }}
+                  >
+                    / month
+                  </span>
+                </div>
+                <p 
+                  className="font-sans text-base mt-1"
                   style={{ color: 'rgba(255,255,255,0.6)' }}
                 >
-                  USD / year
-                </span>
+                  Billed annually at US$80.40 - equivalent to 3 months free
+                </p>
               </div>
 
               {/* Features */}
