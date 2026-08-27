@@ -47,10 +47,11 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-[28rem]">
           <Image
-            src="/images/companion-moment.jpg"
+            src="/images/hero-test-prayer.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[center_35%]"
+            style={{ transform: 'scaleX(-1)' }}
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -130,7 +131,7 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
-            src="/images/companion-moment.jpg"
+            src="/images/hero-test-prayer.jpg"
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-center"
