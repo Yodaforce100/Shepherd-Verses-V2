@@ -137,11 +137,13 @@ export function Hero({ onSignupClick }: HeroProps) {
             className="object-cover object-[72%_center]"
             style={{ transform: 'scaleX(-1)' }}
           />
-          {/* Gradient fade to the right */}
+          {/* Gradient fade to the right — ramps gradually so the image
+              dissolves all the way to the panel edge (where the text begins)
+              instead of hitting flat cream early and leaving a dead gap. */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 40%, rgba(247,246,244,0.8) 70%, rgba(247,246,244,1) 100%)',
+              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.12) 38%, rgba(247,246,244,0.4) 60%, rgba(247,246,244,0.72) 78%, rgba(247,246,244,0.92) 90%, rgba(247,246,244,1) 100%)',
             }}
           />
           {/* Additional top/bottom fade */}
