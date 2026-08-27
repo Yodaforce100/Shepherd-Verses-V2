@@ -23,11 +23,12 @@ export function Footer() {
           <div className="flex justify-center lg:flex-1">
             <Link href="/">
               <Image
-                src="/images/shepherd-verses-logo-2x.png"
+                src="/images/shepherd-verses-logo-cropped.png"
                 alt="Shepherd Verses"
-                width={220}
-                height={70}
-                className="h-12 w-auto"
+                width={1450}
+                height={420}
+                className="h-16 w-auto"
+                priority={false}
               />
             </Link>
           </div>
