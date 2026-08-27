@@ -36,9 +36,20 @@ function LatinCross({ className, style }: { className?: string; style?: React.CS
 
 interface HeroProps {
   onSignupClick?: () => void
+  /** Hero photo. Overridable so candidates can be compared on /hero-preview. */
+  imageSrc?: string
+  /** object-position for the mobile (top) crop. */
+  mobilePosition?: string
+  /** object-position for the desktop (left panel) crop. */
+  desktopPosition?: string
 }
 
-export function Hero({ onSignupClick }: HeroProps) {
+export function Hero({
+  onSignupClick,
+  imageSrc = "/images/companion-moment.jpg",
+  mobilePosition = "center 35%",
+  desktopPosition = "center",
+}: HeroProps) {
   return (
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
@@ -47,10 +58,12 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-[28rem]">
           <Image
-            src="/images/companion-moment.jpg"
+            src={imageSrc}
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-[center_35%]"
+            priority
+            className="object-cover"
+            style={{ objectPosition: mobilePosition }}
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -130,10 +143,12 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
-            src="/images/companion-moment.jpg"
+            src={imageSrc}
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-center"
+            priority
+            className="object-cover"
+            style={{ objectPosition: desktopPosition }}
           />
           {/* Gradient fade to the right */}
           <div 
