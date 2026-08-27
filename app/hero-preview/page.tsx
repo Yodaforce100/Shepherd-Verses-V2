@@ -10,7 +10,7 @@ const CANDIDATES = [
     note: "companion-moment.jpg · window light, coffee, praying hands",
     src: "/images/companion-moment.jpg",
     mobilePosition: "center 35%",
-    desktopPosition: "center",
+    desktopPosition: "22% center",
   },
   {
     id: "contemplative",
@@ -18,7 +18,7 @@ const CANDIDATES = [
     note: "hero-contemplative.jpg · already in project, matches palette",
     src: "/images/hero-contemplative.jpg",
     mobilePosition: "center 30%",
-    desktopPosition: "35% center",
+    desktopPosition: "18% center",
   },
   {
     id: "option-3",
@@ -26,7 +26,7 @@ const CANDIDATES = [
     note: "hero-option-3.jpg · already in project, golden window light",
     src: "/images/hero-option-3.jpg",
     mobilePosition: "center 30%",
-    desktopPosition: "40% center",
+    desktopPosition: "20% center",
   },
   {
     id: "option-4",
@@ -34,7 +34,7 @@ const CANDIDATES = [
     note: "hero-option-4.jpg · already in project, brightest of the set",
     src: "/images/hero-option-4.jpg",
     mobilePosition: "center 30%",
-    desktopPosition: "55% center",
+    desktopPosition: "28% center",
   },
   {
     id: "istock",
@@ -42,7 +42,7 @@ const CANDIDATES = [
     note: "WATERMARKED comp · cooler white tones, wider crop",
     src: "/images/hero-candidate-istock.jpg",
     mobilePosition: "center 40%",
-    desktopPosition: "30% center",
+    desktopPosition: "16% center",
     watermarked: true,
   },
 ]
