@@ -51,6 +51,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[center_40%]"
+            style={{ transform: 'scaleX(-1)' }}
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -133,7 +134,8 @@ export function Hero({ onSignupClick }: HeroProps) {
             src="/images/hero-test-bible.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-[60%_center]"
+            className="object-cover object-[40%_center]"
+            style={{ transform: 'scaleX(-1)' }}
           />
           {/* Gradient fade to the right */}
           <div 
