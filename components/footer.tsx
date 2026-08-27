@@ -17,13 +17,14 @@ export function Footer() {
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
                 &ldquo;The Lord is my shepherd; I shall lack nothing. He makes me lie down in green
-                pastures. He leads me beside still waters. He restores my soul.&rdquo;
+                pastures. He leads me beside still waters. He restores my soul. He guides me in the
+                paths of righteousness for his name&apos;s sake.&rdquo;
               </p>
               <footer
                 className="font-sans text-xs mt-1.5 text-center lg:text-left"
                 style={{ color: '#001C5F', fontWeight: 600 }}
               >
-                &mdash; Psalm 23:1-3a (WEBBE)
+                &mdash; Psalm 23:1-3 (WEBBE)
               </footer>
             </blockquote>
           </div>
