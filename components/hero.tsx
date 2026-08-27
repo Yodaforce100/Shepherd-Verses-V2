@@ -36,21 +36,9 @@ function LatinCross({ className, style }: { className?: string; style?: React.CS
 
 interface HeroProps {
   onSignupClick?: () => void
-  /** Hero photo. Overridable so candidates can be compared on /hero-preview. */
-  imageSrc?: string
-  /** object-position for the mobile (top) crop. */
-  mobilePosition?: string
-  /** object-position for the desktop full-bleed crop. Keeps the subject left
-   *  of the copy, since the image now spans the whole section. */
-  desktopPosition?: string
 }
 
-export function Hero({
-  onSignupClick,
-  imageSrc = "/images/companion-moment.jpg",
-  mobilePosition = "center 35%",
-  desktopPosition = "22% center",
-}: HeroProps) {
+export function Hero({ onSignupClick }: HeroProps) {
   return (
     <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       
@@ -59,12 +47,10 @@ export function Hero({
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-[28rem]">
           <Image
-            src={imageSrc}
+            src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
-            priority
-            className="object-cover"
-            style={{ objectPosition: mobilePosition }}
+            className="object-cover object-[center_35%]"
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -141,35 +127,26 @@ export function Hero({
 
       {/* Desktop Layout - Side by side for tablets and up */}
       <div className="hidden md:block relative py-8 sm:py-12 md:py-16">
-        {/* Full-bleed image. Spanning the whole section (rather than a narrow
-            left panel) keeps object-cover from blowing the photo up, so the
-            subject reads at a calmer distance — and there is no container
-            edge for a seam to form on. */}
-        <div className="absolute inset-0 z-0">
+        {/* Left Image with Fade to Right */}
+        <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
-            src={imageSrc}
+            src="/images/companion-moment.jpg"
             alt="A peaceful moment of reflection"
             fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            style={{ objectPosition: desktopPosition }}
+            className="object-cover object-center"
           />
-          {/* Long, eased fade to the right so the photo dissolves into the
-              cream behind the text instead of stopping at a line. */}
-          <div
+          {/* Gradient fade to the right */}
+          <div 
             className="absolute inset-0"
             style={{
-              background:
-                'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.04) 10%, rgba(247,246,244,0.16) 20%, rgba(247,246,244,0.38) 29%, rgba(247,246,244,0.66) 37%, rgba(247,246,244,0.88) 45%, rgba(247,246,244,0.98) 54%, rgba(247,246,244,1) 62%)',
+              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 40%, rgba(247,246,244,0.8) 70%, rgba(247,246,244,1) 100%)',
             }}
           />
-          {/* Soft top/bottom vignette to blend into adjacent sections. */}
-          <div
+          {/* Additional top/bottom fade */}
+          <div 
             className="absolute inset-0"
             style={{
-              background:
-                'linear-gradient(to bottom, rgba(247,246,244,0.55) 0%, rgba(247,246,244,0) 22%, rgba(247,246,244,0) 74%, rgba(247,246,244,0.7) 100%)',
+              background: 'linear-gradient(to bottom, rgba(247,246,244,0.3) 0%, rgba(247,246,244,0) 20%, rgba(247,246,244,0) 80%, rgba(247,246,244,0.3) 100%)',
             }}
           />
         </div>
