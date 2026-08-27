@@ -32,15 +32,32 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Right - Legal Links */}
-          <div className="text-center lg:text-right lg:flex-1">
-            <p 
-              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-2"
-              style={{ color: '#001C5F' }}
-            >
-              Legal
-            </p>
-            <div className="flex items-center justify-center lg:justify-end gap-4">
+          {/* Right - Contact & Legal Links */}
+          <div className="text-center lg:text-right lg:flex-1 flex flex-col items-center lg:items-end gap-4">
+            <div className="text-center lg:text-right">
+              <p
+                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-2"
+                style={{ color: '#001C5F' }}
+              >
+                Contact
+              </p>
+              <a
+                href="mailto:hello@shepherdverses.com"
+                className="font-sans text-sm transition-colors hover:opacity-80"
+                style={{ color: '#2A4B7C', fontWeight: 450 }}
+              >
+                hello@shepherdverses.com
+              </a>
+            </div>
+
+            <div className="text-center lg:text-right">
+              <p
+                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-2"
+                style={{ color: '#001C5F' }}
+              >
+                Legal
+              </p>
+              <div className="flex items-center justify-center lg:justify-end gap-4">
               <Link 
                 href="/privacy" 
                 className="font-sans text-sm transition-colors hover:opacity-80"
@@ -62,6 +79,7 @@ export function Footer() {
               >
                 Refund Policy
               </Link>
+              </div>
             </div>
           </div>
         </div>
