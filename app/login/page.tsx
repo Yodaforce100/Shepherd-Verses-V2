@@ -39,7 +39,7 @@ export default function LoginPage() {
       {/* Navbar */}
       <div style={{ padding: '20px 32px' }}>
         <Link href="/">
-          <Image src="/images/shepherd-verses-logo-2x.png" alt="Shepherd Verses" width={180} height={56} style={{ height: '40px', width: 'auto' }} />
+          <Image src="/images/shepherd-verses-logo-cropped.png" alt="Shepherd Verses" width={1360} height={207} style={{ height: '30px', width: 'auto' }} />
         </Link>
       </div>
 

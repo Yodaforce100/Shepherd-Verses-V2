@@ -235,9 +235,9 @@ function WelcomeContent() {
       <div className="text-center mt-2">
         <a href="/">
           <img
-            src="/images/shepherd-verses-logo-2x.png"
+            src="/images/shepherd-verses-logo-cropped.png"
             alt="Shepherd Verses"
-            style={{ height: '80px', width: 'auto', display: 'inline-block' }}
+            style={{ height: '44px', width: 'auto', display: 'inline-block' }}
           />
         </a>
       </div>
