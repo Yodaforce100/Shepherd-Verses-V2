@@ -133,7 +133,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             src="/images/hero-test-bible.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-[60%_center]"
+            className="object-cover object-[54%_center]"
           />
           {/* Gradient fade to the right — ramps gradually so the image
               dissolves all the way to the panel edge (where the text begins)
