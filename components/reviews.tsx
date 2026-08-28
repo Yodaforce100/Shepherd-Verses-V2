@@ -54,6 +54,14 @@ export function Reviews() {
               className="w-full md:w-1/3 max-w-[240px] mx-auto rounded-xl p-4 lg:p-5 flex flex-col"
               style={{ backgroundColor: '#F7F6F4', border: '0.5px solid #D5CDB8', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
             >
+              {/* Placeholder label */}
+              <p
+                className="font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-2"
+                style={{ color: '#9A8F73' }}
+              >
+                PLACE HOLDER to be updated
+              </p>
+
               {/* Stars */}
               <StarRating />
 
