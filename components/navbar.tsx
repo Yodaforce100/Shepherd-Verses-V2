@@ -41,11 +41,11 @@ export function Navbar({ onSignupClick }: NavbarProps) {
           <Link href="/" className="flex items-center justify-center lg:flex-1 focus:outline-none">
             <div className="flex items-center justify-center" style={{ border: 'none', outline: 'none' }}>
               <Image
-                src="/images/shepherd-verses-logo-2x.png"
+                src="/images/shepherd-verses-logo-cropped.png"
                 alt="Shepherd Verses"
-                width={320}
-                height={100}
-                className="h-16 sm:h-[72px] lg:h-20 w-auto"
+                width={1360}
+                height={207}
+                className="h-9 sm:h-10 lg:h-11 w-auto"
                 priority
                 style={{ border: 'none', outline: 'none' }}
               />

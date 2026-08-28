@@ -47,10 +47,10 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Image at top with fade to bottom */}
         <div className="relative h-72 sm:h-[28rem]">
           <Image
-            src="/images/companion-moment.jpg"
+            src="/images/hero-test-bible.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-[center_35%]"
+            className="object-cover object-[center_40%]"
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -130,16 +130,18 @@ export function Hero({ onSignupClick }: HeroProps) {
         {/* Left Image with Fade to Right */}
         <div className="absolute inset-y-0 left-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-3/5 z-0">
           <Image
-            src="/images/companion-moment.jpg"
+            src="/images/hero-test-bible.jpg"
             alt="A peaceful moment of reflection"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[66%_center]"
           />
-          {/* Gradient fade to the right */}
+          {/* Gradient fade to the right — ramps gradually so the image
+              dissolves all the way to the panel edge (where the text begins)
+              instead of hitting flat cream early and leaving a dead gap. */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.3) 40%, rgba(247,246,244,0.8) 70%, rgba(247,246,244,1) 100%)',
+              background: 'linear-gradient(to right, rgba(247,246,244,0) 0%, rgba(247,246,244,0.12) 38%, rgba(247,246,244,0.4) 60%, rgba(247,246,244,0.72) 78%, rgba(247,246,244,0.92) 90%, rgba(247,246,244,1) 100%)',
             }}
           />
           {/* Additional top/bottom fade */}
