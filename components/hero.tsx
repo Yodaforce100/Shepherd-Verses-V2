@@ -52,6 +52,8 @@ export function Hero({ onSignupClick }: HeroProps) {
             fill
             className="object-cover object-[center_40%]"
           />
+          {/* Subtle cream veil to lighten the photo slightly */}
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(247,246,244,0.12)' }} />
           {/* Gradient fade to bottom */}
           <div 
             className="absolute inset-0"
@@ -135,6 +137,8 @@ export function Hero({ onSignupClick }: HeroProps) {
             fill
             className="object-cover object-[66%_center]"
           />
+          {/* Subtle cream veil to lighten the photo slightly */}
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(247,246,244,0.12)' }} />
           {/* Gradient fade to the right — ramps gradually so the image
               dissolves all the way to the panel edge (where the text begins)
               instead of hitting flat cream early and leaving a dead gap. */}
