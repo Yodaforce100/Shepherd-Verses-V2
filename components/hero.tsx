@@ -51,7 +51,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[center_40%]"
-            style={{ filter: 'brightness(1.08) contrast(1.02)' }}
+            style={{ filter: 'brightness(1.14) contrast(0.98) saturate(0.94)' }}
           />
           {/* Gradient fade to bottom */}
           <div 
@@ -135,7 +135,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             alt="A peaceful moment of reflection"
             fill
             className="object-cover object-[66%_center]"
-            style={{ filter: 'brightness(1.08) contrast(1.02)' }}
+            style={{ filter: 'brightness(1.14) contrast(0.98) saturate(0.94)' }}
           />
           {/* Gradient fade to the right — ramps gradually so the image
               dissolves all the way to the panel edge (where the text begins)
