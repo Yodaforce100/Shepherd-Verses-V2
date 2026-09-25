@@ -48,7 +48,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
 
           {/* Subtitle */}
           <p 
-            className="font-sans text-lg lg:text-xl"
+            className="font-sans text-sm lg:text-base"
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
