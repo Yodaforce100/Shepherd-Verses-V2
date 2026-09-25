@@ -46,7 +46,7 @@ const steps = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hero%20Mobile%20phone%20image%20Apr26-JLFOCxANb5QnS51z8WCdLELMtMraKZ.png",
     title: "Share How You Feel",
     accentWord: "Pause.",
-    description: "Each morning your Shepherd Verses companion gently asks 'How are you feeling today?' Choose your current emotion — whether you're anxious, tired, or grateful. We listen to where you are in this moment.",
+    description: "Each morning your Shepherd Verses companion gently asks 'How are you feeling today?' Choose your current emotion - whether you're anxious, tired, or grateful. We listen to where you are in this moment.",
     emphasis: null,
     descriptionEnd: null,
     icon: "speech",
@@ -55,7 +55,7 @@ const steps = [
     image: "/images/mobile-app-ui-new.jpg",
     title: "Hear a Caring Voice",
     accentWord: "Listen.",
-    description: "Your companion shares a spoken Scripture, and a personalised affirmation and mantra, tailored to how you're feeling. Carefully chosen to offer comfort and support — delivered straight to your Telegram.",
+    description: "Shepherd Verses shares a spoken Scripture, and a personalised affirmation and mantra, tailored to how you're feeling. Carefully chosen to offer comfort and support - delivered straight to your Telegram.",
     emphasis: null,
     descriptionEnd: null,
     icon: "soundwave",
@@ -69,13 +69,20 @@ export function HowItWorks() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-12">
-          {/* Heading */}
+          {/* Primary Heading */}
           <h2 
+            className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
+            style={{ color: '#001C5F' }}
+          >
+            Wake up to a voice that hears you
+          </h2>
+          {/* Sub-heading */}
+          <h3 
             className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
             style={{ color: '#001C5F' }}
           >
             Two simple steps
-          </h2>
+          </h3>
           {/* Subtitle */}
           <p 
             className="font-sans text-lg lg:text-xl"
