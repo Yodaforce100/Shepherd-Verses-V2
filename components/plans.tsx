@@ -160,7 +160,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </button>
             <p
               className="font-sans text-xs text-center mt-2.5"
-              style={{ color: '#6B7280' }}
+              style={{ color: '#8A919E' }}
             >
               Billed monthly
             </p>
@@ -251,7 +251,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               </button>
               <p
                 className="font-sans text-xs text-center mt-2.5"
-                style={{ color: 'rgba(255,255,255,0.6)' }}
+                style={{ color: 'rgba(255,255,255,0.5)' }}
               >
                 Billed annually at $80.40 USD
               </p>
