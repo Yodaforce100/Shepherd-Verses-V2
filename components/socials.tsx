@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Instagram, Youtube } from "lucide-react"
+import type React from "react"
+import { Facebook, Instagram, Youtube } from "lucide-react"
 import styles from "./socials.module.css"
 
 // Soundwave divider component with animation - matching hero section
@@ -21,13 +22,26 @@ function SoundwaveDivider() {
   )
 }
 
+type IconComponent = (props: { className?: string; style?: React.CSSProperties }) => React.ReactNode
+
+// lucide-react has no TikTok icon, so this is a filled brand glyph sized to match.
+function TikTokIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className} style={style}>
+      <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 0 1-2.59-2.59 2.59 2.59 0 0 1 3.37-2.47V9.7a5.69 5.69 0 0 0-.78-.05A5.69 5.69 0 0 0 4.17 15.3 5.69 5.69 0 0 0 9.86 21a5.69 5.69 0 0 0 5.69-5.69V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.28 4.28 0 0 1-3.25-1.48Z" />
+    </svg>
+  )
+}
+
 // Set href to the real channel URL once each account is live; null shows a "coming soon" note instead.
-const socials: { name: string; icon: typeof Youtube; href: string | null }[] = [
+const socials: { name: string; icon: IconComponent; href: string | null }[] = [
   { name: "YouTube", icon: Youtube, href: null },
   { name: "Instagram", icon: Instagram, href: null },
+  { name: "Facebook", icon: Facebook, href: null },
+  { name: "TikTok", icon: TikTokIcon, href: null },
 ]
 
-function SocialIcon({ name, icon: Icon }: { name: string; icon: typeof Youtube }) {
+function SocialIcon({ name, icon: Icon }: { name: string; icon: IconComponent }) {
   return (
     <>
       <div
