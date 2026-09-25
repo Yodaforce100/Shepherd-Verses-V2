@@ -76,7 +76,7 @@ export function Connection() {
             className="font-sans text-base mx-auto max-w-lg lg:max-w-2xl mb-6"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
-            Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments—listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
+            Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
           </p>
           
           {/* Scripture Quote */}
@@ -86,7 +86,7 @@ export function Connection() {
           >
             &quot;Come to me, all you who are weary and burdened,
             <br />
-            and I will give you rest.&quot; — Matthew 11:28
+            and I will give you rest.&quot; - Matthew 11:28
           </p>
         </div>
       </div>

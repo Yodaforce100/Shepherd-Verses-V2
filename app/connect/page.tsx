@@ -74,7 +74,7 @@ export default function ConnectPage() {
               boxShadow: "0 8px 24px rgba(212,185,106,0.5)",
             }}
           >
-            I have Telegram — connect now
+            I have Telegram - connect now
           </a>
 
           {/* Button 2 — secondary outline */}
@@ -124,7 +124,7 @@ export default function ConnectPage() {
           className="font-sans text-sm mx-auto max-w-sm"
           style={{ color: "#4A5568", lineHeight: "1.6" }}
         >
-          📲 When Telegram asks, tap <strong className="font-bold">ALLOW notifications</strong> — that&apos;s how your verse reaches you each day.
+          📲 When Telegram asks, tap <strong className="font-bold">ALLOW notifications</strong> - that&apos;s how your verse reaches you each day.
         </p>
       </div>
     </main>

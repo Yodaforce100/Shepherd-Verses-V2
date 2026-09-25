@@ -12,7 +12,7 @@ const reviews = [
     location: "Texas",
   },
   {
-    quote: "The verse it gave me brought me to tears — in the best way. It felt like being heard. I've recommended it to everyone.",
+    quote: "The verse it gave me brought me to tears - in the best way. It felt like being heard. I've recommended it to everyone.",
     name: "Joanne M.",
     location: "Georgia",
   },

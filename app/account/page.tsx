@@ -23,7 +23,7 @@ const TIME_OPTIONS = [
 ]
 
 function formatTime(time: string) {
-  if (!time) return '—'
+  if (!time) return '-'
   const [h, m] = time.split(':').map(Number)
   const period = h >= 12 ? 'PM' : 'AM'
   const hour = h % 12 || 12

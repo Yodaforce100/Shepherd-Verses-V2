@@ -47,7 +47,7 @@ const faqs = [
           and our support team will help.
         </p>
         <p className="mt-3">
-          Billing, payment method or cancelling: handled by Paddle, our payment provider — use the link in your confirmation email or visit{" "}
+          Billing, payment method or cancelling: handled by Paddle, our payment provider - use the link in your confirmation email or visit{" "}
           <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
             paddle.net
           </a>
