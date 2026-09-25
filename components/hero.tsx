@@ -81,7 +81,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             className="font-serif text-3xl leading-tight mb-2 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
             style={{ color: '#001C5F' }}
           >
-            Wake up to a voice that hears you
+            Find comfort in God&apos;s Word, every day
           </h1>
 
           {/* Subtitle */}
@@ -89,9 +89,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             className="font-serif italic text-lg mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
             style={{ color: '#5E8DBF', fontWeight: 550 }}
           >
-            and guides you with scripture
-            <br />
-            and affirmations.
+            Personalised scripture and affirmations, sent daily as a voice and written message
           </p>
 
           {/* Body Text */}
@@ -99,7 +97,7 @@ export function Hero({ onSignupClick }: HeroProps) {
             className="font-sans text-base max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
             style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
           >
-            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
+                Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion is there to help you find clarity and reassurance.
           </p>
 
           {/* CTA Button */}
@@ -176,7 +174,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-2 sm:mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
                 style={{ color: '#001C5F' }}
               >
-                Wake up to a voice that hears you
+                Find comfort in God&apos;s Word, every day
               </h1>
 
               {/* Subtitle */}
@@ -184,7 +182,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                 className="font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
                 style={{ color: '#5E8DBF', fontWeight: 550 }}
               >
-                and guides you with scripture and affirmations.
+                Personalised scripture and affirmations, sent daily as a voice and written message
               </p>
 
               {/* Body Text */}
@@ -192,7 +190,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                 className="font-sans text-base mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
                 style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
               >
-                Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion delivers calming, spoken scripture and affirmations—helping you find clarity and reassurance.
+            Share how you&apos;re feeling, and your <span style={{ fontWeight: 550 }}>Shepherd Verses</span> companion is there to help you find clarity and reassurance.
               </p>
 
               {/* CTA Button */}
