@@ -56,12 +56,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
 
           {/* Trial Pill */}
           <div
-            className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 mt-6"
+            className="inline-flex w-full max-w-xs sm:max-w-sm items-center justify-center gap-2.5 rounded-full px-6 py-3 mt-6"
             style={{ backgroundColor: '#001C5F' }}
           >
             <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
   <span className="font-sans text-base lg:text-lg font-semibold text-white whitespace-nowrap">
-  Try 3 days free
+  3-day free trial
             </span>
           </div>
 
