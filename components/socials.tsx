@@ -1,20 +1,9 @@
 "use client"
 
+import { useState } from "react"
+import type React from "react"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 import styles from "./socials.module.css"
-
-// Custom TikTok icon since lucide doesn't have one
-function TikTokIcon({ className }: { className?: string }) {
-  return (
-    <svg 
-      viewBox="0 0 24 24" 
-      fill="currentColor" 
-      className={className}
-    >
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-    </svg>
-  )
-}
 
 // Soundwave divider component with animation - matching hero section
 function SoundwaveDivider() {
@@ -33,14 +22,44 @@ function SoundwaveDivider() {
   )
 }
 
-const socials = [
-  { name: "TikTok", icon: TikTokIcon, href: "#" },
-  { name: "YouTube", icon: Youtube, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "Facebook", icon: Facebook, href: "#" },
+type IconComponent = (props: { className?: string; style?: React.CSSProperties }) => React.ReactNode
+
+// lucide-react has no TikTok icon, so this is a filled brand glyph sized to match.
+function TikTokIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className} style={style}>
+      <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 0 1-2.59-2.59 2.59 2.59 0 0 1 3.37-2.47V9.7a5.69 5.69 0 0 0-.78-.05A5.69 5.69 0 0 0 4.17 15.3 5.69 5.69 0 0 0 9.86 21a5.69 5.69 0 0 0 5.69-5.69V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.28 4.28 0 0 1-3.25-1.48Z" />
+    </svg>
+  )
+}
+
+// Set href to the real channel URL once each account is live; null shows a "coming soon" note instead.
+const socials: { name: string; icon: IconComponent; href: string | null }[] = [
+  { name: "YouTube", icon: Youtube, href: null },
+  { name: "Instagram", icon: Instagram, href: null },
+  { name: "Facebook", icon: Facebook, href: null },
+  { name: "TikTok", icon: TikTokIcon, href: null },
 ]
 
+function SocialIcon({ name, icon: Icon }: { name: string; icon: IconComponent }) {
+  return (
+    <>
+      <div
+        className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105"
+        style={{ backgroundColor: '#FFFFFF', border: '1px solid #E8D48B' }}
+      >
+        <Icon className="w-6 h-6 transition-colors duration-300" style={{ color: '#C9A227' }} />
+      </div>
+      <span className="font-sans text-xs font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>
+        {name}
+      </span>
+    </>
+  )
+}
+
 export function Socials() {
+  const [comingSoon, setComingSoon] = useState<string | null>(null)
+
   return (
     <section id="socials" className="relative py-10 lg:py-9" style={{ backgroundColor: '#001C5F' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,33 +82,40 @@ export function Socials() {
 
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-6 lg:gap-8">
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              className="flex flex-col items-center gap-1.5 group"
-            >
-              <div 
-                className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105"
-                style={{ 
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #E8D48B',
-                }}
+          {socials.map((social) =>
+            social.href ? (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Shepherd Verses on ${social.name} (opens in a new tab)`}
+                className="flex flex-col items-center gap-1.5 group"
               >
-                <social.icon 
-                  className="w-6 h-6 transition-colors duration-300"
-                  style={{ color: '#C9A227' }}
-                />
-              </div>
-              <span 
-                className="font-sans text-xs font-medium"
-                style={{ color: 'rgba(255,255,255,0.85)' }}
+                <SocialIcon name={social.name} icon={social.icon} />
+              </a>
+            ) : (
+              <button
+                key={social.name}
+                type="button"
+                onClick={() => setComingSoon(social.name)}
+                aria-label={`Shepherd Verses on ${social.name} (coming soon)`}
+                className="flex flex-col items-center gap-1.5 group cursor-pointer"
               >
-                {social.name}
-              </span>
-            </a>
-          ))}
+                <SocialIcon name={social.name} icon={social.icon} />
+              </button>
+            )
+          )}
         </div>
+
+        <p
+          role="status"
+          aria-live="polite"
+          className="font-sans text-sm text-center mt-4 min-h-5"
+          style={{ color: '#E8D48B' }}
+        >
+          {comingSoon ? `Our ${comingSoon} channel is coming soon - thanks for your patience!` : ""}
+        </p>
       </div>
     </section>
   )

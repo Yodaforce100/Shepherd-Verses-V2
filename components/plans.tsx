@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Gift, Pencil, Lock } from "lucide-react"
+import { Check, Gift, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -19,11 +19,34 @@ function GoldDivider({ text }: { text: string }) {
   )
 }
 
-const sharedBenefits: React.ReactNode[] = [
-  "Daily personalised scripture, affirmation and mantra",
-  "Delivered at your chosen time",
-  <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
+const sharedBenefits: { icon: LucideIcon; text: React.ReactNode }[] = [
+  { icon: BookOpen, text: "Daily personalised scripture, affirmation and mantra" },
+  { icon: Clock, text: "Delivered at your chosen time" },
+  {
+    icon: Mic,
+    text: <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
+  },
 ]
+
+function BenefitList() {
+  return (
+    <ul className="inline-block text-left space-y-3">
+      {sharedBenefits.map(({ icon: Icon, text }, index) => (
+        <li key={index} className="flex items-start gap-3">
+          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5 lg:mt-1" aria-hidden="true">
+            <Icon className="w-[18px] h-[18px]" strokeWidth={1.75} style={{ color: '#D4B96A' }} />
+          </div>
+          <span
+            className="font-sans text-base lg:text-lg"
+            style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
+          >
+            {text}
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 interface PlansProps {
   onMonthlyClick?: () => void
@@ -56,40 +79,23 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
 
           {/* Trial Pill */}
           <div
-            className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 mt-6"
+            className="inline-flex w-full max-w-xs sm:max-w-sm items-center justify-center gap-2.5 rounded-full px-6 py-3 mt-6"
             style={{ backgroundColor: '#001C5F' }}
           >
             <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
-            <span className="font-sans text-base lg:text-lg font-semibold text-white">
-              Start free - 3-day free trial on any plan
+  <span className="font-sans text-base lg:text-lg font-semibold text-white whitespace-nowrap">
+  Start with 3 days free
             </span>
           </div>
 
           {/* Shared benefits — included on every plan */}
           <div className="text-center mt-8">
-            <ul className="inline-block text-left space-y-3">
-              {sharedBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div
-                    className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
-                    style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
-                  >
-                    <Check className="w-3 h-3" style={{ color: '#D4B96A' }} />
-                  </div>
-                  <span
-                    className="font-sans text-base lg:text-lg"
-                    style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
-                  >
-                    {benefit}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <BenefitList />
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-5 lg:gap-7 max-w-5xl mx-auto mb-12 px-4">
+        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-5 lg:gap-7 max-w-5xl mx-auto mb-8 px-4">
           
           {/* Monthly Plan Card */}
           <div 
@@ -98,7 +104,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             {/* Plan Name */}
             <h3 
-              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
+              className="font-sans text-sm sm:text-base font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
               style={{ color: '#D4B96A' }}
             >
               Monthly Companion
@@ -120,18 +126,15 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   USD / month
                 </span>
               </div>
-              <p
-                className="font-sans text-sm mt-1 font-semibold italic"
-                style={{ color: '#5E8DBF' }}
-              >
-                only about 30¢ a day!
-              </p>
             </div>
 
             {/* Details */}
             <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
-              {["Billed monthly", "Flexible month to month"].map((item) => (
-                <li key={item} className="flex items-start gap-2 sm:gap-3">
+              {[
+                <span key="per-day" className="italic font-semibold">only about 30¢ a day!</span>,
+                "Flexible month to month",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <div 
                     className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
                     style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
@@ -161,6 +164,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             >
               Start Monthly Plan
             </button>
+            <p
+              className="font-sans text-xs text-center mt-2.5"
+              style={{ color: '#8A919E' }}
+            >
+              Billed monthly
+            </p>
           </div>
 
           {/* Annual Plan Card (Featured) */}
@@ -186,14 +195,14 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             >
               {/* Plan Name */}
               <h3 
-                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4 mt-1 sm:mt-2"
+                className="font-sans text-sm sm:text-base font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4 mt-1 sm:mt-2"
                 style={{ color: 'rgba(255,255,255,0.6)' }}
               >
                 Annual Journey
               </h3>
 
               {/* Price */}
-              <div className="mb-5 sm:mb-6">
+              <div className="mb-4">
                 <div className="flex items-baseline gap-1">
                   <span 
                     className="font-serif text-3xl sm:text-4xl"
@@ -208,18 +217,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     USD / month
                   </span>
                 </div>
-                <p
-                  className="font-sans text-sm mt-1 font-semibold italic"
-                  style={{ color: '#D4B96A' }}
-                >
-                  only about 22¢ a day!
-                </p>
               </div>
 
               {/* Details */}
               <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
                 {[
-                  "Billed annually at $80.40 USD",
+                  <span key="per-day" className="italic font-semibold">only about 22¢ a day!</span>,
                   <><span style={{ fontWeight: 700 }}>3 months free</span> vs monthly</>,
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-2 sm:gap-3">
@@ -252,12 +255,18 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               >
                 Start Annual Journey
               </button>
+              <p
+                className="font-sans text-xs text-center mt-2.5"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+              >
+                Billed annually at $80.40 USD
+              </p>
             </div>
           </div>
         </div>
 
         {/* Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-3">
           <div className="flex items-center gap-2">
             <Pencil className="w-4 h-4" style={{ color: '#D4B96A' }} />
             <span
