@@ -98,7 +98,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             {/* Plan Name */}
             <h3 
-              className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
+              className="font-sans text-sm sm:text-base font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
               style={{ color: '#D4B96A' }}
             >
               Monthly Companion
@@ -120,18 +120,15 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   USD / month
                 </span>
               </div>
-              <p
-                className="font-sans text-sm mt-1 font-semibold italic"
-                style={{ color: '#5E8DBF' }}
-              >
-                only about 30¢ a day!
-              </p>
             </div>
 
             {/* Details */}
             <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
-              {["Billed monthly", "Flexible month to month"].map((item) => (
-                <li key={item} className="flex items-start gap-2 sm:gap-3">
+              {[
+                <span key="per-day" className="italic font-semibold">only about 30¢ a day!</span>,
+                "Flexible month to month",
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <div 
                     className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
                     style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
@@ -161,6 +158,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             >
               Start Monthly Plan
             </button>
+            <p
+              className="font-sans text-xs text-center mt-2.5"
+              style={{ color: '#6B7280' }}
+            >
+              Billed monthly
+            </p>
           </div>
 
           {/* Annual Plan Card (Featured) */}
@@ -186,14 +189,14 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             >
               {/* Plan Name */}
               <h3 
-                className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4 mt-1 sm:mt-2"
+                className="font-sans text-sm sm:text-base font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4 mt-1 sm:mt-2"
                 style={{ color: 'rgba(255,255,255,0.6)' }}
               >
                 Annual Journey
               </h3>
 
               {/* Price */}
-              <div className="mb-5 sm:mb-6">
+              <div className="mb-4">
                 <div className="flex items-baseline gap-1">
                   <span 
                     className="font-serif text-3xl sm:text-4xl"
@@ -208,18 +211,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     USD / month
                   </span>
                 </div>
-                <p
-                  className="font-sans text-sm mt-1 font-semibold italic"
-                  style={{ color: '#D4B96A' }}
-                >
-                  only about 22¢ a day!
-                </p>
               </div>
 
               {/* Details */}
               <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
                 {[
-                  "Billed annually at $80.40 USD",
+                  <span key="per-day" className="italic font-semibold">only about 22¢ a day!</span>,
                   <><span style={{ fontWeight: 700 }}>3 months free</span> vs monthly</>,
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-2 sm:gap-3">
@@ -252,6 +249,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               >
                 Start Annual Journey
               </button>
+              <p
+                className="font-sans text-xs text-center mt-2.5"
+                style={{ color: 'rgba(255,255,255,0.6)' }}
+              >
+                Billed annually at $80.40 USD
+              </p>
             </div>
           </div>
         </div>
