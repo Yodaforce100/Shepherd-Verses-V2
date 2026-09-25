@@ -60,8 +60,8 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             style={{ backgroundColor: '#001C5F' }}
           >
             <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
-            <span className="font-sans text-base lg:text-lg font-semibold text-white">
-              Start free - 3-day free trial on any plan
+  <span className="font-sans text-base lg:text-lg font-semibold text-white whitespace-nowrap">
+  Try 3 days free
             </span>
           </div>
 
