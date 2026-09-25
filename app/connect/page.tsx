@@ -108,7 +108,7 @@ export default function ConnectPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="font-bold" style={{ color: "#CF9D3E" }}>2.</span>
-                  <span>Come back and check your email — we&apos;ve sent your connect link.</span>
+                  <span>Check your email - we&apos;ve sent you a link to connect your Telegram account to Shepherd Verses.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="font-bold" style={{ color: "#CF9D3E" }}>3.</span>
@@ -124,7 +124,7 @@ export default function ConnectPage() {
           className="font-sans text-sm mx-auto max-w-sm"
           style={{ color: "#4A5568", lineHeight: "1.6" }}
         >
-          📲 When Telegram asks, tap Allow notifications — that&apos;s how your verse reaches you each day.
+          📲 When Telegram asks, tap <strong className="font-bold">ALLOW notifications</strong> — that&apos;s how your verse reaches you each day.
         </p>
       </div>
     </main>
