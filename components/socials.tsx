@@ -21,8 +21,8 @@ function SoundwaveDivider() {
 }
 
 const socials = [
-  { name: "YouTube", icon: Youtube, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
+  { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@shepherdverses" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/shepherdverses" },
 ]
 
 export function Socials() {
