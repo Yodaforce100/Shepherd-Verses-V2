@@ -105,10 +105,10 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </h3>
 
             {/* Price */}
-            <div className="mb-5 sm:mb-6">
+            <div className="mb-4">
               <div className="flex items-baseline gap-1">
                 <span 
-                  className="font-serif text-4xl sm:text-5xl"
+                  className="font-serif text-3xl sm:text-4xl"
                   style={{ color: '#001C5F' }}
                 >
                   $8.95
@@ -129,7 +129,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </div>
 
             {/* Details */}
-            <ul className="space-y-4 mb-6 sm:mb-8 flex-grow">
+            <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
               {["Billed monthly", "Flexible month to month"].map((item) => (
                 <li key={item} className="flex items-start gap-2 sm:gap-3">
                   <div 
@@ -151,7 +151,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             {/* CTA Button */}
             <button
               onClick={onMonthlyClick}
-              className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
+              className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full transition-all mt-auto"
               style={{ 
                 borderColor: '#D4B96A',
                 color: '#001C5F',
@@ -196,7 +196,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               <div className="mb-5 sm:mb-6">
                 <div className="flex items-baseline gap-1">
                   <span 
-                    className="font-serif text-4xl sm:text-5xl"
+                    className="font-serif text-3xl sm:text-4xl"
                     style={{ color: '#D4B96A' }}
                   >
                     $6.70
@@ -217,7 +217,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               </div>
 
               {/* Details */}
-              <ul className="space-y-4 mb-6 sm:mb-8 flex-grow">
+              <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
                 {[
                   "Billed annually at $80.40 USD",
                   <><span style={{ fontWeight: 700 }}>3 months free</span> vs monthly</>,
@@ -242,7 +242,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               {/* CTA Button */}
               <button
                 onClick={onAnnualClick}
-                className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
+                className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full hover:opacity-90 transition-opacity mt-auto"
                 style={{ 
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
