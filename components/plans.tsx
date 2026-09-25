@@ -89,7 +89,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-5 lg:gap-7 max-w-5xl mx-auto mb-12 px-4">
+        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-5 lg:gap-7 max-w-5xl mx-auto mb-8 px-4">
           
           {/* Monthly Plan Card */}
           <div 
@@ -260,7 +260,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
         </div>
 
         {/* Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 mb-3">
           <div className="flex items-center gap-2">
             <Pencil className="w-4 h-4" style={{ color: '#D4B96A' }} />
             <span
