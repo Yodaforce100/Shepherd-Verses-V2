@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Instagram, Youtube } from "lucide-react"
 import styles from "./socials.module.css"
 
@@ -20,12 +21,31 @@ function SoundwaveDivider() {
   )
 }
 
-const socials = [
-  { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@shepherdverses" },
-  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/shepherdverses" },
+// Set href to the real channel URL once each account is live; null shows a "coming soon" note instead.
+const socials: { name: string; icon: typeof Youtube; href: string | null }[] = [
+  { name: "YouTube", icon: Youtube, href: null },
+  { name: "Instagram", icon: Instagram, href: null },
 ]
 
+function SocialIcon({ name, icon: Icon }: { name: string; icon: typeof Youtube }) {
+  return (
+    <>
+      <div
+        className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105"
+        style={{ backgroundColor: '#FFFFFF', border: '1px solid #E8D48B' }}
+      >
+        <Icon className="w-6 h-6 transition-colors duration-300" style={{ color: '#C9A227' }} />
+      </div>
+      <span className="font-sans text-xs font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>
+        {name}
+      </span>
+    </>
+  )
+}
+
 export function Socials() {
+  const [comingSoon, setComingSoon] = useState<string | null>(null)
+
   return (
     <section id="socials" className="relative py-10 lg:py-9" style={{ backgroundColor: '#001C5F' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,36 +68,40 @@ export function Socials() {
 
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-6 lg:gap-8">
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Shepherd Verses on ${social.name} (opens in a new tab)`}
-              className="flex flex-col items-center gap-1.5 group"
-            >
-              <div 
-                className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105"
-                style={{ 
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #E8D48B',
-                }}
+          {socials.map((social) =>
+            social.href ? (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Shepherd Verses on ${social.name} (opens in a new tab)`}
+                className="flex flex-col items-center gap-1.5 group"
               >
-                <social.icon 
-                  className="w-6 h-6 transition-colors duration-300"
-                  style={{ color: '#C9A227' }}
-                />
-              </div>
-              <span 
-                className="font-sans text-xs font-medium"
-                style={{ color: 'rgba(255,255,255,0.85)' }}
+                <SocialIcon name={social.name} icon={social.icon} />
+              </a>
+            ) : (
+              <button
+                key={social.name}
+                type="button"
+                onClick={() => setComingSoon(social.name)}
+                aria-label={`Shepherd Verses on ${social.name} (coming soon)`}
+                className="flex flex-col items-center gap-1.5 group cursor-pointer"
               >
-                {social.name}
-              </span>
-            </a>
-          ))}
+                <SocialIcon name={social.name} icon={social.icon} />
+              </button>
+            )
+          )}
         </div>
+
+        <p
+          role="status"
+          aria-live="polite"
+          className="font-sans text-sm text-center mt-4 min-h-5"
+          style={{ color: '#E8D48B' }}
+        >
+          {comingSoon ? `Our ${comingSoon} channel is coming soon - thanks for your patience!` : ""}
+        </p>
       </div>
     </section>
   )
