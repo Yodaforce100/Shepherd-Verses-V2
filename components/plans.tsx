@@ -266,7 +266,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           className="font-sans text-sm text-center max-w-xl mx-auto"
           style={{ color: '#6B7280', fontWeight: 450 }}
         >
-          Prices shown in US dollars. Your local currency and final price are shown at checkout. The annual plan saves you the equivalent of 3 months compared with paying monthly.
+          Prices shown and charged in US dollars. The annual plan saves you the equivalent of 3 months compared with paying monthly.
         </p>
       </div>
     </section>
