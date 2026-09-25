@@ -19,16 +19,10 @@ function GoldDivider({ text }: { text: string }) {
   )
 }
 
-const monthlyFeatures = [
-  "Daily Scripture, affirmation and mantra, sent at your chosen time",
-  "Received in Telegram as a voice and written message",
-  "Flexible month to month",
-]
-
-const annualFeatures = [
-  "Daily Scripture, affirmation and mantra, sent at your chosen time",
-  "Received in Telegram as a voice and written message",
-  "3 months free vs monthly",
+const sharedBenefits: React.ReactNode[] = [
+  "Daily personalised scripture, affirmation and mantra",
+  "Delivered at your chosen time",
+  <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
 ]
 
 interface PlansProps {
@@ -70,6 +64,28 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               Start free — 3-day free trial on any plan
             </span>
           </div>
+
+          {/* Shared benefits — included on every plan */}
+          <div className="text-center mt-8">
+            <ul className="inline-block text-left space-y-3">
+              {sharedBenefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div
+                    className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                    style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
+                  >
+                    <Check className="w-3 h-3" style={{ color: '#D4B96A' }} />
+                  </div>
+                  <span
+                    className="font-sans text-base lg:text-lg"
+                    style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
+                  >
+                    {benefit}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -110,26 +126,30 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               >
                 Billed monthly
               </p>
+              <p
+                className="font-sans text-sm mt-2 font-semibold"
+                style={{ color: '#5E8DBF' }}
+              >
+                Just about 30¢ a day
+              </p>
             </div>
 
-            {/* Features */}
-            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
-              {monthlyFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2 sm:gap-3">
-                  <div 
-                    className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
-                    style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
-                  >
-                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
-                  </div>
-                  <span 
-                    className="font-sans text-base"
-                    style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
-                  >
-                    {feature}
-                  </span>
-                </li>
-              ))}
+            {/* Differentiator */}
+            <ul className="space-y-4 mb-6 sm:mb-8 flex-grow">
+              <li className="flex items-start gap-2 sm:gap-3">
+                <div 
+                  className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
+                  style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
+                >
+                  <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#5E8DBF' }} />
+                </div>
+                <span 
+                  className="font-sans text-base"
+                  style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
+                >
+                  Flexible month to month
+                </span>
+              </li>
             </ul>
 
             {/* CTA Button */}
@@ -198,28 +218,30 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 >
                   Billed annually at $80.40 USD
                 </p>
+                <p
+                  className="font-sans text-sm mt-2 font-semibold"
+                  style={{ color: '#D4B96A' }}
+                >
+                  Just about 22¢ a day
+                </p>
               </div>
 
-              {/* Features */}
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
-                {annualFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 sm:gap-3">
-                    <div 
-                      className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
-                      style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
-                    >
-                      <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
-                    </div>
-                    <span 
-                      className="font-sans text-base"
-                      style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
-                    >
-                      {typeof feature === 'string' ? feature : (
-                        <><span style={{ fontWeight: 700 }}>{feature.text}</span>{feature.suffix}</>
-                      )}
-                    </span>
-                  </li>
-                ))}
+              {/* Differentiator */}
+              <ul className="space-y-4 mb-6 sm:mb-8 flex-grow">
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div 
+                    className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
+                    style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
+                  >
+                    <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" style={{ color: '#D4B96A' }} />
+                  </div>
+                  <span 
+                    className="font-sans text-base"
+                    style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
+                  >
+                    <span style={{ fontWeight: 700 }}>3 months free</span> vs monthly
+                  </span>
+                </li>
               </ul>
 
               {/* CTA Button */}
