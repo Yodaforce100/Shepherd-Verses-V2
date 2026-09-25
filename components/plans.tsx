@@ -19,16 +19,10 @@ function GoldDivider({ text }: { text: string }) {
   )
 }
 
-const monthlyFeatures = [
-  "Daily Scripture, affirmation and mantra, sent at your chosen time",
-  "Received in Telegram as a voice and written message",
-  "Flexible month to month",
-]
-
-const annualFeatures = [
-  "Daily Scripture, affirmation and mantra, sent at your chosen time",
-  "Received in Telegram as a voice and written message",
-  "3 months free vs monthly",
+const sharedBenefits: React.ReactNode[] = [
+  "Daily personalised scripture, affirmation and mantra",
+  "Delivered at your chosen time",
+  <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
 ]
 
 interface PlansProps {
@@ -54,7 +48,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
 
           {/* Subtitle */}
           <p 
-            className="font-sans text-lg lg:text-xl"
+            className="font-sans text-sm lg:text-base"
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
@@ -67,8 +61,30 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
             <span className="font-sans text-base lg:text-lg font-semibold text-white">
-              Start free — 3-day free trial on any plan
+              Start free - 3-day free trial on any plan
             </span>
+          </div>
+
+          {/* Shared benefits — included on every plan */}
+          <div className="text-center mt-8">
+            <ul className="inline-block text-left space-y-3">
+              {sharedBenefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div
+                    className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                    style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
+                  >
+                    <Check className="w-3 h-3" style={{ color: '#D4B96A' }} />
+                  </div>
+                  <span
+                    className="font-sans text-base lg:text-lg"
+                    style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
+                  >
+                    {benefit}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -89,10 +105,10 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </h3>
 
             {/* Price */}
-            <div className="mb-5 sm:mb-6">
+            <div className="mb-4">
               <div className="flex items-baseline gap-1">
                 <span 
-                  className="font-serif text-4xl sm:text-5xl"
+                  className="font-serif text-3xl sm:text-4xl"
                   style={{ color: '#001C5F' }}
                 >
                   $8.95
@@ -104,18 +120,18 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   USD / month
                 </span>
               </div>
-              <p 
-                className="font-sans text-base mt-1"
-                style={{ color: '#6B7280' }}
+              <p
+                className="font-sans text-sm mt-1 font-semibold italic"
+                style={{ color: '#5E8DBF' }}
               >
-                Billed monthly
+                only about 30¢ a day!
               </p>
             </div>
 
-            {/* Features */}
-            <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
-              {monthlyFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2 sm:gap-3">
+            {/* Details */}
+            <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
+              {["Billed monthly", "Flexible month to month"].map((item) => (
+                <li key={item} className="flex items-start gap-2 sm:gap-3">
                   <div 
                     className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
                     style={{ backgroundColor: 'rgba(94, 141, 191, 0.15)' }}
@@ -126,7 +142,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     className="font-sans text-base"
                     style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
                   >
-                    {feature}
+                    {item}
                   </span>
                 </li>
               ))}
@@ -135,7 +151,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             {/* CTA Button */}
             <button
               onClick={onMonthlyClick}
-              className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full transition-all mt-auto"
+              className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full transition-all mt-auto"
               style={{ 
                 borderColor: '#D4B96A',
                 color: '#001C5F',
@@ -180,7 +196,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               <div className="mb-5 sm:mb-6">
                 <div className="flex items-baseline gap-1">
                   <span 
-                    className="font-serif text-4xl sm:text-5xl"
+                    className="font-serif text-3xl sm:text-4xl"
                     style={{ color: '#D4B96A' }}
                   >
                     $6.70
@@ -192,17 +208,20 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                     USD / month
                   </span>
                 </div>
-                <p 
-                  className="font-sans text-base mt-1"
-                  style={{ color: 'rgba(255,255,255,0.6)' }}
+                <p
+                  className="font-sans text-sm mt-1 font-semibold italic"
+                  style={{ color: '#D4B96A' }}
                 >
-                  Billed annually at $80.40 USD
+                  only about 22¢ a day!
                 </p>
               </div>
 
-              {/* Features */}
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
-                {annualFeatures.map((feature, index) => (
+              {/* Details */}
+              <ul className="space-y-3 mb-5 sm:mb-6 flex-grow">
+                {[
+                  "Billed annually at $80.40 USD",
+                  <><span style={{ fontWeight: 700 }}>3 months free</span> vs monthly</>,
+                ].map((item, index) => (
                   <li key={index} className="flex items-start gap-2 sm:gap-3">
                     <div 
                       className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center mt-0.5"
@@ -214,9 +233,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                       className="font-sans text-base"
                       style={{ color: 'rgba(255,255,255,0.9)', lineHeight: '1.5', fontWeight: 450 }}
                     >
-                      {typeof feature === 'string' ? feature : (
-                        <><span style={{ fontWeight: 700 }}>{feature.text}</span>{feature.suffix}</>
-                      )}
+                      {item}
                     </span>
                   </li>
                 ))}
@@ -225,7 +242,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               {/* CTA Button */}
               <button
                 onClick={onAnnualClick}
-                className="w-full font-sans font-medium text-sm sm:text-[15px] py-5 sm:py-6 rounded-full hover:opacity-90 transition-opacity mt-auto"
+                className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full hover:opacity-90 transition-opacity mt-auto"
                 style={{ 
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',

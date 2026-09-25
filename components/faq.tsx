@@ -25,7 +25,7 @@ function LatinCross({ className }: { className?: string }) {
 const faqs = [
   {
     question: "What is Shepherd Verses?",
-    answer: "Shepherd Verses is a personal spiritual companion that helps you begin each day with encouragement, guidance, and peace through God's word. By responding to how you're feeling, it delivers carefully chosen scripture, affirmations, and gentle daily guidance tailored to your emotional and spiritual needs."
+    answer: "Shepherd Verses helps you begin each day with encouragement, guidance, and peace through God's word. By responding to how you're feeling, it delivers carefully chosen scripture, affirmations, and gentle daily guidance tailored to your emotional and spiritual needs."
   },
   {
     question: "How does Shepherd Verses work?",
@@ -47,7 +47,7 @@ const faqs = [
           and our support team will help.
         </p>
         <p className="mt-3">
-          Billing, payment method or cancelling: handled by Paddle, our payment provider — use the link in your confirmation email or visit{" "}
+          Billing, payment method or cancelling: handled by Paddle, our payment provider - use the link in your confirmation email or visit{" "}
           <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
             paddle.net
           </a>

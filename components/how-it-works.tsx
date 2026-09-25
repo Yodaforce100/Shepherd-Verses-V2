@@ -55,7 +55,7 @@ const steps = [
     image: "/images/mobile-app-ui-new.jpg",
     title: "Hear a Caring Voice",
     accentWord: "Listen.",
-    description: "Shepherd Verses shares a spoken Scripture, and a personalised affirmation and mantra, tailored to how you're feeling. Carefully chosen to offer comfort and support - delivered straight to your Telegram.",
+    description: "Shepherd Verses shares a spoken Scripture, and a personalised affirmation and mantra, tailored to how you're feeling. Carefully chosen to offer comfort and support - delivered via Telegram.",
     emphasis: null,
     descriptionEnd: null,
     icon: "soundwave",
