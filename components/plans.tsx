@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Gift, Pencil, Lock } from "lucide-react"
+import { Check, Gift, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -19,11 +19,40 @@ function GoldDivider({ text }: { text: string }) {
   )
 }
 
-const sharedBenefits: React.ReactNode[] = [
-  "Daily personalised scripture, affirmation and mantra",
-  "Delivered at your chosen time",
-  <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
+const sharedBenefits: { icon: LucideIcon; text: React.ReactNode }[] = [
+  { icon: BookOpen, text: "Daily personalised scripture, affirmation and mantra" },
+  { icon: Clock, text: "Delivered at your chosen time" },
+  {
+    icon: Mic,
+    text: <>Received in Telegram as a <span style={{ fontWeight: 700 }}>VOICE</span> and <span style={{ fontWeight: 700 }}>WRITTEN</span> message</>,
+  },
 ]
+
+function BenefitList({ variant }: { variant: "dots" | "icons" }) {
+  return (
+    <ul className="inline-block text-left space-y-3">
+      {sharedBenefits.map(({ icon: Icon, text }, index) => (
+        <li key={index} className="flex items-start gap-3">
+          {variant === "dots" ? (
+            <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5 lg:mt-1" aria-hidden="true">
+              <span className="block w-2 h-2 rounded-full" style={{ backgroundColor: '#D4B96A' }} />
+            </div>
+          ) : (
+            <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5 lg:mt-1" aria-hidden="true">
+              <Icon className="w-[18px] h-[18px]" strokeWidth={1.75} style={{ color: '#D4B96A' }} />
+            </div>
+          )}
+          <span
+            className="font-sans text-base lg:text-lg"
+            style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
+          >
+            {text}
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 interface PlansProps {
   onMonthlyClick?: () => void
@@ -66,25 +95,20 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           </div>
 
           {/* Shared benefits — included on every plan */}
-          <div className="text-center mt-8">
-            <ul className="inline-block text-left space-y-3">
-              {sharedBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div
-                    className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
-                    style={{ backgroundColor: 'rgba(212,185,106,0.2)' }}
-                  >
-                    <Check className="w-3 h-3" style={{ color: '#D4B96A' }} />
-                  </div>
-                  <span
-                    className="font-sans text-base lg:text-lg"
-                    style={{ color: '#2A4B7C', lineHeight: '1.5', fontWeight: 450 }}
-                  >
-                    {benefit}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          {/* TEMPORARY: both bullet styles shown for comparison; keep the chosen one and remove the labels */}
+          <div className="flex flex-col items-center gap-8 mt-8">
+            <div className="text-center">
+              <p className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3" style={{ color: '#9CA3AF' }}>
+                Option A: Gold dots
+              </p>
+              <BenefitList variant="dots" />
+            </div>
+            <div className="text-center">
+              <p className="font-sans text-xs font-semibold tracking-[0.15em] uppercase mb-3" style={{ color: '#9CA3AF' }}>
+                Option B: Icons
+              </p>
+              <BenefitList variant="icons" />
+            </div>
           </div>
         </div>
 
