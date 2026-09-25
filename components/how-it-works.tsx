@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { AnimatedHeading, Reveal } from "@/components/reveal"
 
 // Speech Bubble Icon
 function SpeechBubbleIcon() {
@@ -70,12 +71,11 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-12">
           {/* Primary Heading */}
-          <h2 
+          <AnimatedHeading
+            lead="Wake up to a voice that"
+            highlight="hears you"
             className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
-            style={{ color: '#001C5F' }}
-          >
-            Wake up to a voice that hears you
-          </h2>
+          />
           {/* Sub-heading */}
           <h3 
             className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
@@ -95,8 +95,9 @@ export function HowItWorks() {
         {/* Steps Grid */}
         <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 sm:gap-6 lg:gap-10 max-w-2xl sm:max-w-3xl mx-auto px-4">
           {steps.map((step, index) => (
-            <div 
+            <Reveal
               key={index}
+              delay={index * 180}
               className="w-full md:w-1/2 max-w-[320px] sm:max-w-[300px] lg:max-w-[340px] mx-auto"
             >
               {/* Card */}
@@ -160,7 +161,7 @@ export function HowItWorks() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
