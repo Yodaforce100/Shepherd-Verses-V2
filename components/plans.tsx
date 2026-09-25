@@ -121,7 +121,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 </span>
               </div>
               <p
-                className="font-sans text-base mt-1 font-semibold italic"
+                className="font-sans text-sm mt-1 font-semibold italic"
                 style={{ color: '#5E8DBF' }}
               >
                 only about 30¢ a day!
@@ -209,7 +209,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                   </span>
                 </div>
                 <p
-                  className="font-sans text-base mt-1 font-semibold italic"
+                  className="font-sans text-sm mt-1 font-semibold italic"
                   style={{ color: '#D4B96A' }}
                 >
                   only about 22¢ a day!
