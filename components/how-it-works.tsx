@@ -69,13 +69,20 @@ export function HowItWorks() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-12">
-          {/* Heading */}
+          {/* Primary Heading */}
           <h2 
+            className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
+            style={{ color: '#001C5F' }}
+          >
+            Wake up to a voice that hears you
+          </h2>
+          {/* Sub-heading */}
+          <h3 
             className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
             style={{ color: '#001C5F' }}
           >
             Two simple steps
-          </h2>
+          </h3>
           {/* Subtitle */}
           <p 
             className="font-sans text-lg lg:text-xl"
