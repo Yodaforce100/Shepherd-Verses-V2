@@ -68,10 +68,10 @@ function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, ic
     .map(
       (step, index) => `
           <tr>
-            <td valign="top" width="36" style="padding: 0 0 12px 0;">
-              <img src="${iconSrc(group.icons[index])}" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
+            <td valign="top" width="30" style="padding: 3px 0 12px 0;">
+              <img src="${iconSrc(group.icons[index])}" alt="" width="18" height="18" style="display: block; width: 18px; height: 18px; border: 0;" />
             </td>
-            <td valign="top" style="padding: 3px 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
+            <td valign="top" style="padding: 0 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
           </tr>`,
     )
     .join('')
@@ -165,22 +165,47 @@ export function renderWelcomeEmail({
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 32px 48px;">
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.softStone}; border-left: 3px solid ${colors.gold}; border-radius: 8px;">
-                      <tr>
-                        <td style="padding: 22px 24px;">
-                          <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.5; color: ${colors.navy}; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
-                          <p style="margin: 0; font-family: ${sans}; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: ${colors.muted};">Matthew 11:28</p>
-                        </td>
-                      </tr>
-                    </table>
+                  <td class="px" style="padding: 0 48px 28px 48px;">
+                    <p style="margin: 0 0 4px 0; font-family: ${sans}; font-size: 15px; line-height: 1.7; color: ${colors.text};">With love,</p>
+                    <p style="margin: 0; font-family: ${serif}; font-size: 18px; color: ${colors.navy};">The Shepherd Verses team</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td class="px" style="padding: 0 48px 32px 48px;">
-                    <p style="margin: 0 0 4px 0; font-family: ${sans}; font-size: 15px; line-height: 1.7; color: ${colors.text};">With love,</p>
-                    <p style="margin: 0; font-family: ${serif}; font-size: 18px; color: ${colors.navy};">The Shepherd Verses team</p>
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.navy}; border-radius: 12px;">
+                      <tr>
+                        <td align="center" style="padding: 26px 28px 24px 28px;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto 16px auto;">
+                            <tr>
+                              <td width="40" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                              <td style="padding: 0 10px;">
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <tr>
+                                    <td width="4" height="4" style="font-size: 0; line-height: 0;"></td>
+                                    <td width="2" height="4" style="font-size: 0; line-height: 0; background-color: ${colors.gold};"></td>
+                                    <td width="4" height="4" style="font-size: 0; line-height: 0;"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="4" height="2" style="font-size: 0; line-height: 0; background-color: ${colors.gold};"></td>
+                                    <td width="2" height="2" style="font-size: 0; line-height: 0; background-color: ${colors.gold};"></td>
+                                    <td width="4" height="2" style="font-size: 0; line-height: 0; background-color: ${colors.gold};"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="4" height="9" style="font-size: 0; line-height: 0;"></td>
+                                    <td width="2" height="9" style="font-size: 0; line-height: 0; background-color: ${colors.gold};"></td>
+                                    <td width="4" height="9" style="font-size: 0; line-height: 0;"></td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td width="40" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                            </tr>
+                          </table>
+                          <p style="margin: 0 0 12px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
+                          <p style="margin: 0; font-family: ${sans}; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: ${colors.gold};">Matthew 11:28</p>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
 
@@ -235,10 +260,10 @@ export function renderWelcomeEmail({
     '',
     `Connect to Telegram: ${TELEGRAM_URL}`,
     '',
-    '"Come to me, all you who are weary and burdened, and I will give you rest." - Matthew 11:28',
-    '',
     'With love,',
     'The Shepherd Verses team',
+    '',
+    '"Come to me, all you who are weary and burdened, and I will give you rest." - Matthew 11:28',
     '',
     '---',
     'Your 3 days free start today!',
