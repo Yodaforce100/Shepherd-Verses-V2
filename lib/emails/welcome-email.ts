@@ -203,7 +203,7 @@ export function renderWelcomeEmail({
 
                 <tr>
                   <td class="px" align="center" style="background-color: ${colors.navy}; padding: 24px 48px 22px 48px;">
-                    <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
+                    <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened,<br>and I will give you rest.&rdquo;</p>
                     <p style="margin: 0; font-family: ${sans}; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: ${colors.gold};">Matthew 11:28</p>
                   </td>
                 </tr>
@@ -261,7 +261,8 @@ export function renderWelcomeEmail({
     'With love,',
     'The Shepherd Verses team',
     '',
-    '"Come to me, all you who are weary and burdened, and I will give you rest." - Matthew 11:28',
+    '"Come to me, all you who are weary and burdened,',
+  'and I will give you rest." - Matthew 11:28',
     '',
     '---',
     'Your 3 days free start today!',
