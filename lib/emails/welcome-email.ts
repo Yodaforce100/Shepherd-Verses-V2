@@ -152,12 +152,12 @@ export function renderWelcomeEmail({
                 </tr>
 
                 <tr>
-                  <td class="px" align="center" style="padding: 28px 48px 32px 48px;">
-                    <p style="margin: 0 0 18px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
+                  <td class="px" align="center" style="padding: 20px 48px 28px 48px;">
+                    <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td align="center" style="border-radius: 999px; background-color: ${colors.gold};">
-                          <a href="${TELEGRAM_URL}" style="display: inline-block; padding: 15px 36px; font-family: ${sans}; font-size: 16px; font-weight: 600; color: ${colors.navy}; text-decoration: none; border-radius: 999px;">Connect to Telegram</a>
+                          <a href="${TELEGRAM_URL}" style="display: inline-block; padding: 17px 56px; font-family: ${sans}; font-size: 17px; font-weight: 600; color: ${colors.navy}; text-decoration: none; border-radius: 999px;">Connect to Telegram</a>
                         </td>
                       </tr>
                     </table>
@@ -165,18 +165,18 @@ export function renderWelcomeEmail({
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 28px 48px;">
+                  <td class="px" style="padding: 0 48px 32px 48px;">
                     <p style="margin: 0 0 4px 0; font-family: ${sans}; font-size: 15px; line-height: 1.7; color: ${colors.text};">With love,</p>
                     <p style="margin: 0; font-family: ${serif}; font-size: 18px; color: ${colors.navy};">The Shepherd Verses team</p>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 32px 48px;">
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto 18px auto;">
+                  <td class="px" style="padding: 0 48px 28px 48px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tr>
-                              <td width="130" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
-                              <td style="padding: 0 10px;">
+                              <td width="46%" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                              <td width="30" align="center" style="width: 30px; min-width: 30px; padding: 0 10px;">
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                                   <tr>
                                     <td width="4" height="4" style="font-size: 0; line-height: 0;"></td>
@@ -195,23 +195,21 @@ export function renderWelcomeEmail({
                                   </tr>
                                 </table>
                               </td>
-                              <td width="130" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                              <td width="46%" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
                             </tr>
                           </table>
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.navy}; border-radius: 12px;">
-                      <tr>
-                        <td align="center" style="padding: 18px 28px 16px 28px;">
-                          <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
-                          <p style="margin: 0; font-family: ${sans}; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: ${colors.gold};">Matthew 11:28</p>
-                        </td>
-                      </tr>
-                    </table>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 36px 48px;">
-                    <div style="height: 1px; background-color: ${colors.border}; margin: 0 0 24px 0;"></div>
+                  <td class="px" align="center" style="background-color: ${colors.navy}; padding: 24px 48px 22px 48px;">
+                    <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
+                    <p style="margin: 0; font-family: ${sans}; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: ${colors.gold};">Matthew 11:28</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px" style="padding: 28px 48px 36px 48px;">
                     <p style="margin: 0 0 12px 0; font-family: ${sans}; font-size: 14px; line-height: 1.6; color: ${colors.navy}; font-weight: 600;">Your 3 days free start today!</p>
                     <p style="margin: 0 0 10px 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">Keep this email - your connect link will always be here if you need it.</p>
                     <p style="margin: 0 0 10px 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">To manage your plan, or update your email or message time, contact us at <a href="mailto:${SUPPORT_EMAIL}" style="color: ${colors.navy}; text-decoration: underline;">${SUPPORT_EMAIL}</a>.</p>
