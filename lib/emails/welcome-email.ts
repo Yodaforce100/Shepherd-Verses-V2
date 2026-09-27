@@ -68,7 +68,7 @@ function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, as
       (step, index) => `
           <tr>
             <td valign="top" width="36" style="padding: 0 0 12px 0;">
-              <img src="${assetBaseUrl}/images/email/step-${group.icons[index]}.png" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
+              <img src="${assetBaseUrl}/images/email/step-${group.icons[index]}.png?v=2" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
             </td>
             <td valign="top" style="padding: 3px 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
           </tr>`,
@@ -90,7 +90,7 @@ function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, as
 export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: WelcomeEmailOptions = {}) {
   const trimmedName = firstName?.trim() || null
   const name = trimmedName ? escapeHtml(trimmedName) : null
-  const greeting = name ? `Welcome, ${name}` : 'Welcome'
+  const greeting = name ? `Hello ${name}` : 'Hello'
   const subject = 'Welcome to Shepherd Verses - your Telegram link inside'
   const preheader = 'One step to go. Keep this email - your connect link lives here.'
 
@@ -132,14 +132,14 @@ export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: Welco
                 <tr>
                   <td class="px" align="center" style="background-color: ${colors.navy}; padding: 44px 48px 40px 48px; border-radius: 16px 16px 0 0;">
                     <p style="margin: 0 0 12px 0; font-family: ${sans}; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: ${colors.gold};">Your journey begins</p>
-                    <h1 class="h1" style="margin: 0; font-family: ${serif}; font-weight: 400; font-size: 32px; line-height: 1.25; color: #FFFFFF;">${greeting}</h1>
+                    <h1 class="h1" style="margin: 0; font-family: ${serif}; font-weight: 400; font-size: 32px; line-height: 1.25; color: #FFFFFF;">Welcome to Shepherd Verses!</h1>
                     <div style="width: 48px; height: 2px; background-color: ${colors.gold}; margin: 20px auto 0 auto;"></div>
                   </td>
                 </tr>
 
                 <tr>
                   <td class="px" style="padding: 36px 48px 8px 48px;">
-                    <p style="margin: 0 0 16px 0; font-family: ${serif}; font-size: 22px; line-height: 1.3; color: ${colors.navy};">Welcome to Shepherd Verses!</p>
+                    <p style="margin: 0 0 16px 0; font-family: ${serif}; font-size: 22px; line-height: 1.3; color: ${colors.navy};">${greeting}</p>
                     <p style="margin: 0 0 16px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">Thank you for joining us - we&rsquo;re so glad you&rsquo;re here.</p>
                     <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};"><strong style="color: ${colors.navy};">One step to go</strong> so you can start receiving your daily message - <strong style="color: ${colors.navy};">Connect to the Telegram App</strong>. Telegram is free to use and only takes a few minutes to set up.</p>
                     ${stepsHtml}
@@ -213,9 +213,9 @@ export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: Welco
 </html>`
 
   const text = [
-    trimmedName ? `Welcome, ${trimmedName}` : 'Welcome',
-    '',
     'Welcome to Shepherd Verses!',
+    '',
+    trimmedName ? `Hello ${trimmedName}` : 'Hello',
     '',
     "Thank you for joining us - we're so glad you're here.",
     '',
