@@ -20,6 +20,7 @@ const sans = "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 type WelcomeEmailOptions = {
   firstName?: string | null
+  assetBaseUrl?: string
 }
 
 const notificationStep = 'When Telegram asks, please <strong>ALLOW</strong> notifications - so you see your message arrive every day'
@@ -30,6 +31,7 @@ const startStepText = 'Press Start (or log in), then enter the email address you
 const stepGroups = [
   {
     title: 'New to Telegram?',
+    icons: ['telegram', 'pointer', 'log-in', 'bell-ring'],
     steps: [
       'Download Telegram free from your app store',
       'Come back to this email and tap the <strong>Connect to Telegram</strong> button below',
@@ -45,6 +47,7 @@ const stepGroups = [
   },
   {
     title: 'Already have Telegram?',
+    icons: ['telegram', 'log-in', 'bell-ring'],
     steps: ['Tap the <strong>Connect to Telegram</strong> button below', startStep, notificationStep],
     textSteps: ['Tap the Connect to Telegram button below', startStepText, notificationStepText],
   },
@@ -59,13 +62,13 @@ function escapeHtml(value: string) {
     .replace(/'/g, '&#39;')
 }
 
-function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean) {
+function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, assetBaseUrl: string) {
   const rows = group.steps
     .map(
       (step, index) => `
           <tr>
             <td valign="top" width="36" style="padding: 0 0 12px 0;">
-              <div style="width: 26px; height: 26px; line-height: 26px; border-radius: 13px; background-color: ${colors.navy}; color: ${colors.gold}; font-family: ${serif}; font-size: 14px; text-align: center;">${index + 1}</div>
+              <img src="${assetBaseUrl}/images/email/step-${group.icons[index]}.png" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
             </td>
             <td valign="top" style="padding: 3px 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
           </tr>`,
@@ -84,14 +87,14 @@ function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean) {
       </table>`
 }
 
-export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
+export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: WelcomeEmailOptions = {}) {
   const trimmedName = firstName?.trim() || null
   const name = trimmedName ? escapeHtml(trimmedName) : null
   const greeting = name ? `Welcome, ${name}` : 'Welcome'
   const subject = 'Welcome to Shepherd Verses - your Telegram link inside'
   const preheader = 'One step to go. Keep this email - your connect link lives here.'
 
-  const stepsHtml = stepGroups.map((group, index) => renderStepGroup(group, index === stepGroups.length - 1)).join('')
+  const stepsHtml = stepGroups.map((group, index) => renderStepGroup(group, index === stepGroups.length - 1, assetBaseUrl)).join('')
 
   const html = `<!DOCTYPE html>
 <html lang="en">

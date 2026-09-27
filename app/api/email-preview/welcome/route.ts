@@ -6,7 +6,8 @@ export async function GET(request: Request) {
   }
 
   const firstName = new URL(request.url).searchParams.get('name')
-  const { html } = renderWelcomeEmail({ firstName })
+  // The preview is rendered on this site, so relative paths show freshly added images before they reach production.
+  const { html } = renderWelcomeEmail({ firstName, assetBaseUrl: '' })
 
   return new Response(html, {
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
