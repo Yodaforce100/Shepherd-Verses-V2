@@ -138,7 +138,7 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
                   <td class="px" style="padding: 36px 48px 8px 48px;">
                     <p style="margin: 0 0 16px 0; font-family: ${serif}; font-size: 22px; line-height: 1.3; color: ${colors.navy};">Welcome to Shepherd Verses!</p>
                     <p style="margin: 0 0 16px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">Thank you for joining us - we&rsquo;re so glad you&rsquo;re here.</p>
-                    <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">There&rsquo;s just one step to go before your daily message can start arriving: connect to the Telegram app. Telegram is free to use and only takes a few minutes to set up.</p>
+                    <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};"><strong style="color: ${colors.navy};">One step to go</strong> so you can start receiving your daily message - <strong style="color: ${colors.navy};">Connect to the Telegram App</strong>. Telegram is free to use and only takes a few minutes to set up.</p>
                     ${stepsHtml}
                   </td>
                 </tr>
@@ -216,7 +216,7 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
     '',
     "Thank you for joining us - we're so glad you're here.",
     '',
-    "There's just one step to go before your daily message can start arriving: connect to the Telegram app. Telegram is free to use and only takes a few minutes to set up.",
+    'One step to go so you can start receiving your daily message - Connect to the Telegram App. Telegram is free to use and only takes a few minutes to set up.',
     '',
     ...stepGroups.flatMap((group) => [
       group.title,
