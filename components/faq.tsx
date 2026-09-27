@@ -33,7 +33,17 @@ const faqs = [
   },
   {
     question: "Do I need Telegram?",
-    answer: "Yes. Shepherd Verses currently delivers messages through Telegram. Telegram is free to use and only takes a few moments to set up. Once connected, you'll receive your daily messages directly through the app."
+    answer: (
+      <>
+        <p>
+  Yes. Shepherd Verses delivers your daily message through Telegram, which is completely free to use. Simply download Telegram from your app store and follow the quick setup process.{" "}
+  <em>
+  <strong className="font-semibold">Be sure to ALLOW notifications</strong>{" "}so you don&apos;t miss your message when it arrives.
+  </em>{" "}
+  Once connected, your messages will be delivered directly to you each day.
+  </p>
+      </>
+    )
   },
   {
     question: "How do I update my account details?",
