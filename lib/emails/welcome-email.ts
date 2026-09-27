@@ -21,6 +21,7 @@ const sans = "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 type WelcomeEmailOptions = {
   firstName?: string | null
   assetBaseUrl?: string
+  iconSrc?: (icon: string) => string
 }
 
 const notificationStep = 'When Telegram asks, please <strong>ALLOW</strong> notifications - so you see your message arrive every day'
@@ -62,13 +63,13 @@ function escapeHtml(value: string) {
     .replace(/'/g, '&#39;')
 }
 
-function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, assetBaseUrl: string) {
+function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, iconSrc: (icon: string) => string) {
   const rows = group.steps
     .map(
       (step, index) => `
           <tr>
             <td valign="top" width="36" style="padding: 0 0 12px 0;">
-              <img src="${assetBaseUrl}/images/email/step-${group.icons[index]}.png?v=2" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
+              <img src="${iconSrc(group.icons[index])}" alt="" width="26" height="26" style="display: block; width: 26px; height: 26px; border: 0;" />
             </td>
             <td valign="top" style="padding: 3px 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
           </tr>`,
@@ -87,14 +88,18 @@ function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean, as
       </table>`
 }
 
-export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: WelcomeEmailOptions = {}) {
+export function renderWelcomeEmail({
+  firstName,
+  assetBaseUrl = SITE_URL,
+  iconSrc = (icon) => `${assetBaseUrl}/images/email/step-${icon}.png?v=2`,
+}: WelcomeEmailOptions = {}) {
   const trimmedName = firstName?.trim() || null
   const name = trimmedName ? escapeHtml(trimmedName) : null
   const greeting = name ? `Hello ${name}` : 'Hello'
   const subject = 'Welcome to Shepherd Verses - your Telegram link inside'
   const preheader = 'One step to go. Keep this email - your connect link lives here.'
 
-  const stepsHtml = stepGroups.map((group, index) => renderStepGroup(group, index === stepGroups.length - 1, assetBaseUrl)).join('')
+  const stepsHtml = stepGroups.map((group, index) => renderStepGroup(group, index === stepGroups.length - 1, iconSrc)).join('')
 
   const html = `<!DOCTYPE html>
 <html lang="en">
