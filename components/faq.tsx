@@ -40,20 +40,16 @@ const faqs = [
     answer: (
       <>
         <p>
-          To update your email address or change the time of your daily message, contact us at{" "}
+          To update your email address, or time of your daily message, contact us at{" "}
           <a href="mailto:hello@shepherdverses.com" className="underline hover:opacity-80">
             hello@shepherdverses.com
           </a>{" "}
           and our support team will help.
         </p>
         <p className="mt-3">
-          Billing, payment method or cancelling: handled by Paddle, our payment provider - use the link in your confirmation email or visit{" "}
-          <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
-            paddle.net
-          </a>
-          .
+          To manage billing, change your payment method, or cancel, use the &quot;manage your subscription&quot; link in your welcome email, where you can update your card, view invoices, or cancel anytime. Billing is handled securely by our payment provider, Paddle.
         </p>
-        <p className="mt-3">Not sure where to go? Email us and we&apos;ll help.</p>
+        <p className="mt-3">Not sure where to go? Email us anytime, we&apos;re here to help.</p>
       </>
     )
   },
