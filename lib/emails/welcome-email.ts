@@ -156,8 +156,8 @@ export function renderWelcomeEmail({
                     <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td align="center" style="border-radius: 999px; background-color: ${colors.gold};">
-                          <a href="${TELEGRAM_URL}" style="display: inline-block; padding: 17px 56px; font-family: ${sans}; font-size: 17px; font-weight: 600; color: ${colors.navy}; text-decoration: none; border-radius: 999px;">Connect to Telegram</a>
+  <td align="center" bgcolor="${colors.gold}" style="border-radius: 999px; background-color: ${colors.gold}; background-image: linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%);">
+  <a href="${TELEGRAM_URL}" style="display: inline-block; padding: 17px 56px; font-family: ${sans}; font-size: 17px; font-weight: 700; color: ${colors.navy}; text-decoration: none; border-radius: 999px;">Connect to Telegram</a>
                         </td>
                       </tr>
                     </table>
