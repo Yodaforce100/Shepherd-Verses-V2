@@ -36,11 +36,12 @@ const faqs = [
     answer: (
       <>
         <p>
-          Yes. Shepherd Verses delivers your daily message through Telegram, which is completely free to use. Simply download Telegram from your app store and follow the quick setup process. Once connected, your messages will be delivered directly to you each day.
-        </p>
-        <p className="mt-3">
-          <strong className="font-semibold">Be sure to ALLOW notifications</strong>{" "}so you don&apos;t miss your message when it arrives.
-        </p>
+  Yes. Shepherd Verses delivers your daily message through Telegram, which is completely free to use. Simply download Telegram from your app store and follow the quick setup process.{" "}
+  <em>
+  <strong className="font-semibold">Be sure to ALLOW notifications</strong>{" "}so you don&apos;t miss your message when it arrives.
+  </em>{" "}
+  Once connected, your messages will be delivered directly to you each day.
+  </p>
       </>
     )
   },
