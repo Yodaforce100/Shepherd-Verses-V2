@@ -1,6 +1,7 @@
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://shepherdverses.com'
 const TELEGRAM_URL = 'https://t.me/Shepherdverses_bot?start=connect'
 const SUPPORT_EMAIL = 'hello@shepherdverses.com'
+const PADDLE_URL = 'https://paddle.net'
 
 const colors = {
   navy: '#001C5F',
@@ -21,18 +22,31 @@ type WelcomeEmailOptions = {
   firstName?: string | null
 }
 
-const steps = [
+const notificationStep = 'When Telegram asks, please <strong>ALLOW</strong> notifications - so you see your message arrive every day'
+const notificationStepText = 'When Telegram asks, please ALLOW notifications - so you see your message arrive every day'
+const startStep = 'Press <strong>Start</strong> (or log in), then enter the email address you subscribed with'
+const startStepText = 'Press Start (or log in), then enter the email address you subscribed with'
+
+const stepGroups = [
   {
-    title: 'Connect to Telegram',
-    body: 'Tap the button below to open our Telegram bot and press Start. This links your account.',
+    title: 'New to Telegram?',
+    steps: [
+      'Download Telegram free from your app store',
+      'Come back to this email and tap the <strong>Connect to Telegram</strong> button below',
+      startStep,
+      notificationStep,
+    ],
+    textSteps: [
+      'Download Telegram free from your app store',
+      'Come back to this email and tap the Connect to Telegram button below',
+      startStepText,
+      notificationStepText,
+    ],
   },
   {
-    title: 'Choose your time',
-    body: 'Tell us when you would like your daily message to arrive, so it meets you at the start of your day.',
-  },
-  {
-    title: 'Receive your first message',
-    body: 'Your personalised scripture, affirmation and mantra arrive as a voice and written message.',
+    title: 'Already have Telegram?',
+    steps: ['Tap the <strong>Connect to Telegram</strong> button below', startStep, notificationStep],
+    textSteps: ['Tap the Connect to Telegram button below', startStepText, notificationStepText],
   },
 ]
 
@@ -45,26 +59,39 @@ function escapeHtml(value: string) {
     .replace(/'/g, '&#39;')
 }
 
-export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
-  const name = firstName?.trim() ? escapeHtml(firstName.trim()) : null
-  const greeting = name ? `Welcome, ${name}` : 'Welcome to Shepherd Verses'
-  const subject = 'Welcome to Shepherd Verses - your first step'
-  const preheader = 'Connect to Telegram to receive your first daily message.'
-
-  const stepsHtml = steps
+function renderStepGroup(group: (typeof stepGroups)[number], isLast: boolean) {
+  const rows = group.steps
     .map(
       (step, index) => `
-        <tr>
-          <td valign="top" width="44" style="padding: 0 0 20px 0;">
-            <div style="width: 32px; height: 32px; line-height: 32px; border-radius: 16px; background-color: ${colors.navy}; color: ${colors.gold}; font-family: ${serif}; font-size: 16px; text-align: center;">${index + 1}</div>
-          </td>
-          <td valign="top" style="padding: 0 0 20px 0;">
-            <p style="margin: 0 0 4px 0; font-family: ${serif}; font-size: 18px; line-height: 1.3; color: ${colors.navy};">${step.title}</p>
-            <p style="margin: 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step.body}</p>
-          </td>
-        </tr>`,
+          <tr>
+            <td valign="top" width="36" style="padding: 0 0 12px 0;">
+              <div style="width: 26px; height: 26px; line-height: 26px; border-radius: 13px; background-color: ${colors.navy}; color: ${colors.gold}; font-family: ${serif}; font-size: 14px; text-align: center;">${index + 1}</div>
+            </td>
+            <td valign="top" style="padding: 3px 0 12px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">${step}</td>
+          </tr>`,
     )
     .join('')
+
+  return `
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.softStone}; border-radius: 12px; margin: 0 0 ${isLast ? 0 : 16}px 0;">
+        <tr>
+          <td style="padding: 20px 22px 10px 22px;">
+            <p style="margin: 0 0 14px 0; font-family: ${serif}; font-size: 19px; line-height: 1.3; color: ${colors.navy};">${group.title}</p>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${rows}
+            </table>
+          </td>
+        </tr>
+      </table>`
+}
+
+export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
+  const trimmedName = firstName?.trim() || null
+  const name = trimmedName ? escapeHtml(trimmedName) : null
+  const greeting = name ? `Welcome, ${name}` : 'Welcome'
+  const subject = 'Welcome to Shepherd Verses - your Telegram link inside'
+  const preheader = 'One step to go. Keep this email - your connect link lives here.'
+
+  const stepsHtml = stepGroups.map((group, index) => renderStepGroup(group, index === stepGroups.length - 1)).join('')
 
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -109,16 +136,15 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
 
                 <tr>
                   <td class="px" style="padding: 36px 48px 8px 48px;">
-                    <p style="margin: 0 0 16px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">We are so glad you are here.</p>
-                    <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">Each morning, Shepherd Verses will send you a personalised scripture, affirmation and mantra to help you wake up supported and start your day guided. Getting set up only takes a minute.</p>
-                    <p style="margin: 0 0 20px 0; font-family: ${serif}; font-size: 22px; line-height: 1.3; color: ${colors.navy};">Here is what happens next</p>
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${stepsHtml}
-                    </table>
+                    <p style="margin: 0 0 16px 0; font-family: ${serif}; font-size: 22px; line-height: 1.3; color: ${colors.navy};">Welcome to Shepherd Verses!</p>
+                    <p style="margin: 0 0 16px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">Thank you for joining us - we&rsquo;re so glad you&rsquo;re here.</p>
+                    <p style="margin: 0 0 28px 0; font-family: ${sans}; font-size: 16px; line-height: 1.7; color: ${colors.text};">There&rsquo;s just one step to go before your daily message can start arriving: connect to the Telegram app. Telegram is free to use and only takes a few minutes to set up.</p>
+                    ${stepsHtml}
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px" align="center" style="padding: 8px 48px 36px 48px;">
+                  <td class="px" align="center" style="padding: 28px 48px 32px 48px;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td align="center" style="border-radius: 999px; background-color: ${colors.gold};">
@@ -126,12 +152,12 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
                         </td>
                       </tr>
                     </table>
-                    <p style="margin: 14px 0 0 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">Please allow notifications in Telegram so your messages reach you.</p>
+                    <p style="margin: 18px 0 0 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 36px 48px;">
+                  <td class="px" style="padding: 0 48px 32px 48px;">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.softStone}; border-left: 3px solid ${colors.gold}; border-radius: 8px;">
                       <tr>
                         <td style="padding: 22px 24px;">
@@ -144,10 +170,19 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
                 </tr>
 
                 <tr>
-                  <td class="px" style="padding: 0 48px 40px 48px;">
-                    <p style="margin: 0 0 16px 0; font-family: ${sans}; font-size: 15px; line-height: 1.7; color: ${colors.text};">Your 3 days free start today. You can manage your plan at any time from your <a href="${SITE_URL}/account" style="color: ${colors.navy}; text-decoration: underline;">account page</a>.</p>
+                  <td class="px" style="padding: 0 48px 32px 48px;">
                     <p style="margin: 0 0 4px 0; font-family: ${sans}; font-size: 15px; line-height: 1.7; color: ${colors.text};">With love,</p>
                     <p style="margin: 0; font-family: ${serif}; font-size: 18px; color: ${colors.navy};">The Shepherd Verses team</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="px" style="padding: 0 48px 36px 48px;">
+                    <div style="height: 1px; background-color: ${colors.border}; margin: 0 0 24px 0;"></div>
+                    <p style="margin: 0 0 12px 0; font-family: ${sans}; font-size: 14px; line-height: 1.6; color: ${colors.navy}; font-weight: 600;">Your 3 days free start today!</p>
+                    <p style="margin: 0 0 10px 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">Keep this email - your connect link will always be here if you need it.</p>
+                    <p style="margin: 0 0 10px 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">To manage your plan, or update your email or message time, contact us at <a href="mailto:${SUPPORT_EMAIL}" style="color: ${colors.navy}; text-decoration: underline;">${SUPPORT_EMAIL}</a>.</p>
+                    <p style="margin: 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">For billing, payment methods or cancelling, contact our payment provider Paddle at <a href="${PADDLE_URL}" style="color: ${colors.navy}; text-decoration: underline;">paddle.net</a>.</p>
                   </td>
                 </tr>
 
@@ -156,8 +191,7 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
           </tr>
 
           <tr>
-            <td align="center" class="px" style="padding: 28px 24px 8px 24px;">
-              <p style="margin: 0 0 8px 0; font-family: ${sans}; font-size: 13px; line-height: 1.6; color: ${colors.muted};">Questions? Just reply to this email or write to <a href="mailto:${SUPPORT_EMAIL}" style="color: ${colors.navy}; text-decoration: none;">${SUPPORT_EMAIL}</a></p>
+            <td align="center" class="px" style="padding: 24px 24px 8px 24px;">
               <p style="margin: 0; font-family: ${sans}; font-size: 12px; line-height: 1.6; color: ${colors.muted};">
                 <a href="${SITE_URL}" style="color: ${colors.muted}; text-decoration: underline;">shepherdverses.com</a>
                 &nbsp;&middot;&nbsp;
@@ -176,26 +210,33 @@ export function renderWelcomeEmail({ firstName }: WelcomeEmailOptions = {}) {
 </html>`
 
   const text = [
-    name ? `Welcome, ${firstName?.trim()}` : 'Welcome to Shepherd Verses',
+    trimmedName ? `Welcome, ${trimmedName}` : 'Welcome',
     '',
-    'We are so glad you are here.',
+    'Welcome to Shepherd Verses!',
     '',
-    'Each morning, Shepherd Verses will send you a personalised scripture, affirmation and mantra to help you wake up supported and start your day guided. Getting set up only takes a minute.',
+    "Thank you for joining us - we're so glad you're here.",
     '',
-    'Here is what happens next:',
-    ...steps.map((step, index) => `${index + 1}. ${step.title} - ${step.body}`),
+    "There's just one step to go before your daily message can start arriving: connect to the Telegram app. Telegram is free to use and only takes a few minutes to set up.",
     '',
+    ...stepGroups.flatMap((group) => [
+      group.title,
+      ...group.textSteps.map((step, index) => `${index + 1}. ${step}`),
+      '',
+    ]),
     `Connect to Telegram: ${TELEGRAM_URL}`,
-    'Please allow notifications in Telegram so your messages reach you.',
+    '',
+    "That's it! You'll be connected and ready to receive your daily message.",
     '',
     '"Come to me, all you who are weary and burdened, and I will give you rest." - Matthew 11:28',
-    '',
-    `Your 3 days free start today. Manage your plan any time: ${SITE_URL}/account`,
     '',
     'With love,',
     'The Shepherd Verses team',
     '',
-    `Questions? Write to ${SUPPORT_EMAIL}`,
+    '---',
+    'Your 3 days free start today!',
+    'Keep this email - your connect link will always be here if you need it.',
+    `To manage your plan, or update your email or message time, contact us at ${SUPPORT_EMAIL}.`,
+    `For billing, payment methods or cancelling, contact our payment provider Paddle at ${PADDLE_URL}.`,
   ].join('\n')
 
   return { subject, html, text }
