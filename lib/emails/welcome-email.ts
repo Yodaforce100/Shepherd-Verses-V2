@@ -173,12 +173,9 @@ export function renderWelcomeEmail({
 
                 <tr>
                   <td class="px" style="padding: 0 48px 32px 48px;">
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.navy}; border-radius: 12px;">
-                      <tr>
-                        <td align="center" style="padding: 26px 28px 24px 28px;">
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto 16px auto;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto 18px auto;">
                             <tr>
-                              <td width="40" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                              <td width="130" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
                               <td style="padding: 0 10px;">
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                                   <tr>
@@ -198,10 +195,13 @@ export function renderWelcomeEmail({
                                   </tr>
                                 </table>
                               </td>
-                              <td width="40" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
+                              <td width="130" style="padding: 0;"><div style="height: 1px; line-height: 1px; font-size: 1px; background-color: ${colors.gold};">&nbsp;</div></td>
                             </tr>
                           </table>
-                          <p style="margin: 0 0 12px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: ${colors.navy}; border-radius: 12px;">
+                      <tr>
+                        <td align="center" style="padding: 18px 28px 16px 28px;">
+                          <p style="margin: 0 0 8px 0; font-family: ${serif}; font-size: 18px; line-height: 1.55; color: #FFFFFF; font-style: italic;">&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</p>
                           <p style="margin: 0; font-family: ${sans}; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: ${colors.gold};">Matthew 11:28</p>
                         </td>
                       </tr>
