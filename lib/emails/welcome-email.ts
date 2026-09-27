@@ -148,6 +148,7 @@ export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: Welco
 
                 <tr>
                   <td class="px" align="center" style="padding: 28px 48px 32px 48px;">
+                    <p style="margin: 0 0 18px 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td align="center" style="border-radius: 999px; background-color: ${colors.gold};">
@@ -155,7 +156,6 @@ export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: Welco
                         </td>
                       </tr>
                     </table>
-                    <p style="margin: 18px 0 0 0; font-family: ${sans}; font-size: 15px; line-height: 1.6; color: ${colors.text};">That&rsquo;s it! You&rsquo;ll be connected and ready to receive your daily message.</p>
                   </td>
                 </tr>
 
@@ -226,9 +226,9 @@ export function renderWelcomeEmail({ firstName, assetBaseUrl = SITE_URL }: Welco
       ...group.textSteps.map((step, index) => `${index + 1}. ${step}`),
       '',
     ]),
-    `Connect to Telegram: ${TELEGRAM_URL}`,
-    '',
     "That's it! You'll be connected and ready to receive your daily message.",
+    '',
+    `Connect to Telegram: ${TELEGRAM_URL}`,
     '',
     '"Come to me, all you who are weary and burdened, and I will give you rest." - Matthew 11:28',
     '',
