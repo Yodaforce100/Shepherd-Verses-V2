@@ -68,7 +68,7 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       className="relative py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24"
-      style={{ background: 'linear-gradient(180deg, #F1DFA8 0%, #E3C47A 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)' }}
     >
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,19 +78,20 @@ export function HowItWorks() {
           <AnimatedHeading
             lead="Wake up to a voice that"
             highlight="hears you"
+            color="#FFFFFF"
             className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
           />
           {/* Sub-heading */}
           <h3 
             className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
-            style={{ color: '#001C5F' }}
+            style={{ color: '#F3EBD6' }}
           >
             Two simple steps
           </h3>
           {/* Subtitle */}
           <p 
             className="font-sans text-lg lg:text-xl"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
+            style={{ color: '#D4B96A', fontWeight: 500 }}
           >
             A day transformed
           </p>
@@ -107,7 +108,7 @@ export function HowItWorks() {
               {/* Card */}
               <div 
                 className="bg-white rounded-2xl overflow-hidden h-full flex flex-col"
-                style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
+                style={{ border: '0.5px solid rgba(212,185,106,0.35)', boxShadow: '0 10px 30px rgba(0,0,0,0.25)' }}
               >
                 {/* Image with Title Overlay */}
                 <div className="relative aspect-[4/3]">
