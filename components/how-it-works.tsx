@@ -68,7 +68,7 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       className="relative py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24"
-      style={{ background: 'linear-gradient(180deg, #F8F1DF 0%, #F3E7C9 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #F1DFA8 0%, #E3C47A 100%)' }}
     >
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
