@@ -10,37 +10,13 @@
   }
 }
 
-@keyframes lightSweep {
-  0% {
-    transform: translate3d(-120%, 0, 0) skewX(-18deg);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  70%,
-  100% {
-    transform: translate3d(320%, 0, 0) skewX(-18deg);
-    opacity: 0;
-  }
-}
-
 .drift {
   animation: bibleDrift 28s ease-in-out infinite;
   will-change: transform;
 }
 
-.sweep {
-  animation: lightSweep 14s ease-in-out infinite;
-  will-change: transform, opacity;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .drift,
-  .sweep {
+  .drift {
     animation: none;
   }
 }

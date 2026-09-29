@@ -42,15 +42,6 @@ export function Connection() {
           filter: 'grayscale(80%) saturate(70%)',
         }}
       />
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div
-          className={`absolute inset-y-0 left-0 w-1/3 ${styles.sweep}`}
-          style={{
-            background:
-              'linear-gradient(90deg, transparent 0%, rgba(217,184,106,0.12) 35%, rgba(255,246,222,0.45) 50%, rgba(217,184,106,0.12) 65%, transparent 100%)',
-          }}
-        />
-      </div>
       {/* Top gradient blend from previous section */}
       <div
         className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
