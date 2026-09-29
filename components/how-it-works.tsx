@@ -107,16 +107,16 @@ export function HowItWorks() {
             >
               {/* Card */}
               <div 
-                className="bg-white rounded-2xl overflow-hidden h-full flex flex-col"
-                style={{ border: '0.5px solid rgba(212,185,106,0.35)', boxShadow: '0 10px 30px rgba(0,0,0,0.25)' }}
+                className="group bg-white rounded-2xl overflow-hidden h-full flex flex-col shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-500 ease-out motion-safe:hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(0,0,0,0.35),0_0_0_1px_rgba(212,185,106,0.6),0_0_28px_rgba(212,185,106,0.25)]"
+                style={{ border: '0.5px solid rgba(212,185,106,0.35)' }}
               >
                 {/* Image with Title Overlay */}
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-[1200ms] ease-out motion-safe:group-hover:scale-[1.06]"
                   />
                   {/* Soft warm gradient overlay for better title visibility */}
                   <div 
