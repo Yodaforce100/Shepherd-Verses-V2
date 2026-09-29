@@ -1,5 +1,3 @@
-import styles from './connection.module.css'
-
 // Latin cross icon (tall vertical bar, shorter crossbar near the top)
 function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -31,13 +29,17 @@ export function Connection() {
   return (
     <section id="connection" className="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       {/* Subtle Bible image background */}
-      <div
-        className={`absolute inset-0 pointer-events-none ${styles.drift}`}
+      <video
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+        src="/videos/bible-pages.mp4"
+        poster="/images/bible-pages-bg.jpeg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
         style={{
-          backgroundImage: 'url(/images/bible-pages-bg.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
           opacity: 0.38,
           filter: 'grayscale(80%) saturate(70%)',
         }}
