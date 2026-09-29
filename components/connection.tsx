@@ -1,3 +1,5 @@
+import styles from './connection.module.css'
+
 // Latin cross icon (tall vertical bar, shorter crossbar near the top)
 function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -30,7 +32,7 @@ export function Connection() {
     <section id="connection" className="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
       {/* Subtle Bible image background */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className={`absolute inset-0 pointer-events-none ${styles.drift}`}
         style={{
           backgroundImage: 'url(/images/bible-pages-bg.jpeg)',
           backgroundSize: 'cover',
@@ -40,6 +42,15 @@ export function Connection() {
           filter: 'grayscale(80%) saturate(70%)',
         }}
       />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div
+          className={`absolute inset-y-0 left-0 w-1/3 ${styles.sweep}`}
+          style={{
+            background:
+              'linear-gradient(90deg, transparent 0%, rgba(217,184,106,0.12) 35%, rgba(255,246,222,0.45) 50%, rgba(217,184,106,0.12) 65%, transparent 100%)',
+          }}
+        />
+      </div>
       {/* Top gradient blend from previous section */}
       <div
         className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
