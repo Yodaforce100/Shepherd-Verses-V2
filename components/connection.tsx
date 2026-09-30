@@ -50,10 +50,9 @@ export function Connection() {
             </p>
           </div>
 
-          <div className="-mt-6 sm:-mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
+          <div className="-mt-5 sm:-mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
             <div
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl"
-              style={{ boxShadow: '0 20px 40px -20px rgba(0, 28, 95, 0.35)' }}
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_40px_-24px_rgba(0,28,95,0.35)] lg:shadow-[0_20px_40px_-20px_rgba(0,28,95,0.35)]"
             >
               <SegmentLoopVideo
                 className="absolute inset-0 h-full w-full object-cover"
@@ -67,7 +66,12 @@ export function Connection() {
                 aria-hidden="true"
               />
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 opacity-100 lg:opacity-70"
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/2 lg:hidden"
+                style={{ background: 'linear-gradient(to bottom, #F7F6F4 0%, #F7F6F4 18%, rgba(247, 246, 244, 0.6) 50%, rgba(247, 246, 244, 0) 100%)' }}
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 hidden h-1/4 opacity-70 lg:block"
                 style={{ background: 'linear-gradient(to bottom, rgba(247, 246, 244, 0.85) 0%, rgba(247, 246, 244, 0) 100%)' }}
                 aria-hidden="true"
               />
