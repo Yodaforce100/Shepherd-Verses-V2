@@ -19,76 +19,74 @@ function LatinCross({ className, style }: { className?: string; style?: React.CS
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-20 h-px" style={{ backgroundColor: '#D9B86A' }} />
-      <LatinCross className="size-10" style={{ color: '#D9B86A' }} />
-      <div className="w-20 h-px" style={{ backgroundColor: '#D9B86A' }} />
+    <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
+      <div className="w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <LatinCross className="size-8" style={{ color: '#D9B86A' }} />
+      <div className="w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
 
 export function Connection() {
   return (
-    <section id="connection" className="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
-      {/* Subtle Bible image background */}
-      <SegmentLoopVideo
-        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
-        src="/videos/bible-pages.mp4"
-        poster="/images/bible-pages-bg.jpeg"
-        endAt={7}
-        style={{
-          opacity: 0.55,
-          filter: 'sepia(15%) saturate(90%) contrast(1.03)',
-        }}
-      />
-      {/* Top gradient blend from previous section */}
-      <div
-        className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to top, transparent 0%, rgba(247,246,244,0.9) 100%)',
-        }}
-      />
-      {/* Bottom gradient blend into next section */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.7) 100%)',
-        }}
-      />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-2xl lg:max-w-3xl mx-auto text-center">
-          <CrossDivider />
-          
-          <h2 
-            className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2"
-            style={{ color: '#001C5F' }}
-          >
-            A companion for every
-          </h2>
-          
-          <p 
-            className="font-sans text-lg lg:text-xl mb-6"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
-          >
-            moment of your day
-          </p>
-          
-          <p 
-            className="font-sans text-base mx-auto max-w-lg lg:max-w-2xl mb-6"
-            style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
-          >
-            Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
-          </p>
-          
-          {/* Scripture Quote */}
-          <p
-            className="font-serif italic text-base mx-auto max-w-md mt-4"
-            style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 700 }}
-          >
-            &quot;Come to me, all you who are weary and burdened,
-            <br />
-            and I will give you rest.&quot; - Matthew 11:28
-          </p>
+    <section id="connection" className="py-16 lg:py-24" style={{ backgroundColor: '#F7F6F4' }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16">
+          <div className="lg:w-1/2 lg:order-2">
+            <div
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg"
+              style={{ boxShadow: '0 20px 40px -20px rgba(0, 28, 95, 0.35)' }}
+            >
+              <SegmentLoopVideo
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/videos/bible-pages.mp4"
+                poster="/images/bible-pages-bg.jpeg"
+                endAt={7}
+              />
+            </div>
+          </div>
+
+          <div className="lg:w-1/2 lg:order-1 text-center lg:text-left">
+            <CrossDivider />
+
+            <h2
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2 text-balance"
+              style={{ color: '#001C5F' }}
+            >
+              A companion for every
+            </h2>
+
+            <p
+              className="font-sans text-lg lg:text-xl mb-6"
+              style={{ color: '#5E8DBF', fontWeight: 500 }}
+            >
+              moment of your day
+            </p>
+
+            <p
+              className="font-sans text-base mx-auto lg:mx-0 max-w-lg mb-8"
+              style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+            >
+              Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
+            </p>
+
+            <blockquote
+              className="mx-auto lg:mx-0 max-w-md border-l-0 lg:border-l-2 lg:pl-5"
+              style={{ borderColor: '#D9B86A' }}
+            >
+              <p
+                className="font-serif italic text-base"
+                style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 700 }}
+              >
+                &quot;Come to me, all you who are weary and burdened,
+                <br />
+                and I will give you rest.&quot;
+              </p>
+              <footer className="font-sans text-sm mt-2" style={{ color: '#5E8DBF', fontWeight: 500 }}>
+                Matthew 11:28
+              </footer>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>
