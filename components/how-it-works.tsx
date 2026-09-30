@@ -67,13 +67,13 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24"
+      className="relative py-8 sm:py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24"
       style={{ background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)' }}
     >
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 sm:mb-12">
+        <div className="text-center mb-5 sm:mb-12">
           {/* Primary Heading */}
           <AnimatedHeading
             lead="Wake up to a voice that"
@@ -111,7 +111,7 @@ export function HowItWorks() {
                 style={{ border: '0.5px solid rgba(212,185,106,0.35)' }}
               >
                 {/* Image with Title Overlay */}
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[4/3] overflow-hidden">
                   <Image
                     src={step.image}
                     alt={step.title}
@@ -137,7 +137,7 @@ export function HowItWorks() {
                 </div>
 
                 {/* Description with Icon */}
-                <div className="p-4 sm:p-5 flex-grow">
+                <div className="px-4 py-3.5 sm:p-5 flex-grow">
                   <div className="flex items-start gap-3">
                     {/* Icon */}
                     <div className="mt-0.5">
@@ -145,8 +145,8 @@ export function HowItWorks() {
                     </div>
                     {/* Text */}
                     <p 
-                      className="font-sans text-base"
-                      style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+                      className="font-sans text-[15px] leading-[1.55] sm:text-base sm:leading-[1.6]"
+                      style={{ color: '#2A4B7C', fontWeight: 450 }}
                     >
                       <span 
                         className="font-semibold"
