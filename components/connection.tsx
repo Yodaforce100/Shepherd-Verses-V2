@@ -29,7 +29,7 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="py-16 lg:py-24" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="connection" className="py-16 lg:py-24 bg-gradient-to-b from-light-stone via-stone to-stone">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-16">
           <div className="relative z-10 text-center lg:text-left lg:col-start-1 lg:row-start-1 lg:self-end">
@@ -62,17 +62,17 @@ export function Connection() {
               />
               <div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
-                style={{ boxShadow: 'inset 0 0 36px 6px rgba(247, 246, 244, 0.55)' }}
+                style={{ boxShadow: 'inset 0 0 36px 6px rgba(244, 243, 240, 0.55)' }}
                 aria-hidden="true"
               />
               <div
                 className="pointer-events-none absolute inset-x-0 top-0 h-1/2 lg:hidden"
-                style={{ background: 'linear-gradient(to bottom, #F7F6F4 0%, #F7F6F4 18%, rgba(247, 246, 244, 0.6) 50%, rgba(247, 246, 244, 0) 100%)' }}
+                style={{ background: 'linear-gradient(to bottom, #F4F3F0 0%, #F4F3F0 18%, rgba(244, 243, 240, 0.6) 50%, rgba(244, 243, 240, 0) 100%)' }}
                 aria-hidden="true"
               />
               <div
                 className="pointer-events-none absolute inset-x-0 top-0 hidden h-1/4 opacity-70 lg:block"
-                style={{ background: 'linear-gradient(to bottom, rgba(247, 246, 244, 0.85) 0%, rgba(247, 246, 244, 0) 100%)' }}
+                style={{ background: 'linear-gradient(to bottom, rgba(244, 243, 240, 0.85) 0%, rgba(244, 243, 240, 0) 100%)' }}
                 aria-hidden="true"
               />
             </div>
@@ -86,17 +86,14 @@ export function Connection() {
               Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
             </p>
 
-            <blockquote
-              className="mx-auto lg:mx-0 max-w-md border-l-0 lg:border-l-2 lg:pl-5"
-              style={{ borderColor: '#D9B86A' }}
-            >
+            <blockquote className="mx-auto lg:mx-0 max-w-md">
               <p
-                className="font-serif italic text-base"
-                style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 700 }}
+                className="font-serif italic text-lg"
+                style={{ color: '#D9B86A', lineHeight: '1.6', fontWeight: 700 }}
               >
-                &quot;Come to me, all you who are weary and burdened,
+                &ldquo;Come to me, all you who are weary and burdened,
                 <br />
-                and I will give you rest.&quot;
+                and I will give you rest.&rdquo;
               </p>
               <footer className="font-sans text-sm mt-2" style={{ color: '#5E8DBF', fontWeight: 500 }}>
                 Matthew 11:28
