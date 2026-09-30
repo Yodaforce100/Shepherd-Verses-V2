@@ -29,7 +29,7 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="py-16 lg:py-24 bg-gradient-to-b from-light-stone via-stone to-stone">
+    <section id="connection" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-16">
           <div className="relative z-10 text-center lg:text-left lg:col-start-1 lg:row-start-1 lg:self-end">
