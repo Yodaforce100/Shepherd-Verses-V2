@@ -38,7 +38,7 @@ export function Connection() {
         endAt={7}
         style={{
           opacity: 0.55,
-          filter: 'grayscale(55%) saturate(80%) contrast(1.08) brightness(0.95)',
+          filter: 'sepia(40%) saturate(85%) contrast(1.05) brightness(0.97)',
         }}
       />
       {/* Top gradient blend from previous section */}
