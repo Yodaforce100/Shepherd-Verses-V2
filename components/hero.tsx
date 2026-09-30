@@ -193,9 +193,10 @@ export function Hero({ onSignupClick }: HeroProps) {
             Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
               </p>
 
-              {/* CTA Button */}
-              <Button 
-                asChild
+  <div className="inline-flex flex-col items-center">
+  {/* CTA Button */}
+  <Button
+  asChild
                 className="font-sans font-bold text-lg px-12 py-6 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
@@ -210,11 +211,12 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* Trust Line - centered under button */}
               <p 
                 className="font-sans text-sm text-center animate-in fade-in duration-700 delay-500"
-                style={{ color: '#4A5568', opacity: 0.7, maxWidth: '280px', margin: '0 auto' }}
-              >
-                3-day free trial · Cancel anytime
-              </p>
-            </div>
+  style={{ color: '#4A5568', opacity: 0.7 }}
+  >
+  3-day free trial · Cancel anytime
+  </p>
+  </div>
+  </div>
           </div>
         </div>
       </div>
