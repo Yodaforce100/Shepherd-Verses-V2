@@ -37,8 +37,8 @@ export function Connection() {
         poster="/images/bible-pages-bg.jpeg"
         endAt={7}
         style={{
-          opacity: 0.38,
-          filter: 'grayscale(80%) saturate(70%)',
+          opacity: 0.55,
+          filter: 'grayscale(55%) saturate(80%) contrast(1.08) brightness(0.95)',
         }}
       />
       {/* Top gradient blend from previous section */}
