@@ -62,8 +62,13 @@ export function Connection() {
                 endAt={7}
               />
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/3"
-                style={{ background: 'linear-gradient(to bottom, #F7F6F4 0%, rgba(247, 246, 244, 0.7) 35%, rgba(247, 246, 244, 0) 100%)' }}
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{ boxShadow: 'inset 0 0 36px 6px rgba(247, 246, 244, 0.55)' }}
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 opacity-100 lg:opacity-70"
+                style={{ background: 'linear-gradient(to bottom, rgba(247, 246, 244, 0.85) 0%, rgba(247, 246, 244, 0) 100%)' }}
                 aria-hidden="true"
               />
             </div>
