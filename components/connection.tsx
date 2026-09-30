@@ -44,9 +44,9 @@ export function Connection() {
 
             <p
               className="font-sans text-xl lg:text-xl lg:mb-6"
-              style={{ color: '#5E8DBF', fontWeight: 500 }}
-            >
-              moment of your day
+  style={{ color: '#001C5F', fontWeight: 500 }}
+  >
+  moment of your day
             </p>
           </div>
 
