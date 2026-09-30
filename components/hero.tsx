@@ -103,7 +103,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* CTA Button */}
           <button
             onClick={onSignupClick}
-            className="font-sans font-bold text-base px-10 py-7 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+            className="font-sans font-bold text-base px-9 py-4 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
               color: '#001C5F',
@@ -111,8 +111,8 @@ export function Hero({ onSignupClick }: HeroProps) {
               boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
             }}
           >
-            Start Your Morning with Peace
-          </button>
+  Begin your free trial today
+  </button>
 
           {/* Trust Line */}
           <p 
@@ -196,7 +196,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* CTA Button */}
               <Button 
                 asChild
-                className="font-sans font-bold text-lg px-14 py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+                className="font-sans font-bold text-lg px-12 py-6 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
@@ -204,7 +204,7 @@ export function Hero({ onSignupClick }: HeroProps) {
                   boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
                 }}
               >
-                <Link href="#plans">Start Your Morning with Peace</Link>
+                <Link href="#plans">Begin your free trial today</Link>
               </Button>
 
               {/* Trust Line - centered under button */}
