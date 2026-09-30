@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Gift, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
+import { Check, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -76,17 +76,6 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           >
             Wake up supported. Start your day guided.
           </p>
-
-          {/* Trial Pill */}
-          <div
-            className="inline-flex w-full max-w-xs sm:max-w-sm items-center justify-center gap-2.5 rounded-full px-6 py-3 mt-6"
-            style={{ backgroundColor: '#001C5F' }}
-          >
-            <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
-  <span className="font-sans text-base lg:text-lg font-semibold text-white whitespace-nowrap">
-  Start with 3 days free
-            </span>
-          </div>
 
           {/* Shared benefits — included on every plan */}
           <div className="text-center mt-8">
@@ -166,7 +155,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               className="font-sans text-xs text-center mt-2.5"
               style={{ color: '#8A919E' }}
             >
-              Billed monthly
+                <span className="font-semibold">3 days free</span>, then billed monthly
             </p>
           </div>
 
@@ -254,7 +243,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 className="font-sans text-xs text-center mt-2.5"
                 style={{ color: 'rgba(255,255,255,0.5)' }}
               >
-                Billed annually at $80.40 USD
+                <span className="font-semibold">3 days free</span>, then billed annually at $80.40 USD
               </p>
             </div>
           </div>
