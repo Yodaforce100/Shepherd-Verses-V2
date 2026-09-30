@@ -87,7 +87,7 @@ export function FAQ() {
         {/* Section Header */}
         <div className="text-center mb-10">
           <CrossDivider />
-          <h2 className="font-serif text-2xl lg:text-3xl leading-tight text-navy">
+          <h2 className="font-serif text-3xl md:text-4xl text-balance leading-tight text-navy">
             Frequently Asked Questions
           </h2>
         </div>

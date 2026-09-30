@@ -39,7 +39,7 @@ export function Reviews() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight"
+            className="font-serif text-3xl md:text-4xl text-balance leading-tight"
             style={{ color: '#001C5F' }}
           >
             What Our Members Are Saying

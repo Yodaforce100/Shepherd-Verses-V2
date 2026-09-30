@@ -63,7 +63,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           
           {/* Heading */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-3"
+            className="font-serif text-3xl md:text-4xl text-balance leading-tight mb-3"
             style={{ color: '#001C5F' }}
           >
             Choose Your Subscription
