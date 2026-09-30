@@ -20,9 +20,9 @@ function LatinCross({ className, style }: { className?: string; style?: React.CS
 function CrossDivider() {
   return (
     <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
-      <div className="w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
-      <LatinCross className="size-8" style={{ color: '#D9B86A' }} />
-      <div className="w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <div className="w-24 sm:w-28 lg:w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <LatinCross className="size-8 shrink-0" style={{ color: '#D9B86A' }} />
+      <div className="w-24 sm:w-28 lg:w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
@@ -36,14 +36,14 @@ export function Connection() {
             <CrossDivider />
 
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2 text-balance"
+              className="font-serif text-[1.875rem] sm:text-4xl lg:text-4xl leading-tight mb-2 text-balance"
               style={{ color: '#001C5F' }}
             >
               A companion for every
             </h2>
 
             <p
-              className="font-sans text-lg lg:text-xl lg:mb-6"
+              className="font-sans text-xl lg:text-xl lg:mb-6"
               style={{ color: '#5E8DBF', fontWeight: 500 }}
             >
               moment of your day
