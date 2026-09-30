@@ -62,7 +62,7 @@ export function Connection() {
                 endAt={7}
               />
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/3 lg:hidden"
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/3"
                 style={{ background: 'linear-gradient(to bottom, #F7F6F4 0%, rgba(247, 246, 244, 0.7) 35%, rgba(247, 246, 244, 0) 100%)' }}
                 aria-hidden="true"
               />
