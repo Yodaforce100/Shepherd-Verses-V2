@@ -146,7 +146,7 @@ export function HowItWorks() {
                     {/* Text */}
                     <p 
                       className="font-sans text-[15px] leading-[1.55] sm:text-base sm:leading-[1.6]"
-                      style={{ color: '#2A4B7C', fontWeight: 450 }}
+                      style={{ color: '#5E8DBF', fontWeight: 450 }}
                     >
                       <span 
                         className="font-semibold"

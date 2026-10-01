@@ -84,7 +84,7 @@ export function Connection() {
 
             <p
               className="font-sans text-base mx-auto lg:mx-0 max-w-lg mb-8"
-              style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+              style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
             >
               Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
             </p>
