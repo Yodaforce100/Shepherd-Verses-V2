@@ -74,7 +74,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             className="font-sans text-sm lg:text-base"
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
-            Wake up supported. Start your day guided.
+            Wake up supported ~ start your day guided
           </p>
 
           {/* Shared benefits — included on every plan */}
