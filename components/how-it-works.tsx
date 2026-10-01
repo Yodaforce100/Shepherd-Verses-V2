@@ -125,19 +125,14 @@ export function HowItWorks() {
                       background: 'linear-gradient(to top, rgba(62,50,38,0.7) 0%, rgba(62,50,38,0.35) 50%, rgba(62,50,38,0) 100%)',
                     }}
                   />
-                  <span
-                    className="absolute left-3 top-3 sm:left-4 sm:top-4 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full font-serif text-base sm:text-lg font-bold"
-                    style={{
-                      background: 'linear-gradient(135deg, #F1E3A8 0%, #D4B96A 55%, #C4A55A 100%)',
-                      color: '#001C5F',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.25), 0 0 0 2px rgba(255,255,255,0.85)',
-                    }}
-                  >
-                    <span className="sr-only">Step </span>
-                    {index + 1}
-                  </span>
                   {/* Title Overlay */}
                   <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+                    <p
+                      className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.18em] mb-0.5"
+                      style={{ color: '#E6CC85', fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.35)' }}
+                    >
+                      Step {index + 1}
+                    </p>
                     <h3 
                       className="font-serif text-lg sm:text-xl text-white"
                       style={{ fontWeight: 500 }}
