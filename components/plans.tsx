@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, Gift, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
+import { Check, Pencil, Lock, BookOpen, Clock, Mic, type LucideIcon } from "lucide-react"
 
 // Gold Divider with text
 function GoldDivider({ text }: { text: string }) {
@@ -63,7 +63,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           
           {/* Heading */}
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-3"
+            className="font-serif text-3xl md:text-4xl text-balance leading-tight mb-3"
             style={{ color: '#001C5F' }}
           >
             Choose Your Subscription
@@ -74,19 +74,8 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             className="font-sans text-sm lg:text-base"
             style={{ color: '#5E8DBF', fontWeight: 500 }}
           >
-            Wake up supported. Start your day guided.
+            Wake up supported ~ start your day guided
           </p>
-
-          {/* Trial Pill */}
-          <div
-            className="inline-flex w-full max-w-xs sm:max-w-sm items-center justify-center gap-2.5 rounded-full px-6 py-3 mt-6"
-            style={{ backgroundColor: '#001C5F' }}
-          >
-            <Gift className="w-5 h-5 shrink-0" style={{ color: '#D4B96A' }} />
-  <span className="font-sans text-base lg:text-lg font-semibold text-white whitespace-nowrap">
-  Start with 3 days free
-            </span>
-          </div>
 
           {/* Shared benefits — included on every plan */}
           <div className="text-center mt-8">
@@ -99,8 +88,8 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           
           {/* Monthly Plan Card */}
           <div 
-            className="w-full max-w-[320px] sm:max-w-[300px] lg:max-w-[340px] bg-white rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col"
-            style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
+            className="w-full max-w-[320px] sm:max-w-[300px] lg:max-w-[340px] bg-white rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-500 ease-out motion-safe:hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(0,28,95,0.12),0_0_0_1px_rgba(212,185,106,0.5)]"
+            style={{ border: '0.5px solid #D5CDB8' }}
           >
             {/* Plan Name */}
             <h3 
@@ -154,12 +143,10 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             {/* CTA Button */}
             <button
               onClick={onMonthlyClick}
-              className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full transition-all mt-auto"
+              className="w-full font-sans font-medium text-sm sm:text-[15px] py-3.5 sm:py-4 rounded-full transition-all duration-300 mt-auto bg-transparent hover:bg-[#D4B96A]/15"
               style={{ 
-                borderColor: '#D4B96A',
                 color: '#001C5F',
                 border: '1px solid #D4B96A',
-                backgroundColor: 'transparent'
               }}
             >
               Start Monthly Plan
@@ -168,12 +155,12 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
               className="font-sans text-xs text-center mt-2.5"
               style={{ color: '#8A919E' }}
             >
-              Billed monthly
+                <span className="font-semibold">3 days free</span>, then billed monthly
             </p>
           </div>
 
           {/* Annual Plan Card (Featured) */}
-          <div className="w-full max-w-[320px] sm:max-w-[300px] lg:max-w-[340px] relative">
+          <div className="group w-full max-w-[320px] sm:max-w-[300px] lg:max-w-[340px] relative transition-transform duration-500 ease-out motion-safe:hover:-translate-y-1.5">
             {/* Best Value Badge */}
             <div 
               className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-6 sm:px-8 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-xs font-semibold whitespace-nowrap"
@@ -187,11 +174,8 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </div>
 
             <div 
-              className="rounded-2xl p-4 sm:p-5 lg:p-6 h-full flex flex-col"
-              style={{ 
-                backgroundColor: '#001C5F',
-                boxShadow: '0 8px 30px rgba(0,28,95,0.25)',
-              }}
+              className="rounded-2xl p-4 sm:p-5 lg:p-6 h-full flex flex-col shadow-[0_8px_30px_rgba(0,28,95,0.25)] transition-shadow duration-500 ease-out group-hover:shadow-[0_18px_44px_rgba(0,28,95,0.35),0_0_28px_rgba(212,185,106,0.35)]"
+              style={{ backgroundColor: '#001C5F' }}
             >
               {/* Plan Name */}
               <h3 
@@ -259,7 +243,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
                 className="font-sans text-xs text-center mt-2.5"
                 style={{ color: 'rgba(255,255,255,0.5)' }}
               >
-                Billed annually at $80.40 USD
+                <span className="font-semibold">3 days free</span>, then billed annually at $80.40 USD
               </p>
             </div>
           </div>

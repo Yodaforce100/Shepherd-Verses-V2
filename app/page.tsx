@@ -56,8 +56,8 @@ export default function Home() {
       <Navbar onSignupClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })} />
       <main>
         <Hero onSignupClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })} />
-        <HowItWorks />
         <Connection />
+        <HowItWorks />
         <Plans 
           onMonthlyClick={() => openCheckout('monthly')}
           onAnnualClick={() => openCheckout('annual')}

@@ -64,15 +64,6 @@ export function AnimatedHeading({
   const leadWords = lead.split(" ")
   const wordDelay = 90
   const highlightDelay = leadWords.length * wordDelay
-  const underlineDrawDelay = highlightDelay + 250
-  const underlineHoldMs = 2200
-  const [underlineGone, setUnderlineGone] = useState(false)
-
-  useEffect(() => {
-    if (!inView) return
-    const timer = setTimeout(() => setUnderlineGone(true), underlineDrawDelay + 700 + underlineHoldMs)
-    return () => clearTimeout(timer)
-  }, [inView, underlineDrawDelay])
 
   const wordClass = `inline-block transition-all duration-500 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
     inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
@@ -88,19 +79,10 @@ export function AnimatedHeading({
             {"\u00A0"}
           </span>
         ))}
-        <span className="relative inline-block whitespace-nowrap">
+        <span className="inline-block whitespace-nowrap">
           <span className={wordClass} style={{ transitionDelay: `${highlightDelay}ms` }}>
             {highlight}
           </span>
-          <span
-            className={`absolute left-0 right-0 -bottom-0.5 h-[1.5px] rounded-full origin-left transition-[transform,opacity] duration-700 ease-out motion-reduce:hidden ${
-              inView ? "scale-x-100" : "scale-x-0"
-            } ${underlineGone ? "opacity-0" : "opacity-100"}`}
-            style={{
-              backgroundColor: "#CF9D3E",
-              transitionDelay: underlineGone ? "0ms" : `${underlineDrawDelay}ms`,
-            }}
-          />
         </span>
       </span>
     </h2>

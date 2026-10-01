@@ -17,77 +17,85 @@ function LatinCross({ className, style }: { className?: string; style?: React.CS
 // Cross Divider Component
 function CrossDivider() {
   return (
-    <div className="flex items-center justify-center gap-4 mb-4">
-      <div className="w-20 h-px" style={{ backgroundColor: '#D9B86A' }} />
-      <LatinCross className="size-10" style={{ color: '#D9B86A' }} />
-      <div className="w-20 h-px" style={{ backgroundColor: '#D9B86A' }} />
+    <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
+      <div className="w-24 sm:w-28 lg:w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
+      <LatinCross className="size-8 shrink-0" style={{ color: '#D9B86A' }} />
+      <div className="w-24 sm:w-28 lg:w-16 h-px" style={{ backgroundColor: '#D9B86A' }} />
     </div>
   )
 }
 
 export function Connection() {
   return (
-    <section id="connection" className="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
-      {/* Subtle Bible image background */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: 'url(/images/bible-pages-bg.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.38,
-          filter: 'grayscale(80%) saturate(70%)',
-        }}
+    <section id="connection" className="relative overflow-hidden bg-white pt-14 pb-20 lg:py-32">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/videos/bible-pages.mp4?v=hd"
+        poster="/images/bible-pages-bg.jpeg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
       />
-      {/* Top gradient blend from previous section */}
+
+      {/* Soft white wash: even on mobile, stronger behind the text column on desktop */}
       <div
-        className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to top, transparent 0%, rgba(247,246,244,0.9) 100%)',
-        }}
+        className="pointer-events-none absolute inset-0 bg-white/80 lg:hidden"
+        aria-hidden="true"
       />
-      {/* Bottom gradient blend into next section */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.7) 100%)',
+          background:
+            'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.88) 40%, rgba(255,255,255,0.55) 70%, rgba(255,255,255,0.4) 100%)',
         }}
+        aria-hidden="true"
       />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-2xl lg:max-w-3xl mx-auto text-center">
-          <CrossDivider />
-          
-          <h2 
-            className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2"
-            style={{ color: '#001C5F' }}
-          >
-            A companion for every
-          </h2>
-          
-          <p 
-            className="font-sans text-lg lg:text-xl mb-6"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
-          >
-            moment of your day
-          </p>
-          
-          <p 
-            className="font-sans text-base mx-auto max-w-lg lg:max-w-2xl mb-6"
-            style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
-          >
-            Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
-          </p>
-          
-          {/* Scripture Quote */}
-          <p
-            className="font-serif italic text-base mx-auto max-w-md mt-4"
-            style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 700 }}
-          >
-            &quot;Come to me, all you who are weary and burdened,
-            <br />
-            and I will give you rest.&quot; - Matthew 11:28
-          </p>
+      {/* Top and bottom fades so the section blends into its neighbours */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-56 lg:h-40 bg-gradient-to-b from-white from-45% lg:from-0% to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+            <CrossDivider />
+
+            <h2
+              className="font-serif text-[1.875rem] sm:text-4xl lg:text-4xl leading-tight mb-6 text-balance"
+              style={{ color: '#001C5F' }}
+            >
+              A companion for every moment of your day
+            </h2>
+
+            <p
+              className="font-sans text-base mx-auto lg:mx-0 max-w-lg mb-8"
+              style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
+            >
+              Some days begin with calm. Others begin with uncertainty, heaviness, or quiet worry. <span style={{ fontWeight: 550 }}>Shepherd Verses</span> meets you in those moments - listening to how you feel and responding with spoken scripture and affirmations, chosen just for you.
+            </p>
+
+            <blockquote className="mx-auto lg:mx-0 max-w-md">
+              <p
+                className="font-serif italic text-lg"
+                style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 600 }}
+              >
+                &ldquo;Come to me, all you who are weary and burdened,{' '}
+                <br className="hidden sm:inline" />
+                and I will give you rest.&rdquo;{' '}
+                <cite className="font-sans not-italic text-sm text-[#A8842F] whitespace-nowrap" style={{ fontWeight: 600 }}>
+                  Matthew 11:28
+                </cite>
+              </p>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>

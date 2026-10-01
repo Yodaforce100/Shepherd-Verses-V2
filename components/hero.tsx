@@ -40,8 +40,18 @@ interface HeroProps {
 
 export function Hero({ onSignupClick }: HeroProps) {
   return (
-    <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
-      
+    <section
+      id="hero"
+      className="relative overflow-hidden"
+      style={{ backgroundColor: '#F7F6F4' }}
+    >
+      {/* Full-width bottom blend into the white companion section; sits over the photo and background alike so their edges stay aligned */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-16 md:h-24 z-[1]"
+        style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%)' }}
+      />
+
       {/* Mobile Layout - Stacked for phones and small tablets */}
       <div className="md:hidden">
         {/* Image at top with fade to bottom */}
@@ -63,7 +73,7 @@ export function Hero({ onSignupClick }: HeroProps) {
         </div>
         
         {/* Text content below image */}
-        <div className="text-center px-4 -mt-8 pb-8">
+        <div className="relative z-10 text-center px-4 -mt-8 pb-8">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3 mb-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <SoundwaveBars />
@@ -78,7 +88,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
           {/* Headline */}
           <h1 
-            className="font-serif text-3xl leading-tight mb-2 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+            className="font-serif text-3xl leading-tight mb-3 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
             style={{ color: '#001C5F' }}
           >
             Find comfort in God&apos;s Word, every day
@@ -86,16 +96,16 @@ export function Hero({ onSignupClick }: HeroProps) {
 
           {/* Subtitle */}
           <p
-            className="font-serif italic text-lg mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-            style={{ color: '#2A4B7C', fontWeight: 550 }}
+            className="font-sans text-base mb-3 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+            style={{ color: '#001C5F', fontWeight: 500, lineHeight: '1.5' }}
           >
             Personalised scripture and affirmations, sent daily as a voice and written message
           </p>
 
           {/* Body Text */}
           <p 
-            className="font-sans text-base max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-            style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
+            className="font-sans text-sm max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
           >
                 Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
           </p>
@@ -103,7 +113,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* CTA Button */}
           <button
             onClick={onSignupClick}
-            className="font-sans font-bold text-base px-10 py-7 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+            className="font-sans font-bold text-base px-9 py-4 rounded-full hover:scale-105 transition-transform duration-300 mb-3 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
             style={{
               background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
               color: '#001C5F',
@@ -111,8 +121,8 @@ export function Hero({ onSignupClick }: HeroProps) {
               boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
             }}
           >
-            Start Your Morning with Peace
-          </button>
+  Begin your free trial today
+  </button>
 
           {/* Trust Line */}
           <p 
@@ -171,7 +181,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Headline */}
               <h1 
-                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-2 sm:mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-3 sm:mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
                 style={{ color: '#001C5F' }}
               >
                 Find comfort in God&apos;s Word, every day
@@ -179,24 +189,25 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Subtitle */}
               <p 
-                className="font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-                style={{ color: '#2A4B7C', fontWeight: 550 }}
+                className="font-sans text-base lg:text-lg mb-3 sm:mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+                style={{ color: '#001C5F', fontWeight: 500, lineHeight: '1.5' }}
               >
                 Personalised scripture and affirmations, sent daily as a voice and written message
               </p>
 
               {/* Body Text */}
               <p 
-                className="font-sans text-base mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-                style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
+                className="font-sans text-sm lg:text-base mb-6 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
               >
             Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
               </p>
 
-              {/* CTA Button */}
-              <Button 
-                asChild
-                className="font-sans font-bold text-lg px-14 py-8 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
+  <div className="inline-flex flex-col items-center">
+  {/* CTA Button */}
+  <Button
+  asChild
+                className="font-sans font-bold text-lg px-12 py-6 rounded-full hover:scale-105 transition-transform duration-300 mb-4 shadow-lg hover:shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400"
                 style={{
                   background: 'linear-gradient(90deg, #D9B86A 0%, #F5E9A4 35%, #E8D48B 60%, #D9B86A 100%)',
                   color: '#001C5F',
@@ -204,17 +215,18 @@ export function Hero({ onSignupClick }: HeroProps) {
                   boxShadow: '0 8px 24px rgba(212,185,106,0.5)',
                 }}
               >
-                <Link href="#plans">Start Your Morning with Peace</Link>
+                <Link href="#plans">Begin your free trial today</Link>
               </Button>
 
               {/* Trust Line - centered under button */}
               <p 
                 className="font-sans text-sm text-center animate-in fade-in duration-700 delay-500"
-                style={{ color: '#4A5568', opacity: 0.7, maxWidth: '280px', margin: '0 auto' }}
-              >
-                3-day free trial · Cancel anytime
-              </p>
-            </div>
+  style={{ color: '#4A5568', opacity: 0.7 }}
+  >
+  3-day free trial · Cancel anytime
+  </p>
+  </div>
+  </div>
           </div>
         </div>
       </div>

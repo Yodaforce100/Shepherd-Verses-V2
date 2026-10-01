@@ -65,30 +65,35 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-10 lg:py-14 bg-white scroll-mt-20 lg:scroll-mt-24">
+    <section
+      id="how-it-works"
+      className="relative px-3 py-4 sm:px-6 sm:py-6 lg:px-10 lg:py-8 scroll-mt-20 lg:scroll-mt-24"
+      style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F7F6F4 100%)' }}
+    >
+      <div
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] py-8 sm:py-10 lg:py-14"
+        style={{
+          background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)',
+          boxShadow: '0 24px 60px -24px rgba(0,28,95,0.55), 0 0 0 1px rgba(212,185,106,0.28)',
+        }}
+      >
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 sm:mb-12">
+        <div className="text-center mb-5 sm:mb-12">
           {/* Primary Heading */}
           <AnimatedHeading
             lead="Wake up to a voice that"
             highlight="hears you"
+            color="#FFFFFF"
             className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
           />
           {/* Sub-heading */}
-          <h3 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
-            style={{ color: '#001C5F' }}
+          <p
+            className="font-sans text-base lg:text-lg text-balance"
+            style={{ color: '#D4B96A', fontWeight: 500 }}
           >
-            Two simple steps
-          </h3>
-          {/* Subtitle */}
-          <p 
-            className="font-sans text-lg lg:text-xl"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
-          >
-            A day transformed
+            Two simple steps to a day transformed!
           </p>
         </div>
 
@@ -102,16 +107,16 @@ export function HowItWorks() {
             >
               {/* Card */}
               <div 
-                className="bg-white rounded-2xl overflow-hidden h-full flex flex-col"
-                style={{ border: '0.5px solid #D5CDB8', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
+                className="group bg-white rounded-2xl overflow-hidden h-full flex flex-col shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all duration-500 ease-out motion-safe:hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(0,0,0,0.35),0_0_0_1px_rgba(212,185,106,0.6),0_0_28px_rgba(212,185,106,0.25)]"
+                style={{ border: '0.5px solid rgba(212,185,106,0.35)' }}
               >
                 {/* Image with Title Overlay */}
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-[1200ms] ease-out motion-safe:group-hover:scale-[1.06]"
                   />
                   {/* Soft warm gradient overlay for better title visibility */}
                   <div 
@@ -126,13 +131,13 @@ export function HowItWorks() {
                       className="font-serif text-lg sm:text-xl text-white"
                       style={{ fontWeight: 500 }}
                     >
-                      {step.title}
+                      {index + 1}. {step.title}
                     </h3>
                   </div>
                 </div>
 
                 {/* Description with Icon */}
-                <div className="p-4 sm:p-5 flex-grow">
+                <div className="px-4 py-3.5 sm:p-5 flex-grow">
                   <div className="flex items-start gap-3">
                     {/* Icon */}
                     <div className="mt-0.5">
@@ -140,8 +145,8 @@ export function HowItWorks() {
                     </div>
                     {/* Text */}
                     <p 
-                      className="font-sans text-base"
-                      style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+                      className="font-sans text-[15px] leading-[1.55] sm:text-base sm:leading-[1.6]"
+                      style={{ color: '#5E8DBF', fontWeight: 450 }}
                     >
                       <span 
                         className="font-semibold"
@@ -164,6 +169,7 @@ export function HowItWorks() {
             </Reveal>
           ))}
         </div>
+      </div>
       </div>
     </section>
   )

@@ -80,14 +80,17 @@ export function FAQ() {
   return (
     <section id="faq" className="relative pt-10 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-light-stone via-stone to-stone" />
+      <div
+        className="absolute inset-0 z-0"
+        style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, var(--light-stone) 22%, var(--stone) 55%, #FFFFFF 100%)' }}
+      />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <CrossDivider />
-          <h2 className="font-serif text-2xl lg:text-3xl leading-tight text-navy">
+          <h2 className="font-serif text-3xl md:text-4xl text-balance leading-tight text-navy">
             Frequently Asked Questions
           </h2>
         </div>

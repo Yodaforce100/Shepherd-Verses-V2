@@ -61,7 +61,14 @@ export function Socials() {
   const [comingSoon, setComingSoon] = useState<string | null>(null)
 
   return (
-    <section id="socials" className="relative py-10 lg:py-9" style={{ backgroundColor: '#001C5F' }}>
+    <section id="socials" className="relative bg-white px-3 py-4 sm:px-6 sm:py-6 lg:px-10 lg:py-8">
+      <div
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] py-10 lg:py-12"
+        style={{
+          background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)',
+          boxShadow: '0 24px 60px -24px rgba(0,28,95,0.55), 0 0 0 1px rgba(212,185,106,0.28)',
+        }}
+      >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 lg:mb-7">
@@ -116,6 +123,7 @@ export function Socials() {
         >
           {comingSoon ? `Our ${comingSoon} channel is coming soon - thanks for your patience!` : ""}
         </p>
+      </div>
       </div>
     </section>
   )

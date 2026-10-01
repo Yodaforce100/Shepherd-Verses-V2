@@ -34,12 +34,19 @@ function StarRating() {
 
 export function Reviews() {
   return (
-    <section id="reviews" className="relative py-10 lg:py-14 bg-white">
+    <section id="reviews" className="relative bg-white px-3 py-4 sm:px-6 sm:py-6 lg:px-10 lg:py-8">
+      <div
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] py-10 lg:py-14"
+        style={{
+          backgroundColor: '#F7F6F4',
+          boxShadow: '0 20px 50px -28px rgba(0,28,95,0.18), 0 0 0 1px rgba(212,185,106,0.28)',
+        }}
+      >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 
-            className="font-serif text-2xl lg:text-3xl leading-tight"
+            className="font-serif text-3xl md:text-4xl text-balance leading-tight"
             style={{ color: '#001C5F' }}
           >
             What Our Members Are Saying
@@ -52,7 +59,7 @@ export function Reviews() {
             <div 
               key={index}
               className="w-full md:w-1/3 max-w-[240px] mx-auto rounded-xl p-4 lg:p-5 flex flex-col"
-              style={{ backgroundColor: '#F7F6F4', border: '0.5px solid #D5CDB8', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
+              style={{ backgroundColor: '#FFFFFF', border: '0.5px solid #D5CDB8', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
             >
               {/* Placeholder label */}
               <p
@@ -94,6 +101,7 @@ export function Reviews() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   )
