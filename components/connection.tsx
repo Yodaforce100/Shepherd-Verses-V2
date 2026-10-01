@@ -52,10 +52,10 @@ export function Connection() {
 
           <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
             <div
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_40px_-24px_rgba(0,28,95,0.35)] lg:shadow-[0_20px_40px_-20px_rgba(0,28,95,0.35)]"
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_40px_-24px_rgba(0,28,95,0.35)] lg:aspect-[4/5] lg:max-w-md lg:ml-auto lg:shadow-[0_16px_32px_-20px_rgba(0,28,95,0.22)]"
             >
               <SegmentLoopVideo
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover lg:origin-bottom lg:scale-[1.18]"
                 src="/videos/bible-pages.mp4"
                 poster="/images/bible-pages-bg.jpeg"
                 endAt={7}
