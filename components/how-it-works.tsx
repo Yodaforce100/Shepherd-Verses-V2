@@ -67,9 +67,16 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-8 sm:py-10 lg:py-14 scroll-mt-20 lg:scroll-mt-24"
-      style={{ background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)' }}
+      className="relative px-3 py-4 sm:px-6 sm:py-6 lg:px-10 lg:py-8 scroll-mt-20 lg:scroll-mt-24"
+      style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F7F6F4 100%)' }}
     >
+      <div
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] py-8 sm:py-10 lg:py-14"
+        style={{
+          background: 'linear-gradient(180deg, #0A2468 0%, #001C5F 55%, #00154A 100%)',
+          boxShadow: '0 24px 60px -24px rgba(0,28,95,0.55), 0 0 0 1px rgba(212,185,106,0.28)',
+        }}
+      >
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -162,6 +169,7 @@ export function HowItWorks() {
             </Reveal>
           ))}
         </div>
+      </div>
       </div>
     </section>
   )
