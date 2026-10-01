@@ -80,7 +80,7 @@ export function FAQ() {
   return (
     <section id="faq" className="relative pt-10 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-light-stone via-stone to-stone" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-light-stone via-stone via-55% to-white" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
