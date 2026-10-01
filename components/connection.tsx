@@ -27,7 +27,7 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="relative overflow-hidden bg-white py-20 lg:py-32">
+    <section id="connection" className="relative overflow-hidden bg-white pt-14 pb-20 lg:py-32">
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/videos/bible-pages.mp4?v=hd"
@@ -55,7 +55,7 @@ export function Connection() {
       />
       {/* Top and bottom fades so the section blends into its neighbours */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-24 lg:h-40 bg-gradient-to-b from-white to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-56 lg:h-40 bg-gradient-to-b from-white from-45% lg:from-0% to-transparent"
         aria-hidden="true"
       />
       <div
