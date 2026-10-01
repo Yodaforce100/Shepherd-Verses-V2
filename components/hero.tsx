@@ -87,7 +87,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* Subtitle */}
           <p
             className="font-sans text-base mb-3 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-            style={{ color: '#5E8DBF', fontWeight: 500, lineHeight: '1.5' }}
+            style={{ color: '#001C5F', fontWeight: 500, lineHeight: '1.5' }}
           >
             Personalised scripture and affirmations, sent daily as a voice and written message
           </p>
@@ -95,7 +95,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* Body Text */}
           <p 
             className="font-sans text-sm max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-            style={{ color: '#6B7280', lineHeight: '1.6', fontWeight: 450 }}
+            style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
           >
                 Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
           </p>
@@ -180,7 +180,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* Subtitle */}
               <p 
                 className="font-sans text-base lg:text-lg mb-3 sm:mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-                style={{ color: '#5E8DBF', fontWeight: 500, lineHeight: '1.5' }}
+                style={{ color: '#001C5F', fontWeight: 500, lineHeight: '1.5' }}
               >
                 Personalised scripture and affirmations, sent daily as a voice and written message
               </p>
@@ -188,7 +188,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* Body Text */}
               <p 
                 className="font-sans text-sm lg:text-base mb-6 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-                style={{ color: '#6B7280', lineHeight: '1.6', fontWeight: 450 }}
+                style={{ color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
               >
             Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
               </p>
