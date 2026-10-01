@@ -10,7 +10,7 @@ function GoldDivider({ text }: { text: string }) {
       <div className="w-20 h-px" style={{ backgroundColor: '#D9B86A' }} />
       <span 
         className="font-sans text-sm font-semibold tracking-[0.2em] uppercase"
-        style={{ color: '#D9B86A' }}
+        style={{ color: '#CF9D3E' }}
       >
         {text}
       </span>
@@ -72,7 +72,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
           {/* Subtitle */}
           <p 
             className="font-sans text-sm lg:text-base"
-            style={{ color: '#5E8DBF', fontWeight: 500 }}
+            style={{ color: '#2A4B7C', fontWeight: 500 }}
           >
             Wake up supported. Start your day guided.
           </p>
@@ -94,7 +94,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             {/* Plan Name */}
             <h3 
               className="font-sans text-sm sm:text-base font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4"
-              style={{ color: '#D4B96A' }}
+              style={{ color: '#CF9D3E' }}
             >
               Monthly Companion
             </h3>
@@ -153,7 +153,7 @@ export function Plans({ onMonthlyClick, onAnnualClick }: PlansProps) {
             </button>
             <p
               className="font-sans text-xs text-center mt-2.5"
-              style={{ color: '#8A919E' }}
+              style={{ color: '#6B7280' }}
             >
                 <span className="font-semibold">3 days free</span>, then billed monthly
             </p>
