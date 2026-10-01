@@ -90,7 +90,7 @@ export function HowItWorks() {
           />
           {/* Sub-heading */}
           <p
-            className="font-sans text-xl lg:text-2xl text-balance"
+            className="font-sans text-base lg:text-lg text-balance"
             style={{ color: '#D4B96A', fontWeight: 500 }}
           >
             Two simple steps to a day transformed!
