@@ -30,7 +30,7 @@ export function Connection() {
     <section id="connection" className="relative overflow-hidden bg-white py-20 lg:py-32">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/videos/bible-pages.mp4"
+        src="/videos/bible-pages.mp4?v=hd"
         poster="/images/bible-pages-bg.jpeg"
         autoPlay
         muted
