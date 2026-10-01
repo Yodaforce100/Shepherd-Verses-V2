@@ -86,7 +86,7 @@ export function HowItWorks() {
             className="font-sans text-xl lg:text-2xl text-balance"
             style={{ color: '#D4B96A', fontWeight: 500 }}
           >
-            Two simple steps to a day transformed
+            Two simple steps to a day transformed!
           </p>
         </div>
 
