@@ -43,14 +43,14 @@ export function Connection() {
             </h2>
 
             <p
-              className="font-sans text-xl lg:text-xl lg:mb-6"
+              className="font-sans text-xl lg:text-xl mb-6"
   style={{ color: '#001C5F', fontWeight: 500 }}
   >
   moment of your day
             </p>
           </div>
 
-          <div className="-mt-5 sm:-mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
+          <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
             <div
               className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_40px_-24px_rgba(0,28,95,0.35)] lg:shadow-[0_20px_40px_-20px_rgba(0,28,95,0.35)]"
             >
@@ -62,17 +62,12 @@ export function Connection() {
               />
               <div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
-                style={{ boxShadow: 'inset 0 0 36px 6px rgba(244, 243, 240, 0.55)' }}
+                style={{ boxShadow: 'inset 0 0 36px 6px rgba(255, 255, 255, 0.55)' }}
                 aria-hidden="true"
               />
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/2 lg:hidden"
-                style={{ background: 'linear-gradient(to bottom, #F4F3F0 0%, #F4F3F0 18%, rgba(244, 243, 240, 0.6) 50%, rgba(244, 243, 240, 0) 100%)' }}
-                aria-hidden="true"
-              />
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 hidden h-1/4 opacity-70 lg:block"
-                style={{ background: 'linear-gradient(to bottom, rgba(244, 243, 240, 0.85) 0%, rgba(244, 243, 240, 0) 100%)' }}
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 opacity-70"
+                style={{ background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 100%)' }}
                 aria-hidden="true"
               />
             </div>
