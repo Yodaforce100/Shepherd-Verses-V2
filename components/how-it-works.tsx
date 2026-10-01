@@ -82,18 +82,11 @@ export function HowItWorks() {
             className="font-serif text-3xl lg:text-4xl leading-tight mb-3 text-balance font-bold"
           />
           {/* Sub-heading */}
-          <h3 
-            className="font-serif text-2xl lg:text-3xl leading-tight mb-1"
-            style={{ color: '#F3EBD6' }}
-          >
-            Two simple steps
-          </h3>
-          {/* Subtitle */}
-          <p 
-            className="font-sans text-lg lg:text-xl"
+          <p
+            className="font-sans text-xl lg:text-2xl text-balance"
             style={{ color: '#D4B96A', fontWeight: 500 }}
           >
-            A day transformed
+            Two simple steps to a day transformed
           </p>
         </div>
 

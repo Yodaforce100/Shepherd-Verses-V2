@@ -69,18 +69,11 @@ export function Connection() {
             <CrossDivider />
 
             <h2
-              className="font-serif text-[1.875rem] sm:text-4xl lg:text-4xl leading-tight mb-2 text-balance"
+              className="font-serif text-[1.875rem] sm:text-4xl lg:text-4xl leading-tight mb-6 text-balance"
               style={{ color: '#001C5F' }}
             >
-              A companion for every
+              A companion for every moment of your day
             </h2>
-
-            <p
-              className="font-sans text-xl lg:text-xl mb-8"
-              style={{ color: '#001C5F', fontWeight: 500 }}
-            >
-              moment of your day
-            </p>
 
             <p
               className="font-sans text-base mx-auto lg:mx-0 max-w-lg mb-8"
