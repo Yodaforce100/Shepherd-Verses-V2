@@ -1,5 +1,3 @@
-import { SegmentLoopVideo } from './segment-loop-video'
-
 // Latin cross icon (tall vertical bar, shorter crossbar near the top)
 function LatinCross({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -51,23 +49,21 @@ export function Connection() {
           </div>
 
           <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
-            <div
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_24px_40px_-24px_rgba(0,28,95,0.35)] lg:aspect-[4/5] lg:max-w-md lg:ml-auto lg:shadow-[0_16px_32px_-20px_rgba(0,28,95,0.22)]"
-            >
-              <SegmentLoopVideo
-                className="absolute inset-0 h-full w-full object-cover lg:origin-bottom lg:scale-[1.18]"
+            <div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_16px_32px_-20px_rgba(0,28,95,0.22)]">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
                 src="/videos/bible-pages.mp4"
                 poster="/images/bible-pages-bg.jpeg"
-                endAt={7}
-              />
-              <div
-                className="pointer-events-none absolute inset-0 rounded-2xl"
-                style={{ boxShadow: 'inset 0 0 36px 6px rgba(255, 255, 255, 0.55)' }}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
                 aria-hidden="true"
               />
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 opacity-70"
-                style={{ background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 100%)' }}
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{ boxShadow: 'inset 0 0 24px 4px rgba(255, 255, 255, 0.35)' }}
                 aria-hidden="true"
               />
             </div>
