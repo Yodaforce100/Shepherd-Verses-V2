@@ -85,15 +85,15 @@ export function Connection() {
             <blockquote className="mx-auto lg:mx-0 max-w-md">
               <p
                 className="font-serif italic text-lg"
-                style={{ color: '#001C5F', lineHeight: '1.6' }}
+                style={{ color: '#001C5F', lineHeight: '1.6', fontWeight: 600 }}
               >
-                &ldquo;Come to me, all you who are weary and burdened,
-                <br />
-                and I will give you rest.&rdquo;
+                &ldquo;Come to me, all you who are weary and burdened,{' '}
+                <br className="hidden sm:inline" />
+                and I will give you rest.&rdquo;{' '}
+                <cite className="font-sans not-italic text-sm text-gold whitespace-nowrap" style={{ fontWeight: 600 }}>
+                  Matthew 11:28
+                </cite>
               </p>
-              <footer className="font-sans text-sm mt-2" style={{ color: '#5E8DBF', fontWeight: 500 }}>
-                Matthew 11:28
-              </footer>
             </blockquote>
           </div>
         </div>
