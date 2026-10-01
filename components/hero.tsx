@@ -43,9 +43,15 @@ export function Hero({ onSignupClick }: HeroProps) {
     <section
       id="hero"
       className="relative overflow-hidden"
-      style={{ background: 'linear-gradient(to bottom, #F7F6F4 0%, #F7F6F4 82%, #FFFFFF 100%)' }}
+      style={{ backgroundColor: '#F7F6F4' }}
     >
-      
+      {/* Full-width bottom blend into the white companion section; sits over the photo and background alike so their edges stay aligned */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-16 md:h-24 z-[1]"
+        style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%)' }}
+      />
+
       {/* Mobile Layout - Stacked for phones and small tablets */}
       <div className="md:hidden">
         {/* Image at top with fade to bottom */}
@@ -67,7 +73,7 @@ export function Hero({ onSignupClick }: HeroProps) {
         </div>
         
         {/* Text content below image */}
-        <div className="text-center px-4 -mt-8 pb-8">
+        <div className="relative z-10 text-center px-4 -mt-8 pb-8">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3 mb-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <SoundwaveBars />
