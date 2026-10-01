@@ -111,7 +111,7 @@ export function HowItWorks() {
                 style={{ border: '0.5px solid rgba(212,185,106,0.35)' }}
               >
                 {/* Image with Title Overlay */}
-                <div className="relative aspect-[16/9] md:aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={step.image}
                     alt={step.title}
