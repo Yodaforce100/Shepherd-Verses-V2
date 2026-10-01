@@ -78,7 +78,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
           {/* Headline */}
           <h1 
-            className="font-serif text-3xl leading-tight mb-2 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+            className="font-serif text-3xl leading-tight mb-3 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
             style={{ color: '#001C5F' }}
           >
             Find comfort in God&apos;s Word, every day
@@ -86,16 +86,16 @@ export function Hero({ onSignupClick }: HeroProps) {
 
           {/* Subtitle */}
           <p
-            className="font-serif italic text-lg mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-            style={{ color: '#2A4B7C', fontWeight: 550 }}
+            className="font-sans text-base mb-3 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+            style={{ color: '#5E8DBF', fontWeight: 500, lineHeight: '1.5' }}
           >
             Personalised scripture and affirmations, sent daily as a voice and written message
           </p>
 
           {/* Body Text */}
           <p 
-            className="font-sans text-base max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-            style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
+            className="font-sans text-sm max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+            style={{ color: '#6B7280', lineHeight: '1.6', fontWeight: 450 }}
           >
                 Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
           </p>
@@ -171,7 +171,7 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Headline */}
               <h1 
-                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-2 sm:mb-4 text-balance font-bold animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+                className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-3 sm:mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
                 style={{ color: '#001C5F' }}
               >
                 Find comfort in God&apos;s Word, every day
@@ -179,16 +179,16 @@ export function Hero({ onSignupClick }: HeroProps) {
 
               {/* Subtitle */}
               <p 
-                className="font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
-                style={{ color: '#2A4B7C', fontWeight: 550 }}
+                className="font-sans text-base lg:text-lg mb-3 sm:mb-4 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200"
+                style={{ color: '#5E8DBF', fontWeight: 500, lineHeight: '1.5' }}
               >
                 Personalised scripture and affirmations, sent daily as a voice and written message
               </p>
 
               {/* Body Text */}
               <p 
-                className="font-sans text-base mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-                style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
+                className="font-sans text-sm lg:text-base mb-6 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                style={{ color: '#6B7280', lineHeight: '1.6', fontWeight: 450 }}
               >
             Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
               </p>
