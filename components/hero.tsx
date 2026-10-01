@@ -40,7 +40,7 @@ interface HeroProps {
 
 export function Hero({ onSignupClick }: HeroProps) {
   return (
-    <section id="hero" className="relative overflow-hidden" style={{ backgroundColor: '#F7F6F4' }}>
+    <section id="hero" className="relative overflow-hidden rounded-b-[28px]" style={{ backgroundColor: '#F7F6F4' }}>
       
       {/* Mobile Layout - Stacked for phones and small tablets */}
       <div className="md:hidden">
