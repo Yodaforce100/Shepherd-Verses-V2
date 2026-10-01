@@ -90,7 +90,7 @@ export function Connection() {
                 &ldquo;Come to me, all you who are weary and burdened,{' '}
                 <br className="hidden sm:inline" />
                 and I will give you rest.&rdquo;{' '}
-                <cite className="font-sans not-italic text-sm text-gold whitespace-nowrap" style={{ fontWeight: 600 }}>
+                <cite className="font-sans not-italic text-sm text-[#A8842F] whitespace-nowrap" style={{ fontWeight: 600 }}>
                   Matthew 11:28
                 </cite>
               </p>
