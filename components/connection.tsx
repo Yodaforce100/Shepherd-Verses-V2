@@ -27,10 +27,45 @@ function CrossDivider() {
 
 export function Connection() {
   return (
-    <section id="connection" className="py-16 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-16">
-          <div className="relative z-10 text-center lg:text-left lg:col-start-1 lg:row-start-1 lg:self-end">
+    <section id="connection" className="relative overflow-hidden bg-white py-20 lg:py-32">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/videos/bible-pages.mp4"
+        poster="/images/bible-pages-bg.jpeg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+
+      {/* Soft white wash: even on mobile, stronger behind the text column on desktop */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-white/80 lg:hidden"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+        style={{
+          background:
+            'linear-gradient(to right, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.88) 40%, rgba(255,255,255,0.55) 70%, rgba(255,255,255,0.4) 100%)',
+        }}
+        aria-hidden="true"
+      />
+      {/* Top and bottom fades so the section blends into its neighbours */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 lg:h-40 bg-gradient-to-b from-white to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <CrossDivider />
 
             <h2
@@ -41,35 +76,12 @@ export function Connection() {
             </h2>
 
             <p
-              className="font-sans text-xl lg:text-xl mb-6"
-  style={{ color: '#001C5F', fontWeight: 500 }}
-  >
-  moment of your day
+              className="font-sans text-xl lg:text-xl mb-8"
+              style={{ color: '#001C5F', fontWeight: 500 }}
+            >
+              moment of your day
             </p>
-          </div>
 
-          <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
-            <div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_16px_32px_-20px_rgba(0,28,95,0.22)]">
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                src="/videos/bible-pages.mp4"
-                poster="/images/bible-pages-bg.jpeg"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                aria-hidden="true"
-              />
-              <div
-                className="pointer-events-none absolute inset-0 rounded-2xl"
-                style={{ boxShadow: 'inset 0 0 24px 4px rgba(255, 255, 255, 0.35)' }}
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-
-          <div className="mt-10 lg:mt-0 text-center lg:text-left lg:col-start-1 lg:row-start-2 lg:self-start">
             <p
               className="font-sans text-base mx-auto lg:mx-0 max-w-lg mb-8"
               style={{ color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
