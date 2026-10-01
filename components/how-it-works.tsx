@@ -127,17 +127,11 @@ export function HowItWorks() {
                   />
                   {/* Title Overlay */}
                   <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                    <p
-                      className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.18em] mb-0.5"
-                      style={{ color: '#E6CC85', fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.35)' }}
-                    >
-                      Step {index + 1}
-                    </p>
                     <h3 
                       className="font-serif text-lg sm:text-xl text-white"
                       style={{ fontWeight: 500 }}
                     >
-                      {step.title}
+                      {index + 1}. {step.title}
                     </h3>
                   </div>
                 </div>
