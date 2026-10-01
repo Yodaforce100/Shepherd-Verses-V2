@@ -58,7 +58,7 @@ export default function SignupModal({ isOpen, onClose, tier = 'monthly' }: Signu
             </p>
             <p
               className="font-sans text-sm mt-2"
-              style={{ color: '#2A4B7C', fontWeight: 450 }}
+              style={{ color: '#5E8DBF', fontWeight: 450 }}
             >
               3-day free trial. Cancel anytime.
             </p>

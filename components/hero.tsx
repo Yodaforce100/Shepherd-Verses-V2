@@ -95,7 +95,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* Body Text */}
           <p 
             className="font-sans text-base max-w-[320px] mx-auto mb-6 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-            style={{               color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+            style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
           >
                 Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
           </p>
@@ -117,7 +117,7 @@ export function Hero({ onSignupClick }: HeroProps) {
           {/* Trust Line */}
           <p 
             className="font-sans text-xs animate-in fade-in duration-700 delay-500"
-            style={{ color: '#6B7280' }}
+            style={{ color: '#4A5568', opacity: 0.7 }}
           >
             3-day free trial · Cancel anytime
           </p>
@@ -188,7 +188,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* Body Text */}
               <p 
                 className="font-sans text-base mb-4 sm:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
-                style={{               color: '#2A4B7C', lineHeight: '1.6', fontWeight: 450 }}
+                style={{               color: '#5E8DBF', lineHeight: '1.6', fontWeight: 450 }}
               >
             Share how you&apos;re feeling, and <span style={{ fontWeight: 550 }}>Shepherd Verses</span> is there to help you find clarity and reassurance.
               </p>
@@ -211,7 +211,7 @@ export function Hero({ onSignupClick }: HeroProps) {
               {/* Trust Line - centered under button */}
               <p 
                 className="font-sans text-sm text-center animate-in fade-in duration-700 delay-500"
-  style={{ color: '#6B7280' }}
+  style={{ color: '#4A5568', opacity: 0.7 }}
   >
   3-day free trial · Cancel anytime
   </p>
