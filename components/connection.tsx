@@ -89,7 +89,7 @@ export function Connection() {
             <blockquote className="mx-auto lg:mx-0 max-w-md">
               <p
                 className="font-serif italic text-lg"
-                style={{ color: '#D9B86A', lineHeight: '1.6' }}
+                style={{ color: '#001C5F', lineHeight: '1.6' }}
               >
                 &ldquo;Come to me, all you who are weary and burdened,
                 <br />
