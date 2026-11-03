@@ -26,7 +26,7 @@ export function BetaNoticeModal({ open, onOpenChange }: BetaNoticeModalProps) {
           className="font-serif text-lg sm:text-xl leading-relaxed text-pretty mb-6"
           style={{ color: '#001C5F' }}
         >
-          {"Thank you for being here. We're making a few updates to Shepherd Verses and will be back very soon. Please check back shortly."}
+          {"\u{1F64F} Thank you for being here. We're making a few updates to Shepherd Verses and will be back very soon. Please check back shortly. \u{1F49B}"}
         </DialogDescription>
         <DialogClose
           className="mx-auto w-full sm:w-auto sm:px-12 font-sans font-medium text-sm sm:text-[15px] py-3 rounded-full hover:opacity-90 transition-opacity"
