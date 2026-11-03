@@ -2,6 +2,11 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
+    quote: "I\u2019m loving that SV is leading me on a more fulfilling daily experience by taking time for myself every morning. I love the mantra for helping me stay positive and focused throughout the day.",
+    name: "Kim B",
+    isPlaceholder: false,
+  },
+  {
     quote: "I love listening to my message whilst I read along. Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
     name: "JD M",
     isPlaceholder: false,
@@ -9,11 +14,6 @@ const reviews = [
   {
     quote: "SV helps me stay focused and gives me direction for the day ahead. It\u2019s so easy to use and takes just five minutes each morning, even before I get out of bed! I love it.",
     name: "Isabella J",
-    isPlaceholder: false,
-  },
-  {
-    quote: "I\u2019m loving that SV is leading me on a more fulfilling daily experience by taking time for myself every morning. I love the mantra for helping me stay positive and focused throughout the day.",
-    name: "Kim B",
     isPlaceholder: false,
   },
 ]
