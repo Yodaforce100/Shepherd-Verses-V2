@@ -14,10 +14,10 @@ const reviews = [
     isPlaceholder: false,
   },
   {
-    quote: "The verse it gave me brought me to tears - in the best way. It felt like being heard. I've recommended it to everyone.",
-    name: "Joanne M.",
-    location: "Georgia",
-    isPlaceholder: true,
+    quote: "I\u2019m loving that SV is leading me on a more fulfilling daily experience by taking time for myself every morning. I love the mantra for helping me stay positive and focused throughout the day.",
+    name: "Kim",
+    location: "Mississippi",
+    isPlaceholder: false,
   },
 ]
 
