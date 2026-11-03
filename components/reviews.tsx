@@ -4,19 +4,16 @@ const reviews = [
   {
     quote: "Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
     name: "JD M",
-    location: "Australia",
     isPlaceholder: false,
   },
   {
     quote: "SV helps me stay focused and gives me direction for the day ahead. It\u2019s so easy to use and takes just five minutes each morning, even before I get out of bed! I love it.",
     name: "Isabella J",
-    location: "Australia",
     isPlaceholder: false,
   },
   {
     quote: "I\u2019m loving that SV is leading me on a more fulfilling daily experience by taking time for myself every morning. I love the mantra for helping me stay positive and focused throughout the day.",
-    name: "Kim",
-    location: "Mississippi",
+    name: "Kim B",
     isPlaceholder: false,
   },
 ]
@@ -91,16 +88,10 @@ export function Reviews() {
               {/* Reviewer Info */}
               <div>
                 <p
-                  className="font-sans text-sm font-bold mb-0.5"
+                  className="font-sans text-sm font-bold"
                   style={{ color: '#001C5F' }}
                 >
                   {review.name}
-                </p>
-                <p
-                  className="font-sans text-sm"
-                  style={{ color: '#5E8DBF', fontWeight: 500 }}
-                >
-                  {review.location}
                 </p>
               </div>
             </div>
