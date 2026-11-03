@@ -8,10 +8,10 @@ const reviews = [
     isPlaceholder: false,
   },
   {
-    quote: "The way it listens and responds with relevant scripture surprised me deeply. It's become part of my morning prayer time.",
-    name: "David R.",
-    location: "Texas",
-    isPlaceholder: true,
+    quote: "SV helps me stay focused and gives me direction for the day ahead. It\u2019s so easy to use and takes just five minutes each morning, even before I get out of bed! I love it.",
+    name: "Isabella J",
+    location: "Australia",
+    isPlaceholder: false,
   },
   {
     quote: "The verse it gave me brought me to tears - in the best way. It felt like being heard. I've recommended it to everyone.",
