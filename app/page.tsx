@@ -11,6 +11,7 @@ import { Reviews } from "@/components/reviews"
 import { FAQ } from "@/components/faq"
 import { Socials } from "@/components/socials"
 import { Footer } from "@/components/footer"
+import { BetaNoticeModal } from "@/components/beta-notice-modal"
 
 // Paddle is loaded via the external script below; declare it for TypeScript.
 declare global {
@@ -24,6 +25,9 @@ const PADDLE_PRICE_IDS = {
   annual: 'pri_01m252r02n5epx3qa51h6zsdrt',
 } as const
 
+// Beta mode is on unless NEXT_PUBLIC_BETA_MODE is explicitly set to "false".
+const IS_BETA_MODE = process.env.NEXT_PUBLIC_BETA_MODE !== 'false'
+
 export default function Home() {
   const [paddleReady, setPaddleReady] = useState(false)
 
@@ -33,6 +37,16 @@ export default function Home() {
     window.Paddle.Environment.set('sandbox')
     window.Paddle.Initialize({ token: 'test_4bb8f015e77b1f5770360f672ba' })
     setPaddleReady(true)
+  }
+
+  const [betaNoticeOpen, setBetaNoticeOpen] = useState(false)
+
+  const handlePlanClick = (tier: 'monthly' | 'annual') => {
+    if (IS_BETA_MODE) {
+      setBetaNoticeOpen(true)
+      return
+    }
+    openCheckout(tier)
   }
 
   const openCheckout = (tier: 'monthly' | 'annual') => {
@@ -59,14 +73,15 @@ export default function Home() {
         <Connection />
         <HowItWorks />
         <Plans 
-          onMonthlyClick={() => openCheckout('monthly')}
-          onAnnualClick={() => openCheckout('annual')}
+          onMonthlyClick={() => handlePlanClick('monthly')}
+          onAnnualClick={() => handlePlanClick('annual')}
         />
         <Reviews />
         <FAQ />
         <Socials />
       </main>
       <Footer />
+      <BetaNoticeModal open={betaNoticeOpen} onOpenChange={setBetaNoticeOpen} />
     </div>
   )
 }
