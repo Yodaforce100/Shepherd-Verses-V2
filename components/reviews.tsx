@@ -2,19 +2,19 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    quote: "I start with Shepherd Verses every morning and it changes my whole outlook. The scripture always feels like it was written just for me.",
-    name: "Margaret T.",
-    location: "Tennessee",
+    quote: "I\u2019m loving that SV is leading me on a more fulfilling daily experience by taking time for myself every morning. I love the mantra for helping me stay positive and focused throughout the day.",
+    name: "Kim B",
+    isPlaceholder: false,
   },
   {
-    quote: "The way it listens and responds with relevant scripture surprised me deeply. It's become part of my morning prayer time.",
-    name: "David R.",
-    location: "Texas",
+    quote: "I love listening to my message whilst I read along. Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
+    name: "JD M",
+    isPlaceholder: false,
   },
   {
-    quote: "The verse it gave me brought me to tears - in the best way. It felt like being heard. I've recommended it to everyone.",
-    name: "Joanne M.",
-    location: "Georgia",
+    quote: "SV helps me stay focused and gives me direction for the day ahead. It\u2019s so easy to use and takes just five minutes each morning, even before I get out of bed! I love it.",
+    name: "Isabella J",
+    isPlaceholder: false,
   },
 ]
 
@@ -62,12 +62,14 @@ export function Reviews() {
               style={{ backgroundColor: '#FFFFFF', border: '0.5px solid #D5CDB8', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
             >
               {/* Placeholder label */}
-              <p
-                className="font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-2"
-                style={{ color: '#9A8F73' }}
-              >
-                PLACE HOLDER to be updated
-              </p>
+              {review.isPlaceholder && (
+                <p
+                  className="font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-2"
+                  style={{ color: '#9A8F73' }}
+                >
+                  PLACE HOLDER to be updated
+                </p>
+              )}
 
               {/* Stars */}
               <StarRating />
@@ -86,16 +88,10 @@ export function Reviews() {
               {/* Reviewer Info */}
               <div>
                 <p
-                  className="font-sans text-sm font-bold mb-0.5"
+                  className="font-sans text-sm font-bold"
                   style={{ color: '#001C5F' }}
                 >
                   {review.name}
-                </p>
-                <p
-                  className="font-sans text-sm"
-                  style={{ color: '#5E8DBF', fontWeight: 500 }}
-                >
-                  {review.location}
                 </p>
               </div>
             </div>
