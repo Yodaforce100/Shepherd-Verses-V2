@@ -2,7 +2,7 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    quote: "Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
+    quote: "I love listening to my message whilst I read along. Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
     name: "JD M",
     isPlaceholder: false,
   },
