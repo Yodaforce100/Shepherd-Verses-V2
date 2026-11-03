@@ -2,19 +2,22 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    quote: "I start with Shepherd Verses every morning and it changes my whole outlook. The scripture always feels like it was written just for me.",
-    name: "Margaret T.",
-    location: "Tennessee",
+    quote: "Shepherd Verses is a really great addition to my regular bible reading and prayer life.",
+    name: "JD M",
+    location: "Australia",
+    isPlaceholder: false,
   },
   {
     quote: "The way it listens and responds with relevant scripture surprised me deeply. It's become part of my morning prayer time.",
     name: "David R.",
     location: "Texas",
+    isPlaceholder: true,
   },
   {
     quote: "The verse it gave me brought me to tears - in the best way. It felt like being heard. I've recommended it to everyone.",
     name: "Joanne M.",
     location: "Georgia",
+    isPlaceholder: true,
   },
 ]
 
@@ -62,12 +65,14 @@ export function Reviews() {
               style={{ backgroundColor: '#FFFFFF', border: '0.5px solid #D5CDB8', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
             >
               {/* Placeholder label */}
-              <p
-                className="font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-2"
-                style={{ color: '#9A8F73' }}
-              >
-                PLACE HOLDER to be updated
-              </p>
+              {review.isPlaceholder && (
+                <p
+                  className="font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-2"
+                  style={{ color: '#9A8F73' }}
+                >
+                  PLACE HOLDER to be updated
+                </p>
+              )}
 
               {/* Stars */}
               <StarRating />
